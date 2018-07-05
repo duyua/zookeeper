@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jk.mapper.UserMapper">
+
+  <select id="userList" resultType="com.jk.model.UserModel">
+    select * from T_USER
+  </select>
+  <select id="frameselectlist" resultType="com.jk.model.FrameWork">
+    select * FROM framework WHERE  pid=#{pid};
+  </select>
+  <delete id="framedelete">
+    delete from framework where id in(${id})
+  </delete>
+  <insert id="frameinsert">
+   INSERT INTO framework(TEXT,pid,coding,abbreviation,classify,
+               advocate,assistant,phone,interior,fax,postcode,urll,site,optionn,describes)VALUES(#{frame.text},#{frame.pid},#{frame.coding},
+               #{frame.abbreviation},#{frame.classify},#{frame.advocate},#{frame.assistant},#{frame.phone},#{frame.interior},
+               #{frame.fax},#{frame.postcode},#{frame.urll},#{frame.site},#{frame.optionn},#{frame.describes})
+
+  </insert>
+    <select id="frameupdateselectye" resultType="com.jk.model.FrameWork">
+        select * FROM  framework WHERE  id=#{id};
+
+    </select>
+    <update id="frameupdate">
+         UPDATE framework SET TEXT=#{frame.text},pid=#{frame.pid},coding=#{frame.coding},abbreviation=#{frame.abbreviation},
+classify=#{frame.classify},advocate=#{frame.advocate},assistant=#{frame.assistant},phone=#{frame.phone},interior=#{frame.interior},
+fax=#{frame.fax},postcode=#{frame.postcode},urll=#{frame.urll},site=#{frame.site},optionn=#{frame.optionn},describes=#{frame.describes}
+WHERE id=#{frame.id}
+
+    </update>
+</mapper>
