@@ -1,5 +1,6 @@
 package com.jk.model;
 
+
 import java.io.Serializable;
 //商品属性表
 public class Tattribute implements Serializable{

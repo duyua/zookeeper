@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/dubbo-zookeeper-customer-demo/dubbo-zookeeper-customer-demo.iml" filepath="$PROJECT_DIR$/dubbo-zookeeper-customer-demo/dubbo-zookeeper-customer-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo-zookeeper-provider-demo/dubbo-zookeeper-provider-demo.iml" filepath="$PROJECT_DIR$/dubbo-zookeeper-provider-demo/dubbo-zookeeper-provider-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo-zookeeper-provider-indent/dubbo-zookeeper-provider-indent.iml" filepath="$PROJECT_DIR$/dubbo-zookeeper-provider-indent/dubbo-zookeeper-provider-indent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo-zookeeper-provider-product/dubbo-zookeeper-provider-product.iml" filepath="$PROJECT_DIR$/dubbo-zookeeper-provider-product/dubbo-zookeeper-provider-product.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/zookeeper.iml" filepath="$PROJECT_DIR$/.idea/zookeeper.iml" />
+    </modules>
+  </component>
+</project>
