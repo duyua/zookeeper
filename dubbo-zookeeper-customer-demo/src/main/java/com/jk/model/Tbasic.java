@@ -15,8 +15,10 @@ public class Tbasic implements Serializable{
     private String basicnumber;
     //售价
     private Double basicprice;
+    //是否启用会员价
+    private Integer membered;
     //会员价格表id
-    private String membered;
+    private String membersid;
     //成本价
     private Double basiccost;
     //市场价
@@ -29,6 +31,8 @@ public class Tbasic implements Serializable{
     private Double basicweight;
     //库存
     private Integer basicinventory;
+    //创建时间
+    private String basiccreatdate;
     //库存备注
     private String kucunbeizhu;
     //赠送积分
@@ -49,6 +53,8 @@ public class Tbasic implements Serializable{
     private String basicpage;
     //页面描述
     private String pagedescription;
+    //查询商品信息分类业务字段
+    private String classname;
 
     @Override
     public boolean equals(Object o) {
@@ -105,12 +111,20 @@ public class Tbasic implements Serializable{
         this.basicprice = basicprice;
     }
 
-    public String getMembered() {
+    public Integer getMembered() {
         return membered;
     }
 
-    public void setMembered(String membered) {
+    public void setMembered(Integer membered) {
         this.membered = membered;
+    }
+
+    public String getMembersid() {
+        return membersid;
+    }
+
+    public void setMembersid(String membersid) {
+        this.membersid = membersid;
     }
 
     public Double getBasiccost() {
@@ -241,6 +255,22 @@ public class Tbasic implements Serializable{
         this.pagedescription = pagedescription;
     }
 
+    public String getClassname() {
+        return classname;
+    }
+
+    public void setClassname(String classname) {
+        this.classname = classname;
+    }
+
+    public String getBasiccreatdate() {
+        return basiccreatdate;
+    }
+
+    public void setBasiccreatdate(String basiccreatdate) {
+        this.basiccreatdate = basiccreatdate;
+    }
+
     @Override
     public String toString() {
         return "Tbasic{" +
@@ -250,12 +280,14 @@ public class Tbasic implements Serializable{
                 ", basicnumber='" + basicnumber + '\'' +
                 ", basicprice=" + basicprice +
                 ", membered='" + membered + '\'' +
+                ", membersid='" + membersid + '\'' +
                 ", basiccost=" + basiccost +
                 ", basicmarket=" + basicmarket +
                 ", shid='" + shid + '\'' +
                 ", basicdanjia=" + basicdanjia +
                 ", basicweight=" + basicweight +
                 ", basicinventory=" + basicinventory +
+                ", basiccreatdate='" + basiccreatdate + '\'' +
                 ", kucunbeizhu='" + kucunbeizhu + '\'' +
                 ", zengsongjifen=" + zengsongjifen +
                 ", brandid='" + brandid + '\'' +
@@ -266,6 +298,7 @@ public class Tbasic implements Serializable{
                 ", pagetitle='" + pagetitle + '\'' +
                 ", basicpage='" + basicpage + '\'' +
                 ", pagedescription='" + pagedescription + '\'' +
+                ", classname='" + classname + '\'' +
                 '}';
     }
 }

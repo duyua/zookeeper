@@ -8,15 +8,15 @@ public class Tmembers implements Serializable{
     //主键id
     private String memberid;
     //贵宾会员
-    private String vipmember;
+    private Double vipmember;
     //白金会员
-    private String platinummember;
+    private Double platinummember;
     //金牌会员
-    private String goidmembers;
+    private Double goidmembers;
     //银牌会员
-    private String silvermember;
+    private Double silvermember;
     //普通会员
-    private String regularmembers;
+    private Double regularmembers;
 
     @Override
     public boolean equals(Object o) {
@@ -41,43 +41,43 @@ public class Tmembers implements Serializable{
         this.memberid = memberid;
     }
 
-    public String getVipmember() {
+    public Double getVipmember() {
         return vipmember;
     }
 
-    public void setVipmember(String vipmember) {
+    public void setVipmember(Double vipmember) {
         this.vipmember = vipmember;
     }
 
-    public String getPlatinummember() {
+    public Double getPlatinummember() {
         return platinummember;
     }
 
-    public void setPlatinummember(String platinummember) {
+    public void setPlatinummember(Double platinummember) {
         this.platinummember = platinummember;
     }
 
-    public String getGoidmembers() {
+    public Double getGoidmembers() {
         return goidmembers;
     }
 
-    public void setGoidmembers(String goidmembers) {
+    public void setGoidmembers(Double goidmembers) {
         this.goidmembers = goidmembers;
     }
 
-    public String getSilvermember() {
+    public Double getSilvermember() {
         return silvermember;
     }
 
-    public void setSilvermember(String silvermember) {
+    public void setSilvermember(Double silvermember) {
         this.silvermember = silvermember;
     }
 
-    public String getRegularmembers() {
+    public Double getRegularmembers() {
         return regularmembers;
     }
 
-    public void setRegularmembers(String regularmembers) {
+    public void setRegularmembers(Double regularmembers) {
         this.regularmembers = regularmembers;
     }
 
@@ -85,11 +85,11 @@ public class Tmembers implements Serializable{
     public String toString() {
         return "Tmembers{" +
                 "memberid='" + memberid + '\'' +
-                ", vipmember='" + vipmember + '\'' +
-                ", platinummember='" + platinummember + '\'' +
-                ", goidmembers='" + goidmembers + '\'' +
-                ", silvermember='" + silvermember + '\'' +
-                ", regularmembers='" + regularmembers + '\'' +
+                ", vipmember=" + vipmember +
+                ", platinummember=" + platinummember +
+                ", goidmembers=" + goidmembers +
+                ", silvermember=" + silvermember +
+                ", regularmembers=" + regularmembers +
                 '}';
     }
 }

@@ -106,7 +106,7 @@
             <dl id="product" class="default">
                 <dt>商品管理</dt>
                 <dd>
-                    <a href="../product/list.jhtml" target="iframe">商品管理</a>
+                    <a href="<%=request.getContextPath()%>/basicController/basicye.do" target="iframe">商品管理</a>
                 </dd>
                 <dd>
                     <a href="../product_category/list.jhtml" target="iframe">商品分类</a>
@@ -115,7 +115,7 @@
                     <a href="../parameter_group/list.jhtml" target="iframe">商品参数</a>
                 </dd>
                 <dd>
-                    <a href="../attribute/list.jhtml" target="iframe">商品属性</a>
+                    <a href="<%=request.getContextPath()%>/attribute/selectattribute.do" target="iframe">商品属性</a>
                 </dd>
                 <dd>
                     <a href="../specification/list.jhtml" target="iframe">规格管理</a>
