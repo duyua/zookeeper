@@ -2,10 +2,46 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.jk.mapper.UserMapper">
 
-  <select id="userList" resultType="com.jk.model.UserModel">
-    select * from T_USER
+  <select id="querymemberlist" resultType="com.jk.model.Memberbasic">
+    select m.*,e.gradename from memberbasic m left join memberbasicgrade e on m.memberbasicgradeid=e.gradeid WHERE 1=1
   </select>
-  <select id="frameselectlist" resultType="com.jk.model.FrameWork">
+  <delete id="deletemember">
+    delete from memberbasic where memberbasicid in(${ids})
+  </delete>
+  <insert id="addMembers">
+    INSERT INTO memberbasic(memberbasicid,memberbasiclogname,memberbasicpassword,memberbasicemail,memberbasicintegral,memberbasicbalance,memberbasicgradeid,memberbasicstatus,memberbasiccreatdate,memberbasicmima)VALUES(#{memberbasic.memberbasicid},#{memberbasic.memberbasiclogname},#{memberbasic.memberbasicpassword},#{memberbasic.memberbasicemail},#{memberbasic.memberbasicintegral},#{memberbasic.memberbasicbalance},#{memberbasic.memberbasicgradeid},#{memberbasic.memberbasicstatus}, to_date(#{memberbasic.memberbasiccreatdate},'YYYY-MM-DD'),#{memberbasic.memberbasicmima})
+
+  </insert>
+  <insert id="addBasicdatum">
+    INSERT INTO memberbasicdatum(datumid,datumname,datumgender,datumbrithday,datumregion,datumaddress)VALUES(#{datumid},#{datumname},#{datumgender},to_date(#{datumbrithday},'yyyy-MM-dd hh24:mi:ss'),#{datumregion},#{datumaddress})
+  </insert>
+  <select id="querymemberbasicgrade"  resultType="com.jk.model.Memberbasicgrade">
+    select * FROM memberbasicgrade
+  </select>
+  <select id="queryMemberbasiccomment" resultType="com.jk.model.Memberbasiccomment">
+       select * from memberbasiccomment
+  </select>
+  <select id="queryMemberbasicconsult" resultType="com.jk.model.Memberbasicconsult">
+    select * from memberbasicconsult
+  </select>
+  <insert id="savememberbasicgrade">
+    INSERT INTO memberbasicgrade(gradeid,gradename,gradediscounts,grademonetary,gradestatus)VALUES(#{memberbasicgrade.gradeid},#{memberbasicgrade.gradename},#{memberbasicgrade.gradediscounts},#{memberbasicgrade.grademonetary},#{memberbasicgrade.gradestatus})
+  </insert>
+  <delete id="deletememberbasicgrade">
+    delete from memberbasicgrade where gradeid in (${ids})
+  </delete>
+  <delete id="deletememberbasiccomment">
+       delete from memberbasiccomment where commentid in (${ids})
+  </delete>
+  <delete id="deletememberbasicconsult">
+       delete from memberbasicconsult where consultid in (${ids})
+  </delete>
+  <select id="chakanxinxi" resultType="com.jk.model.Memberbasic"  parameterType="String">
+      select m.*,e.gradename,b.datumname,b.datumgender,b.datumbrithday,b.datumregion,b.datumaddress from memberbasic m
+      left join memberbasicgrade e on m.memberbasicgradeid=e.gradeid
+      left join memberbasicdatum b on m.mdatumid = b.datumid where memberbasicid = #{id}
+  </select>
+  <!--<select id="frameselectlist" resultType="com.jk.model.FrameWork">
     select * FROM framework WHERE  pid=#{pid};
   </select>
   <delete id="framedelete">
@@ -28,5 +64,5 @@ classify=#{frame.classify},advocate=#{frame.advocate},assistant=#{frame.assistan
 fax=#{frame.fax},postcode=#{frame.postcode},urll=#{frame.urll},site=#{frame.site},optionn=#{frame.optionn},describes=#{frame.describes}
 WHERE id=#{frame.id}
 
-    </update>
+    </update>-->
 </mapper>
