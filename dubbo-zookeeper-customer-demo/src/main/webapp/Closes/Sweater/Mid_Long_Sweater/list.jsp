@@ -102,7 +102,7 @@
             <li class="first"><a href="/" id="homeLink" >首页</a></li>
 
             <li>
-                <a href="/Whats_New/list.shtml">最新上架</a>
+                <a href="/Whats_New/list.jsp">最新上架</a>
             </li>
             <li>
                 <a href="/Denim/list.jsp">牛仔风尚</a>
