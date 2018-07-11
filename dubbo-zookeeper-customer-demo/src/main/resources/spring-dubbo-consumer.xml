@@ -33,4 +33,5 @@
 	 <dubbo:reference id="productService" interface="com.jk.service.IProductService" />
 	<dubbo:reference id="indentService" interface="com.jk.service.IIndentService" />
 	<dubbo:reference id="attributeService" interface="com.jk.service.AttributeService" />
+	<dubbo:reference id="payMentService" interface="com.jk.service.PayMentService"  />
 </beans>  

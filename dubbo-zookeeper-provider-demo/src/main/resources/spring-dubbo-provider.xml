@@ -30,4 +30,5 @@
    <dubbo:protocol name="dubbo" port="20880" ></dubbo:protocol>
    <dubbo:service interface="com.jk.service.IUserService" ref="userService"></dubbo:service>
 	<dubbo:service interface="com.jk.service.AttributeService" ref="attributeService" timeout="1200000"></dubbo:service>
+	<dubbo:service interface="com.jk.service.PayMentService" ref="payMentService"  ></dubbo:service>
  </beans>	
