@@ -15,6 +15,8 @@ public class Tattribute implements Serializable{
     private String genreid;
     //属性类型名称
     private String attributegenrename;
+    //业务字段
+    private String classname;
 
     @Override
     public boolean equals(Object o) {
@@ -63,6 +65,14 @@ public class Tattribute implements Serializable{
         this.attributegenrename = attributegenrename;
     }
 
+    public String getClassname() {
+        return classname;
+    }
+
+    public void setClassname(String classname) {
+        this.classname = classname;
+    }
+
     @Override
     public String toString() {
         return "Tattribute{" +
@@ -70,6 +80,7 @@ public class Tattribute implements Serializable{
                 ", attributename='" + attributename + '\'' +
                 ", genreid='" + genreid + '\'' +
                 ", attributegenrename='" + attributegenrename + '\'' +
+                ", classname='" + classname + '\'' +
                 '}';
     }
 }
