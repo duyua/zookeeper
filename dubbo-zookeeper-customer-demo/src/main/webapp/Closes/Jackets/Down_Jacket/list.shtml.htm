@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=UTF-8"utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />	
+	<title>Miss Sixty ä¸­å›½å®˜ç½‘ - ç¾½ç»’å¤–å¥—</title>
+
+	<meta name="description" content="MISS SIXTYè‡´åŠ›äºä¸ºå¹¿å¤§æ‘©ç™»å¥³æ€§å¸¦æ¥å……æ»¡ä¸ªæ€§å“ä½åŠè‰ºæœ¯æ„Ÿçš„ä¸¹å®æ—¶å°šã€‚æ¬¢è¿è®¿é—®MISS SIXTYä¸­å›½å®˜æ–¹ç½‘ç«™ï¼Œå³åˆ»äº†è§£æœ€æ–°æœé¥°å’Œå‰æ²¿æ½®æµèµ„è®¯ï¼Œäº«å—è½»æ¾ä¾¿æ·çš„è´­ç‰©ä½“éªŒã€‚" />
+	<meta name="keywords" content="miss sixtyå®˜ç½‘ï¼Œmiss sixtyï¼Œmisssixty, miss sixtyå®˜æ–¹è´­ç‰©ç½‘ï¼Œæ½®æµç‰›ä»”ï¼Œä¸¹å®ï¼Œå¥³æ€§ç‰›ä»”ï¼Œå“ç‰Œå¥³è£…ï¼Œæœè£…å•†åŸ " />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link rel="stylesheet" href="../../../../img2.misssixty.com.cn/rs/misssixty/v1/www/css/m60_base.css" tppabs="http://img2.misssixty.com.cn/rs/misssixty/v1/www/css/m60_base.css" />
+
+	<script src="../../../../img2.misssixty.com.cn/rs/lib/js/jquery.js" tppabs="http://img2.misssixty.com.cn/rs/lib/js/jquery.js"></script>
+	<script src="../../../../img2.misssixty.com.cn/rs/misssixty/v1/www/js/m60_www_global.min.js" tppabs="http://img2.misssixty.com.cn/rs/misssixty/v1/www/js/m60_www_global.min.js"></script>
+	<script>
+		var pageParams = {
+			catelogId : '2360',
+			pId : 0,
+			pageIndex : 1,
+			pageCount : 0,//æ²¡æœ‰
+			pageShowCount : 6,
+			pageSize : 24,
+			beginPrice : '0',
+			size : '',
+			name : '',
+			orderBy : 'listedDate desc',
+			color : '' ,
+			firstDate : '',
+			inventory : '',
+			keyword :  '',
+			brand : '',
+			interpose : ''
+		},
+		sizeItems = [],
+		tBtnLenght = [];
+
+
+		te$.listShow.pages.init(pageParams);
+		te$.listShow.filter.setSizeRange(sizeItems);
+		te$.listShow.imgType = 2;
+	</script>	
+</head>
+<body>
+	<p id="tip520" class="top_tip">å…¨åœº1399åŒ…é‚®<span onclick="this.parentNode.style.display = 'none';">x</span></p>
+	<div class="header">
+		<div class="top_link_box">
+			<div class="header_content">
+				<div class="header_count">
+					<span id="paramLogin"><em id="emUserName"></em><a id="linkLogin" href="#"></a><em>|</em><a href="#" id="linkReg">æ³¨å†Œ</a></span>
+					<a id="linkAccount" href="#" title="æˆ‘çš„è´¦æˆ·">æˆ‘çš„è´¦æˆ·</a><em>|</em>
+					<a id="linkWishlist" class="link_Wishlist" href="#" title="æˆ‘çš„æ”¶è—">æˆ‘çš„æ”¶è—</a><em>|</em>
+					<a id="linkCart" class="link_bag" href="#" title="è´­ç‰©è¢‹"><span id="cartNum">0</span></a><em>|</em>
+					<a href="javascript:;" class="linkServiceOnlineTop">åœ¨çº¿å®¢æœ</a>
+					<p id="navSearch" class="search2013">
+						<input type="text" id="navIntSearch" value="æœç´¢æ‚¨æ„Ÿå…´è¶£çš„å†…å®¹">	
+						<button type="button">æœç´¢</button>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="header_content">
+			<h1 id="logoOch" class="logo ochirly_logo">
+				<a href="javascript:if(confirm('http://www.misssixty.com.cn/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.misssixty.com.cn/'" tppabs="http://www.misssixty.com.cn/">MISS SIXTY</a>
+			</h1>
+		</div>
+	</div>
+	<script>
+		var m60SetSubMenu = function(str, target) {
+			var items;
+			var outHtml = '<h5>æœ€æŠ¢æ‰‹å•å“æ¨è</h5>';
+			var tmp = '<p><a href="http://www.misssixty.com.cn/p/{sku}.shtml" target="_blank"><img src="{url}" />{title}</a></p>'
+			if (!str) {
+				return false;
+			}
+
+			items = str.split('|');
+			if (items.length > 1) {
+				for (var i = 0; i < items.length; i++) {
+					outHtml += te$.subStitute(tmp, {
+						sku: items[i].substr(0, 15).toUpperCase(),
+						title: items[i].substr(16),
+						url: te$.skuToImgUrl(items[i].substr(0, 15).toUpperCase(), 'n', 5)
+					});
+				}
+			}
+
+			if (target && t$(target)) {
+				t$(target).innerHTML = outHtml;
+			}
+		}
+	</script>
+	
+	<div id="nav2013" class="nav2013">
+		<div class="nav2013_ul_box">
+			<ul>
+				<li class="first"><a href="javascript:if(confirm('http://www.misssixty.com.cn/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.misssixty.com.cn/'" tppabs="http://www.misssixty.com.cn/" id="homeLink" >é¦–é¡µ</a></li>
+
+				<li>
+					<a href="javascript:if(confirm('http://www.misssixty.com.cn/Whats_New/list.shtml  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.misssixty.com.cn/Whats_New/list.shtml'" tppabs="http://www.misssixty.com.cn/Whats_New/list.shtml">æœ€æ–°ä¸Šæ¶</a>
+				</li>
+				<li>
+					<a href="javascript:if(confirm('http://www.misssixty.com.cn/Denim/list.shtml  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.misssixty.com.cn/Denim/list.shtml'" tppabs="http://www.misssixty.com.cn/Denim/list.shtml">ç‰›ä»”é£å°š</a>
+					<div class="sub_menu">
+						<div class="sub_menu_mask">-</div>
+						<div class="sub_menu_cont">
+							<h5>æŒ‰ç§ç±»é€‰è´­</h5>
+							<div class="sub_menu_items">
+								<a href="javascript:if(confirm('http://www.misssixty.com.cn/Denim/Jeans/list.shtml  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.misssixty.com.cn/Denim/Jeans/list.shtml'" tppabs="http://www.misssixty.com.cn/Denim/Jeans/list.shtml">ç‰›ä»”è£¤</a>
+								<br />
+								<a href="javascript:if(confirm('http://www.misssixty.com.cn/Denim/Dresses/list.shtml  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.misssixty.com.cn/Denim/Dresses/list.shtml'" tppabs="http://www.misssixty.com.cn/Denim/Dresses/list.shtml">è¿è¡£è£™</a>
+								<br />
+								<a href="javascript:if(confirm('http://www.misssixty.com.cn/Denim/Shirts/list.shtml  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.misssixty.com.cn/Denim/Shirts/list.shtml'" tppabs="http://www.misssixty.com.cn/Denim/Shirts/list.shtml">è¡¬è¡«</a>
+								<br />
+								<a href="javascript:if(confirm('http://www.misssixty.com.cn/Denim/Jackets/list.shtml  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.misssixty.com.cn/Denim/Jackets/list.shtml'" tppabs="http://www.misssixty.com.cn/Denim/Jackets/list.shtml">å¤–å¥—</a>
+								<br />
+								<a href="javascript:if(confirm('http://www.misssixty.com.cn/Denim/Skirts/list.shtml  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.misssixty.com.cn/Denim/Skirts/list.shtml'" tppabs="http://www.misssixty.com.cn/Denim/Skirts/list.shtml">åŠæˆªè£™</a>
+								<br />
+								<a href="javascript:if(confirm('http://www.misssixty.com.cn/Denim/Culottes/list.shtml  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.misssixty.com.cn/Denim/Culottes/list.shtml'" tppabs="http://www.misssixty.com.cn/Denim/Culottes/list.shtml">è£™è£¤</a>
+								<br />
+								<a href="javascript:if(confirm('http://www.misssixty.com.cn/Denim/Shorts/list.shtml  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.misssixty.com.cn/Denim/Shorts/list.shtml'" tppabs="http://www.misssixty.com.cn/Denim/Shorts/list.shtml">çŸ­è£¤</a>
+								<br />
+								<a href="javascript:if(confirm('http://www.misssixty.com.cn/Denim/Jumpsuits/list.shtml  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.misssixty.com.cn/Denim/Jumpsuits/list.shtml'" tppabs="http://www.misssixty.com.cn/Denim/Jumpsuits/list.shtml">è¿ä½“è£¤</a>
+							</div>
+							<div class="sub_menu_imgs" id="subMenuImgsDenim"></div>
+							<script>
+								m60SetSubMenu('682JJ1940000A06-è•¾ä¸ç»£èŠ±ç´§èº«è£¤é“…ç¬”è£¤é•¿è£¤|682JJ1850000F25-çº¯æ£‰ä¸­è…°é’‰ç ç ´æ´ç›´ç­’è£¤ä¹åˆ†è£¤|682JJ2080000F25-ä¸­è…°ç»£èŠ±ç´§èº«ç‰›ä»”é•¿è£¤|682JJ0670000F25-æ£‰è´¨ä¸­è…°å¼€è¡©å–‡å­è£¤ä¹åˆ†è£¤å­', 'subMenuImgsDenim');
+							</script>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="../../list.shtml.htm" tppabs="http://www.misssixty.com.cn/Closes/list.shtml">æœè£…</a>
+					<div class="sub_menu">
+						<div class="sub_menu_mask">-</div>
+						<div class="sub_menu_cont">
+							<h5>æŒ‰ç§ç±»é€‰è´­</h5>
+							<div class="sub_menu_items">
+								<a href="../../suit/list.shtml.htm" tppabs="http://www.misssixty.com.cn/Closes/suit/list.shtml">å¥—è£…</a>
+								<br />
+								<a href="../../Sweater/list.shtml.htm" tppabs="http://www.misssixty.com.cn/Closes/Sweater/list.shtml">å«è¡£</a>
+								<br />
+								<a href="../../Jeans/list.shtml.htm" tppabs="http://www.misssixty.com.cn/Closes/Jeans/list.shtml">ç‰›ä»”è£¤</a>
+								<br />
+								<a href="../../Dresses/list.shtml.htm" tppabs="http://www.misssixty.com.cn/Closes/Dresses/list.shtml">è¿è¡£è£™</a>
+								<br />
+								<a href="../../Shirts/list.shtml.htm" tppabs="http://www.misssixty.com.cn/Closes/Shirts/list.shtml">è¡¬è¡«</a>
+								<br />
+								<a href="../../T_shirts/list.shtml.htm" tppabs="http://www.misssixty.com.cn/Closes/T_shirts/list.shtml">Tæ¤</a>
+								<br />
+								<a href="../../Pullovers/list.shtml.htm" tppabs="http://www.misssixty.com.cn/Closes/Pullovers/list.shtml">æ¯›ç»‡</a>
+								<br />
+								<a href="../list.shtml.htm" tppabs="http://www.misssixty.com.cn/Closes/Jackets/list.shtml">å¤–å¥—</a>
+							</div>
+							<div class="sub_menu_items">
+								<a href="../../Skirts/list.shtml.htm" tppabs="http://www.misssixty.com.cn/Closes/Skirts/list.shtml">åŠæˆªè£™</a>
+								<br />
+								<a href="../../Culottes/list.shtml.htm" tppabs="http://www.misssixty.com.cn/Closes/Culottes/list.shtml">è£™è£¤</a>
+								<br />
+								<a href="../../Shorts/list.shtml.htm" tppabs="http://www.misssixty.com.cn/Closes/Shorts/list.shtml">çŸ­è£¤</a>
+								<br />
+								<a href="../../Trousers/list.shtml.htm" tppabs="http://www.misssixty.com.cn/Closes/Trousers/list.shtml">ä¸­/é•¿è£¤</a>
+								<br />
+								<a href="../../Jumpsuits/list.shtml.htm" tppabs="http://www.misssixty.com.cn/Closes/Jumpsuits/list.shtml">è¿ä½“è£¤</a>
+								<br />
+							</div>
+							<div class="sub_menu_imgs" id="subMenuImgsCloses"></div>
+							<script>
+								m60SetSubMenu('682SJ1230000A03-çº¯æ£‰å­—æ¯å°èŠ±çŸ­è¢–Tæ¤|682RJ2060000A28-çº¯æ£‰é•‚ç©ºé’ˆç»‡åŠèº«é•¿è£™|682DJ0570000T36-æ¡çº¹æ— è¢–ç‰›ä»”è¿è¡£è£™|682JJ2390000F25-ä½è…°ç ´æ´æ¯›è¾¹ç‰›ä»”çŸ­è£¤|682JJ1100000C27-çº¯æ£‰ä½è…°æ¯›è¾¹ç‰›ä»”çŸ­è£¤', 'subMenuImgsCloses');
+							</script>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:if(confirm('http://www.misssixty.com.cn/Angel_Collection/list.shtml  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.misssixty.com.cn/Angel_Collection/list.shtml'" tppabs="http://www.misssixty.com.cn/Angel_Collection/list.shtml">å¤©ä½¿ç³»åˆ—</a>
+					<div class="sub_menu">
+						<div class="sub_menu_mask">-</div>
+						<div class="sub_menu_cont">
+							<h5>æŒ‰ç§ç±»é€‰è´­</h5>
+							<div class="sub_menu_items">
+								<a href="javascript:if(confirm('http://www.misssixty.com.cn/Angel_Collection/2018FW/list.shtml  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.misssixty.com.cn/Angel_Collection/2018FW/list.shtml'" tppabs="http://www.misssixty.com.cn/Angel_Collection/2018FW/list.shtml">2018FW</a>
+								<br />
+								<a href="javascript:if(confirm('http://www.misssixty.com.cn/Angel_Collection/2018SS/list.shtml  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.misssixty.com.cn/Angel_Collection/2018SS/list.shtml'" tppabs="http://www.misssixty.com.cn/Angel_Collection/2018SS/list.shtml">2018SS</a>
+								<br />
+							</div>
+							<div class="sub_menu_imgs" id="subMenuImgsAngel_Collection"></div>
+							<script>
+								m60SetSubMenu('681SJ3230000A03-å¤©ä½¿ä¹‹ç¿¼å°èŠ±çŸ­è¢–Tæ¤|682WJ2480000F25-å¤©ä½¿ä¹‹ç¿¼ç»£èŠ±ç‰›ä»”å¤–å¥—|682DJ2470000F25-å¤©ä½¿ä¹‹ç¿¼ç»£èŠ±è¿è¡£è£™|682JJ0870000F25-å¤©ä½¿ä¹‹ç¿¼å°èŠ±ç‰›ä»”çŸ­è£¤|682JJ0900000F25-å¤©ä½¿ä¹‹ç¿¼ä¹åˆ†ç‰›ä»”è£¤', 'subMenuImgsAngel_Collection');
+							</script>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:if(confirm('http://www.misssixty.com.cn/Crossover/list.shtml  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.misssixty.com.cn/Crossover/list.shtml'" tppabs="http://www.misssixty.com.cn/Crossover/list.shtml">è·¨ç•Œåˆä½œç³»åˆ—</a>
+					<div class="sub_menu">
+						<div class="sub_menu_mask">-</div>
+						<div class="sub_menu_cont">
+							<h5>æŒ‰ç§ç±»é€‰è´­</h5>
+							<div class="sub_menu_items">
+								<a href="javascript:if(confirm('http://www.misssixty.com.cn/Crossover/Disney/list.shtml  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.misssixty.com.cn/Crossover/Disney/list.shtml'" tppabs="http://www.misssixty.com.cn/Crossover/Disney/list.shtml">è¿ªå£«å°¼ç³»åˆ—</a>
+								<br />
+								<a href="javascript:if(confirm('http://www.misssixty.com.cn/Crossover/Stylist/list.shtml  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.misssixty.com.cn/Crossover/Stylist/list.shtml'" tppabs="http://www.misssixty.com.cn/Crossover/Stylist/list.shtml">é€ å‹å¸ˆç³»åˆ—</a>
+								<br />
+							</div>
+							<div class="sub_menu_imgs" id="subMenuImgsCrossover"></div>
+							<script>
+								m60SetSubMenu('682SJ3180000A03-çº¯æ£‰ç±³å¥‡å°èŠ±çŸ­è¢–Tæ¤|682SJ3170000G24-çº¯æ£‰å°èŠ±å®½æ¾çŸ­è¢–Tæ¤|682DJ3280000F25-ç‰›ä»”çŸ­è¢–è¿è¡£è£™|682KJ3430000F44-ç™¾è¤¶ç½‘çº±é«˜è…°åŠèº«é•¿è£™|682JJ4450000G24-çº¯æ£‰é«˜è…°ç»£èŠ±ç‰›ä»”çŸ­è£¤', 'subMenuImgsCrossover');
+							</script>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:if(confirm('http://www.misssixty.com.cn/Young_Line/list.shtml  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.misssixty.com.cn/Young_Line/list.shtml'" tppabs="http://www.misssixty.com.cn/Young_Line/list.shtml">å¹´è½»çº¿ç³»åˆ—</a>
+					<div class="sub_menu">
+						<div class="sub_menu_mask">-</div>
+						<div class="sub_menu_cont">
+							<h5>æŒ‰ç§ç±»é€‰è´­</h5>
+							<div class="sub_menu_items">
+								<a href="javascript:if(confirm('http://www.misssixty.com.cn/Young_Line/2018AU/list.shtml  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.misssixty.com.cn/Young_Line/2018AU/list.shtml'" tppabs="http://www.misssixty.com.cn/Young_Line/2018AU/list.shtml">2018å¹´ç§‹å­£</a>
+								<br />
+								<a href="javascript:if(confirm('http://www.misssixty.com.cn/Young_Line/2018SU/list.shtml  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.misssixty.com.cn/Young_Line/2018SU/list.shtml'" tppabs="http://www.misssixty.com.cn/Young_Line/2018SU/list.shtml">2018å¹´å¤å­£</a>
+								<br />
+								<a href="javascript:if(confirm('http://www.misssixty.com.cn/Young_Line/2018SP/list.shtml  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.misssixty.com.cn/Young_Line/2018SP/list.shtml'" tppabs="http://www.misssixty.com.cn/Young_Line/2018SP/list.shtml">2018å¹´æ˜¥å­£</a>
+								<br />
+							</div>
+							<div class="sub_menu_imgs" id="subMenuImgsYoung_Line"></div>
+							<script>
+								m60SetSubMenu('682JJ3950000F25-ç‰›ä»”è¿ä½“çŸ­è£¤èƒŒå¸¦è£¤|682PJ2980000Z05-å°èŠ±çœŸä¸åŠå¸¦è¿ä½“çŸ­è£¤|682JJ3690000F25-æ£‰è´¨ç´§èº«ä¹åˆ†ç‰›ä»”è£¤|682SJ2840000D08-å­—æ¯å°èŠ±ç³»å¸¦çŸ­è¢–Tæ¤|682DJ3820000F25-æ–œæ’æ‰£æ— è¢–ç‰›ä»”è¿è¡£è£™', 'subMenuImgsYoung_Line');
+							</script>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:if(confirm('http://www.misssixty.com.cn/summer_sale/list.shtml  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.misssixty.com.cn/summer_sale/list.shtml'" tppabs="http://www.misssixty.com.cn/summer_sale/list.shtml" style="color:#ff0000;font-weight:bold;">2018æ˜¥å¤å¤§å‡ä»·</a>
+				</li>
+
+				<li>
+					<a href="javascript:if(confirm('http://www.misssixty.com.cn/a/w/b/list.shtml  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.misssixty.com.cn/a/w/b/list.shtml'" tppabs="http://www.misssixty.com.cn/a/w/b/list.shtml">æ—¶å°šåšå®¢</a>
+				</li>
+
+				<li>
+					<a href="javascript:if(confirm('http://www.misssixty.com.cn/a/article/w/f/misssixty_member.shtml  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.misssixty.com.cn/a/article/w/f/misssixty_member.shtml'" tppabs="http://www.misssixty.com.cn/a/article/w/f/misssixty_member.shtml">ä¼šå‘˜æƒç›Š</a>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+	<script>
+		te$.topCatalog();
+	</script>
+
+	<div class="product_list">
+		<div class="list_blank">
+			<p>æ²¡æœ‰åˆé€‚çš„å•†å“</p>
+		</div>	
+	</div>
+
+	<div class="footer">
+		<div class="footer_links">
+			<dl>
+				<dt>æœåŠ¡ä¿¡æ¯</dt>
+				<dd>
+					<p><a href="javascript:if(confirm('http://www.misssixty.com.cn/a/article/w/f/misssixty_shopping_process.shtml  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.misssixty.com.cn/a/article/w/f/misssixty_shopping_process.shtml'" tppabs="http://www.misssixty.com.cn/a/article/w/f/misssixty_shopping_process.shtml">è´­ç‰©æµç¨‹</a></p>
+					<p><a href="javascript:if(confirm('http://www.misssixty.com.cn/a/article/w/f/misssixty_delivery.shtml  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.misssixty.com.cn/a/article/w/f/misssixty_delivery.shtml'" tppabs="http://www.misssixty.com.cn/a/article/w/f/misssixty_delivery.shtml">é…é€è¯´æ˜</a></p>
+					<!-- <p><a href="/a/article/w/f/misssixty_pay.shtml">æ”¯ä»˜æ–¹å¼</a></p> -->
+					<p><a href="javascript:if(confirm('http://www.misssixty.com.cn/a/article/w/f/misssixty_return.shtml  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.misssixty.com.cn/a/article/w/f/misssixty_return.shtml'" tppabs="http://www.misssixty.com.cn/a/article/w/f/misssixty_return.shtml">é€€è´§æµç¨‹ </a></p>
+					<!-- <p><a href="#">è®¢å•æŸ¥è¯¢è”ç³»æˆ‘ä»¬</a></p> -->
+				</dd>
+			</dl>
+			<dl>
+				<dt>å…³äºæˆ‘ä»¬</dt>
+				<dd>
+					<!-- <p><a href="#">å…³äºæˆ‘ä»¬</a></p> -->
+					<p><a href="javascript:if(confirm('http://www.misssixty.com.cn/a/article/w/f/misssixty_brand_story.shtml  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.misssixty.com.cn/a/article/w/f/misssixty_brand_story.shtml'" tppabs="http://www.misssixty.com.cn/a/article/w/f/misssixty_brand_story.shtml">å“ç‰Œä»‹ç»</a></p>
+					<p><a href="javascript:if(confirm('http://www.misssixty.com.cn/a/article/w/f/misssixty_member.shtml  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.misssixty.com.cn/a/article/w/f/misssixty_member.shtml'" tppabs="http://www.misssixty.com.cn/a/article/w/f/misssixty_member.shtml">ä¼šå‘˜æƒç›Š</a></p>
+					<!-- <p><a href="#">ä¸“å±è¯•è¡£é—´é¢„çº¦</a></p> -->
+				</dd>
+			</dl>
+			<dl>
+				<dt>è”ç³»æˆ‘ä»¬</dt>
+				<dd>
+					<p><a href="javascript:;" id="linkOnlineServiceBottom">åœ¨çº¿å®¢æœ</a></p>
+					<p>æœåŠ¡çƒ­çº¿  400-886-3018</p>
+				</dd>
+			</dl>
+		</div>
+		<ul class="footer_sns">
+			<li>
+				<a href="javascript:;" class="sns_wechat" id="snsWechat">wechat</a>
+				<p class="qcode_wechat">misssixtyå¾®ä¿¡å…¬ä¼—å·</p>
+			</li>
+			<li><a href="javascript:if(confirm('https://www.facebook.com/MissSixty  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.facebook.com/MissSixty'" tppabs="https://www.facebook.com/MissSixty" class="sns_facebook" target="_blank">facebook</a></li>
+			<li><a href="javascript:if(confirm('https://twitter.com/MissSixtyStyle  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://twitter.com/MissSixtyStyle'" tppabs="https://twitter.com/MissSixtyStyle" class="sns_twitter" target="_blank">twitter</a></li>
+			<li><a href="javascript:if(confirm('https://www.youtube.com/user/MisssixtyTube  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.youtube.com/user/MisssixtyTube'" tppabs="https://www.youtube.com/user/MisssixtyTube" class="sns_youtube" target="_blank">youtube</a></li>
+			<li><a href="javascript:if(confirm('https://instagram.com/misssixtyglobal/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://instagram.com/misssixtyglobal/'" tppabs="https://instagram.com/misssixtyglobal/" class="sns_instagram" target="_blank">instagram</a></li>
+			<li><a href="javascript:if(confirm('https://www.pinterest.com/misssixtystyle/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.pinterest.com/misssixtystyle/'" tppabs="https://www.pinterest.com/misssixtystyle/" class="sns_pinterest" target="_blank">pinterest</a></li>
+			<li><a href="javascript:if(confirm('http://weibo.com/lovemssixty  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://weibo.com/lovemssixty'" tppabs="http://weibo.com/lovemssixty" class="sns_weibo" target="_blank">weibo</a></li>
+			<!-- <a href="#" class="sns_qq" target="_blank">qq</a> -->
+		</ul>
+		<script>
+			(function(){
+				$('#snsWechat').mouseenter(function(){
+					this.parentNode.getElementsByTagName('p')[0].style.display = 'block';
+				}).mouseleave(function(){
+					this.parentNode.getElementsByTagName('p')[0].style.display = 'none';
+				});
+			})();
+		</script>
+		<div class="footer_copyright">&copy; å¹¿å·èµ«æ–¯æ±€æœé¥°æœ‰é™å…¬å¸<a href="javascript:if(confirm('http://www.miibeian.gov.cn/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.miibeian.gov.cn/'" tppabs="http://www.miibeian.gov.cn/" target="_blank">ç²¤ICPå¤‡16013978å·-1</a><a href="javascript:if(confirm('http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44010502000396  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44010502000396'" tppabs="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44010502000396" target="_blank"><img src="../../../../img2.misssixty.com.cn/material/2016/10/31/20161031164826771.png" tppabs="http://img2.misssixty.com.cn/material/2016/10/31/20161031164826771.png" />ç²¤å…¬ç½‘å®‰å¤‡ 44010502000396å·</a></div>
+	</div>
+	<script>
+		te$.system.hasLoad();
+	</script>
+</body>
+</html>
