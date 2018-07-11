@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jk.mapper.ProductMapper">
+
+  <select id="typelist" resultType="com.jk.model.Tclass">
+    select * from T_class
+  </select>
+<select id="queryList" resultType="com.jk.model.Tbasic">
+    SELECT t.*,c.classname FROM t_class c,t_basic t WHERE t.typeid=c.classid
+</select>
+    <select id="pinpailist" resultType="com.jk.model.Tbrand">
+        SELECT * FROM t_brand
+    </select>
+<insert id="addmembers">
+    INSERT INTO t_members(memberid,vipmember,platinummember,goidmembers,silvermember,regularmembers)values(#{t.memberid},
+    #{t.vipmember},#{t.platinummember},#{t.goidmembers},#{t.silvermember},#{t.regularmembers})
+</insert>
+    <insert id="addinsert">
+        INSERT INTO t_basic(basicid,typeid,basicname,basicnumber,basicprice,membered,membersid,
+        basiccost,basicmarket,basicdanjia,basicweight,basicinventory,basiccreatdate,kucunbeizhu,
+        zengsongjifen,brandid,thelabel,setupthe,basicnote,basicsearch,pagetitle,basicpage,pagedescription)
+        values(#{t.basicid},#{t.typeid},#{t.basicname},#{t.basicnumber},#{t.basicprice},#{t.membered},#{t.membersid},
+        #{t.basiccost},#{t.basicmarket},#{t.basicdanjia},#{t.basicweight},#{t.basicinventory},#{t.basiccreatdate},
+        #{t.kucunbeizhu},#{t.zengsongjifen},#{t.brandid},#{t.thelabel},#{t.setupthe},#{t.basicnote},#{t.basicsearch},
+        #{t.pagetitle},#{t.basicpage},#{t.pagedescription})
+    </insert>
+    <delete id="deletebasic">
+        DELETE from t_basic where basicid IN (${basicid})
+    </delete>
+    <select id="querybasicbyid" resultType="com.jk.model.Tbasic">
+       SELECT t.*,c.classname FROM t_class c,t_basic t WHERE t.typeid=c.classid AND t.basicid=${id}
+
+    </select>
+    <delete id="deletemembers">
+     DELETE FROM t_members where memberid=${mem}
+    </delete>
+    <update id="updatemembers" parameterType="com.jk.model.Tmembers">
+       UPDATE t_members SET vipmember=#{vipmember},platinummember=#{platinummember},goidmembers=#{goidmembers},
+              silvermember=#{silvermember},regularmembers=#{regularmembers} WHERE memberid=#{memberid}
+
+    </update>
+    <update id="updatebasic">
+        UPDATE t_basic SET typeid=${t.typeid},basicname=${t.basicname},basicnumber=${t.basicnumber},basicprice=${t.basicprice},
+membered=${t.membered},membersid=${t.membersid},basiccost=${t.basiccost},basicmarket=${t.basicmarket},shid=${t.shid},
+basicdanjia=${t.basicdanjia},basicweight=${t.basicweight},basicinventory=${t.basicinventory},basiccreatdate=${t.basiccreatdate},
+kucunbeizhu=${t.kucunbeizhu},zengsongjifen=${t.zengsongjifen},brandid=${t.brandid},thelabel=${t.thelabel},setupthe=${t.setupthe},
+basicnote=${t.basicnote},basicsearch=${t.basicsearch},pagetitle=${t.pagetitle},basicpage=${t.basicpage},pagedescription=${t.pagedescription},
+WHERE basicid=${t.basicid}
+
+    </update>
+
+</mapper>
