@@ -118,10 +118,10 @@
                     <a href="<%=request.getContextPath()%>/attribute/selectattribute.do" target="iframe">商品属性</a>
                 </dd>
                 <dd>
-                    <a href="../specification/list.jhtml" target="iframe">规格管理</a>
+                    <a href="<%=request.getContextPath()%>/attribute/selectattribute.do" target="iframe">规格管理</a>
                 </dd>
                 <dd>
-                    <a href="../brand/list.jhtml" target="iframe">品牌管理</a>
+                    <a href="<%=request.getContextPath()%>/attribute/selectbrand.do" target="iframe">品牌管理</a>
                 </dd>
                 <dd>
                     <a href="../product_notify/list.jhtml" target="iframe">到货通知</a>
