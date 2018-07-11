@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jk.mapper.AttributeMapper">
+    <select id="selectattributeshow" resultType="com.jk.model.Tattribute">
+       select tt.*,cc.classname from tattribute tt, tclass cc where tt.genreid=cc.classid
+
+    </select>
+    <select id="selecttclass" resultType="com.jk.model.Tclass">
+        select * from tclass
+    </select>
+    <insert id="saveattribute">
+        insert into tattribute(attributeid,attributename,genreid) values(#{attr.attributeid},#{attr.attributename},#{attr.genreid})
+    </insert>
+    <select id="selectchecked" resultType="com.jk.model.Checkattr">
+
+         select  aa.attrname from tattribute tt, checkattr aa where  tt.attributeid=aa.attrid and tt.attributeid=#{attributeid}
+    </select>
+    <insert id="savecheckedattr">
+           insert into checkattr values(#{checkattr.attrid},#{checkattr.attrname})
+    </insert>
+    <delete id="deleteall">
+        delete tattribute where  attributeid in (${ids})
+    </delete>
+    <delete id="deleteallcheck">
+        delete checkattr where  attrid in (${ids})
+    </delete>
+    <select id="selectbrandshow" resultType="com.jk.model.Tbrand">
+          select *  from tbrand
+    </select>
+    <insert id="saveatbrand">
+         insert into tbrand values(#{brr.brandid},#{brr.brandname},#{brr.url})
+    </insert>
+</mapper>
