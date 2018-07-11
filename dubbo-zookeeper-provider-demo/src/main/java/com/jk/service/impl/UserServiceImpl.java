@@ -1,12 +1,15 @@
 package com.jk.service.impl;
 
+
 import com.jk.mapper.UserMapper;
-import com.jk.model.FrameWork;
-import com.jk.model.UserModel;
+import com.jk.model.*;
 import com.jk.service.IUserService;
+import com.jk.util.StringUtil;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -17,42 +20,99 @@ public class UserServiceImpl implements IUserService {
    @Resource
    private UserMapper userMapper;
 
-    public List<UserModel> userList() {
-        return userMapper.userList();
+
+    public List<Memberbasic> querymemberlist() {
+
+        return userMapper.querymemberlist();
     }
 
-    public List<FrameWork> frameselectlist() {
-       Integer pid = 0;
-        return frameselectlist(pid);
+    public void deletemember(String ids) {
+        userMapper.deletemember(ids);
     }
 
-    public int framedelete(String id) {
-        return userMapper.framedelete(id);
-    }
+    public void addMembers(Memberbasic memberbasic) {
 
-    public int frameinsert(FrameWork frame) {
-        if(frame.getPid()==null) {
-            frame.setPid(0);
+        String uuid = StringUtil.getUUID();
+
+        memberbasic.setMemberbasicid(uuid);
+        memberbasic.setMemberbasiccreatdate(new SimpleDateFormat("yyyy-MM-dd").format(new Date()).toString());
+
+
+        if (memberbasic.getMemberbasicstatus()==null){
+            memberbasic.setMemberbasicstatus(2);
         }
-        return userMapper.frameinsert(frame);
+
+
+        userMapper.addMembers(memberbasic);
+
     }
 
-    public FrameWork frameupdateselectye(Integer id) {
-        return userMapper.frameupdateselectye(id);
+    public void addBasicdatum(Memberbasicdatum memberbasicdatum) {
+
+
+        String uuid = StringUtil.getUUID();
+
+
+        memberbasicdatum.setDatumid(uuid);
+
+        userMapper.addBasicdatum(memberbasicdatum);
+
     }
 
-    public int frameupdate(FrameWork frame) {
-        return userMapper.frameupdate(frame);
+    public List<Memberbasicgrade> querymemberbasicgrade() {
+
+        return userMapper.querymemberbasicgrade();
     }
 
-    private List<FrameWork> frameselectlist(Integer pid) {
-        List<FrameWork> list=userMapper.frameselectlist(pid);
-        for (FrameWork framework : list) {
-            List<FrameWork> listt = frameselectlist(framework.getId());
-            if(listt!=null&&listt.size()>0) {
-                framework.setChildren(listt);
-            }
+    public List<Memberbasiccomment> queryMemberbasiccomment() {
+
+
+        return userMapper.queryMemberbasiccomment();
+    }
+
+    public List<Memberbasicconsult> queryMemberbasicconsult() {
+
+
+        return userMapper.queryMemberbasicconsult();
+    }
+
+    public void savememberbasicgrade(Memberbasicgrade memberbasicgrade) {
+
+
+        String uuid = StringUtil.getUUID();
+
+        memberbasicgrade.setGradeid(uuid);
+
+        if(memberbasicgrade.getGrademonetary()==null){
+
+            memberbasicgrade.setGrademonetary(0.0);
+
         }
-        return list;
+
+        userMapper.savememberbasicgrade(memberbasicgrade);
     }
+
+    public void deletememberbasicgrade(String ids) {
+
+
+        userMapper.deletememberbasicgrade(ids);
+    }
+
+    public void deletememberbasiccomment(String ids) {
+        userMapper.deletememberbasiccomment(ids);
+    }
+
+    public void deletememberbasicconsult(String ids) {
+
+        userMapper.deletememberbasicconsult(ids);
+
+    }
+
+    public Memberbasic chakanxinxi(String id) {
+
+
+        return userMapper.chakanxinxi(id);
+    }
+
+
 }

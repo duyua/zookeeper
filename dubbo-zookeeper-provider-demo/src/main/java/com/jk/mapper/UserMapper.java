@@ -1,21 +1,33 @@
 package com.jk.mapper;
 
-import com.jk.model.FrameWork;
-import com.jk.model.UserModel;
+import com.jk.model.*;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
 public interface UserMapper {
 
-    List<UserModel> userList();
+    List<Memberbasic> querymemberlist();
 
-    List<FrameWork> frameselectlist(Integer pid);
+    void deletemember(@Param("ids") String ids);
 
-    int framedelete(@Param("id") String id);
-    int frameinsert(@Param("frame") FrameWork frame);
+    void addMembers(@Param("memberbasic") Memberbasic memberbasic);
 
-    FrameWork frameupdateselectye(Integer id);
+    void addBasicdatum(Memberbasicdatum memberbasicdatum);
 
-    int frameupdate(@Param("frame") FrameWork frame);
+    List<Memberbasicgrade> querymemberbasicgrade();
+
+    List<Memberbasiccomment> queryMemberbasiccomment();
+
+    List<Memberbasicconsult> queryMemberbasicconsult();
+
+    void savememberbasicgrade(@Param("memberbasicgrade") Memberbasicgrade memberbasicgrade);
+
+    void deletememberbasicgrade(@Param("ids") String ids);
+
+    void deletememberbasiccomment(@Param("ids") String ids);
+
+    void deletememberbasicconsult(@Param("ids") String ids);
+
+    Memberbasic chakanxinxi(@Param("id") String id);
 }
