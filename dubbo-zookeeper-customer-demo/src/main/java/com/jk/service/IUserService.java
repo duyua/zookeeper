@@ -1,7 +1,6 @@
 package com.jk.service;
 
-import com.jk.model.FrameWork;
-import com.jk.model.UserModel;
+import com.jk.model.*;
 
 import java.util.List;
 
@@ -10,15 +9,27 @@ import java.util.List;
  */
 public interface IUserService {
 
-    List<UserModel> userList();
+    List<Memberbasic> querymemberlist();
 
-    List<FrameWork> frameselectlist();
+    void deletemember(String ids);
 
-    int framedelete(String id);
+    void addMembers(Memberbasic memberbasic);
 
-    int frameinsert(FrameWork frame);
+    void addBasicdatum(Memberbasicdatum memberbasicdatum);
 
-    FrameWork frameupdateselectye(Integer id);
+    List<Memberbasicgrade> querymemberbasicgrade();
 
-    int frameupdate(FrameWork frame);
+    List<Memberbasiccomment> queryMemberbasiccomment();
+
+    List<Memberbasicconsult> queryMemberbasicconsult();
+
+    void savememberbasicgrade(Memberbasicgrade memberbasicgrade);
+
+    void deletememberbasicgrade(String ids);
+
+    void deletememberbasiccomment(String ids);
+
+    void deletememberbasicconsult(String ids);
+
+    Memberbasic chakanxinxi(String id);
 }

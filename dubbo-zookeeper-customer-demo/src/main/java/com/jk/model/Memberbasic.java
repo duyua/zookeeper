@@ -2,52 +2,28 @@ package com.jk.model;
 
 import java.io.Serializable;
 
-//会员基本信息表
 public class Memberbasic implements Serializable{
-    private static final long serialVersionUID = 5223296429381395417L;
-    //主键id
-    private String memberbasicid;
-    //会员登陆名称
-    private String memberbasiclogname;
-    //会员密码
-    private String memberbasicpassword;
-    //会员邮箱
-    private String memberbasicemail;
-    //会员积分
-    private Integer memberbasicintegral;
-    //会员账号余额
-    private Double memberbasicbalance;
-    //会员关联等级表id
-    private String memberbasicgradeid;
-    //会员状态  1、启用2、未启用
-    private Integer memberbasicstatus;
-    //会员消费总金额
-    private Double memberbasicmonetary;
-    //会员咨询数量
-    private Integer memberbasicinquiries;
-    //关联收藏商品表id
-    private String memberbasiccollectid;
-    //会员评论数量
-    private Integer memberbasiccomment;
-    //创建时间
-    private String memberbasiccreatdate;
-    //最后登陆时间
-    private String memberbasiclastlogdate;
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+    private static final long serialVersionUID = -5875333372550837864L;
 
-        Memberbasic that = (Memberbasic) o;
+    private String memberbasicid  ;                 // 主键id
+    private String memberbasiclogname;             // 会员登陆名称
+    private String memberbasicpassword ;           // 会员密码
+    private String memberbasicmima;                 //确认密码
+    private String memberbasicemail ;               // 会员邮箱
+    private Integer memberbasicintegral;           //会员积分
+    private Double memberbasicbalance;             // 会员账号余额
+    private String memberbasicgradeid ;            //会员关联等级表id
+    private Integer memberbasicstatus ;           // 会员状态  1、启用2、未启用
+    private Double memberbasicmonetary ;          // 类型    会员消费总金额
+    private Integer memberbasicinquiries;         //  会员咨询数量
+    private String memberbasiccollectid ;         // 关联收藏商品表id
+    private Integer memberbasiccomment  ;         // 会员评论数量
+    private String memberbasiccreatdate  ;        //创建时间
+    private String memberbasiclastlogdate  ;     //最后登陆时间
 
-        return memberbasicid.equals(that.memberbasicid);
-    }
 
-    @Override
-    public int hashCode() {
-        return memberbasicid.hashCode();
-    }
+    private String gradename; //会员等级业务字段
 
     public String getMemberbasicid() {
         return memberbasicid;
@@ -146,7 +122,7 @@ public class Memberbasic implements Serializable{
     }
 
     public String getMemberbasiccreatdate() {
-        return memberbasiccreatdate;
+        return memberbasiccreatdate.substring(0,10);
     }
 
     public void setMemberbasiccreatdate(String memberbasiccreatdate) {
@@ -161,12 +137,44 @@ public class Memberbasic implements Serializable{
         this.memberbasiclastlogdate = memberbasiclastlogdate;
     }
 
+    public String getGradename() {
+        return gradename;
+    }
+
+    public void setGradename(String gradename) {
+        this.gradename = gradename;
+    }
+
+    public String getMemberbasicmima() {
+        return memberbasicmima;
+    }
+
+    public void setMemberbasicmima(String memberbasicmima) {
+        this.memberbasicmima = memberbasicmima;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Memberbasic that = (Memberbasic) o;
+
+        return memberbasicid.equals(that.memberbasicid);
+    }
+
+    @Override
+    public int hashCode() {
+        return memberbasicid.hashCode();
+    }
+
     @Override
     public String toString() {
         return "Memberbasic{" +
                 "memberbasicid='" + memberbasicid + '\'' +
                 ", memberbasiclogname='" + memberbasiclogname + '\'' +
                 ", memberbasicpassword='" + memberbasicpassword + '\'' +
+                ", memberbasicmima='" + memberbasicmima + '\'' +
                 ", memberbasicemail='" + memberbasicemail + '\'' +
                 ", memberbasicintegral=" + memberbasicintegral +
                 ", memberbasicbalance=" + memberbasicbalance +
@@ -178,6 +186,7 @@ public class Memberbasic implements Serializable{
                 ", memberbasiccomment=" + memberbasiccomment +
                 ", memberbasiccreatdate='" + memberbasiccreatdate + '\'' +
                 ", memberbasiclastlogdate='" + memberbasiclastlogdate + '\'' +
+                ", gradename='" + gradename + '\'' +
                 '}';
     }
 }

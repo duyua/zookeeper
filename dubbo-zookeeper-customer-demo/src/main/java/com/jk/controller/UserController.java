@@ -1,7 +1,6 @@
 package com.jk.controller;
 
-import com.jk.model.FrameWork;
-import com.jk.model.UserModel;
+import com.jk.model.*;
 import com.jk.service.IUserService;
 import com.jk.utils.ExportExcel;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,103 +15,179 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping("/userController")
 public class UserController {
     @Resource
     private IUserService userService;
-    @RequestMapping("/userList")
+
+    @RequestMapping("tomember")
+    public String tomember(){
+        return "/members/memberlist";
+    }
+    @RequestMapping("addmembers")
+    public String addmembers(){
+        return "/members/addmember";
+    }
+    @RequestMapping("getmemberbasicgrade")
+    public String getmemberbasicgrade(){
+        return "/members/memberbasicgradelist";
+    }
+    @RequestMapping("getmemberbasiccomment")
+    public String getmemberbasiccomment(){
+        return "/members/memberbasiccommentlist";
+    }
+    @RequestMapping("getmemberbasicconsult")
+    public String getmemberbasicconsult(){
+        return "/members/memberbasicconsultlist";
+    }
+    @RequestMapping("tomemberbasicgrade")
+    public String tomemberbasicgrade(){
+        return "/members/addmemberbasicgrade";
+    }
+
+
+    @RequestMapping("/querymemberlist")
     @ResponseBody
-    public List<UserModel> userList(){
-        List<UserModel> list=userService.userList();
+   public List<Memberbasic> querymemberlist(){
+
+        List<Memberbasic> list = userService.querymemberlist();
+
         return list;
     }
-    @RequestMapping("/operye")
-    public String operye(){
-        return "frameworklist";
-    }
-    @RequestMapping("/frameselectlist")
+
+    @RequestMapping("/deletemember")
     @ResponseBody
-    public List<FrameWork> frameselectlist(){
-        List<FrameWork> list=userService.frameselectlist();
-        return list;
-    }
-    @RequestMapping("/framedelete")
-    @ResponseBody
-    public Integer framedelete(String id) {
-        int i=userService.framedelete(id);
-        return i;
+    public Map<String,Object> deletemember(String ids){
 
-    }
-    @RequestMapping("/frameinsertselectye")
-    public String frameinsertselectye(){
-        return "frameinsert";
-    }
-    @RequestMapping("/frameinsert")
-    @ResponseBody
-    public Integer frameinsert(FrameWork frame) {
-        int i=userService.frameinsert(frame);
-        return i;
-
-    }
-    @RequestMapping("/frameupdateselectye")
-    public ModelAndView frameupdateselectye(Integer id) {
-        FrameWork frame=userService.frameupdateselectye(id);
-        ModelAndView mo=new ModelAndView();
-        mo.addObject("list", frame);
-        mo.setViewName("frameupdate");
-        return mo;
-
-    }
-    @RequestMapping("/frameupdate")
-    @ResponseBody
-    public Integer frameupdate(FrameWork frame) {
-        int i=userService.frameupdate(frame);
-        return i;
-
-    }
-
-    @RequestMapping("/framepoi")
-    public void fangyuanpoi(HttpServletResponse response, HttpServletRequest request) {
-
-        HashMap<String, Object> params = new HashMap<String,Object>();
-        params.put("page", 1);
-        params.put("rows",3);
-
-
-        List<FrameWork> list=userService.frameselectlist();
-        String [] rowName={"text","coding","abbreviation","classify","advocate","assistant","phone","interior","fax","postcode","urll","site","optionn","describes"};
-
-        List <Object[]> dataList=new ArrayList<Object[]>();
-        Object[] obj=null;
-        for (int i = 0; i < list.size(); i++) {
-            obj = new Object[rowName.length];
-            obj[0]=list.get(i).getText();
-            obj[1]=list.get(i).getCoding();
-            obj[2]=list.get(i).getAbbreviation();
-            obj[3]=list.get(i).getClassify();
-            obj[4]=list.get(i).getAdvocate();
-            obj[5]=list.get(i).getAssistant();
-            obj[6]=list.get(i).getPhone();
-            obj[7]=list.get(i).getInterior();
-            obj[8]=list.get(i).getFax();
-            obj[9]=list.get(i).getUrll();
-            obj[10]=list.get(i).getSite();
-            obj[11]=list.get(i).getOptionn();
-            obj[12]=list.get(i).getDescribes();
-
-            dataList.add(obj);
-        }
-
-        ExportExcel exportExcel = new ExportExcel("组织机构信息表",rowName, dataList, response);
+        Map<String, Object> map = new HashMap<String, Object>();
         try {
-            exportExcel.export();
+            userService.deletemember(ids);
+            map.put("success", true);
         } catch (Exception e) {
             e.printStackTrace();
+            map.put("success", false);
         }
 
+        return map;
+
+    }
+    @RequestMapping("/addMembers")
+    @ResponseBody
+    public String addMembers(Memberbasic memberbasic){
+
+
+        userService.addMembers(memberbasic);
+
+        return "1";
 
     }
 
+    @RequestMapping("/addBasicdatum")
+    @ResponseBody
+    public String addBasicdatum(Memberbasicdatum memberbasicdatum){
+
+
+        userService.addBasicdatum(memberbasicdatum);
+
+        return "1";
+
+    }
+
+    @RequestMapping("querymemberbasicgrade")
+    @ResponseBody
+    public List<Memberbasicgrade> querymemberbasicgrade(){
+
+        List<Memberbasicgrade> list = userService.querymemberbasicgrade();
+
+        return list;
+    }
+    @RequestMapping("queryMemberbasiccomment")
+    @ResponseBody
+    public List<Memberbasiccomment> queryMemberbasiccomment(){
+
+        List<Memberbasiccomment> memberbasiccommentlist = userService.queryMemberbasiccomment();
+
+        return memberbasiccommentlist;
+    }
+    @RequestMapping("queryMemberbasicconsult")
+    @ResponseBody
+    public List<Memberbasicconsult> queryMemberbasicconsult(){
+
+        List<Memberbasicconsult> memberbasicconsultlist = userService.queryMemberbasicconsult();
+
+        return memberbasicconsultlist;
+    }
+
+    @RequestMapping("savememberbasicgrade")
+    @ResponseBody
+    public String savememberbasicgrade(Memberbasicgrade memberbasicgrade){
+
+        userService.savememberbasicgrade(memberbasicgrade);
+
+        return "1";
+    }
+
+    @RequestMapping("/deletememberbasicgrade")
+    @ResponseBody
+    public Map<String,Object> deletememberbasicgrade(String ids){
+
+        Map<String, Object> map = new HashMap<String, Object>();
+        try {
+            userService.deletememberbasicgrade(ids);
+            map.put("success", true);
+        } catch (Exception e) {
+            e.printStackTrace();
+            map.put("success", false);
+        }
+
+        return map;
+
+    }
+    @RequestMapping("/deletememberbasiccomment")
+    @ResponseBody
+    public Map<String,Object> deletememberbasiccomment(String ids){
+
+        Map<String, Object> map = new HashMap<String, Object>();
+        try {
+            userService.deletememberbasiccomment(ids);
+            map.put("success", true);
+        } catch (Exception e) {
+            e.printStackTrace();
+            map.put("success", false);
+        }
+
+        return map;
+
+    }
+    @RequestMapping("/deletememberbasicconsult")
+    @ResponseBody
+    public Map<String,Object> deletememberbasicconsult(String ids){
+
+        Map<String, Object> map = new HashMap<String, Object>();
+        try {
+            userService.deletememberbasicconsult(ids);
+            map.put("success", true);
+        } catch (Exception e) {
+            e.printStackTrace();
+            map.put("success", false);
+        }
+
+        return map;
+
+    }
+    @RequestMapping("chakanxinxi")
+    public ModelAndView chakanxinxi(String id){
+        ModelAndView mav = new ModelAndView();
+
+        Memberbasic memberbasic = userService.chakanxinxi(id);
+
+        mav.addObject("chakan",memberbasic);
+
+        mav.setViewName("members/membermanagement");
+
+        return mav;
+    }
 }
