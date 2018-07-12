@@ -15,7 +15,7 @@ public class Tbasic implements Serializable{
     private String basicnumber;
     //售价
     private Double basicprice;
-    //是否启用会员价
+    //是否启用会员
     private Integer membered;
     //会员价格表id
     private String membersid;
@@ -26,7 +26,7 @@ public class Tbasic implements Serializable{
     //商品图片展示表id
     private String shid;
     //单价
-    private Double basicdanjia;
+    private String basicdanjia;
     //重量
     private Double basicweight;
     //库存
@@ -40,9 +40,9 @@ public class Tbasic implements Serializable{
     //品牌表id
     private String brandid;
     //(1.热销,2.最新) 标签
-    private Integer thelabel;
+    private String thelabel;
     //(1.是,2.否) 设置
-    private Integer setupthe;
+    private String setupthe;
     //备注
     private String basicnote;
     //搜索关键词
@@ -151,11 +151,11 @@ public class Tbasic implements Serializable{
         this.shid = shid;
     }
 
-    public Double getBasicdanjia() {
+    public String getBasicdanjia() {
         return basicdanjia;
     }
 
-    public void setBasicdanjia(Double basicdanjia) {
+    public void setBasicdanjia(String basicdanjia) {
         this.basicdanjia = basicdanjia;
     }
 
@@ -199,19 +199,19 @@ public class Tbasic implements Serializable{
         this.brandid = brandid;
     }
 
-    public Integer getThelabel() {
+    public String getThelabel() {
         return thelabel;
     }
 
-    public void setThelabel(Integer thelabel) {
+    public void setThelabel(String thelabel) {
         this.thelabel = thelabel;
     }
 
-    public Integer getSetupthe() {
+    public String getSetupthe() {
         return setupthe;
     }
 
-    public void setSetupthe(Integer setupthe) {
+    public void setSetupthe(String setupthe) {
         this.setupthe = setupthe;
     }
 

@@ -1,9 +1,6 @@
 package com.jk.service;
 
-import com.jk.model.Tbasic;
-import com.jk.model.Tbrand;
-import com.jk.model.Tclass;
-import com.jk.model.Tmembers;
+import com.jk.model.*;
 
 import java.util.List;
 
@@ -22,4 +19,12 @@ public interface IProductService {
     Tbasic querybasicbyid(String id);
 
     Integer updatebasic(Tbasic tbasic, Tmembers tmembers);
+
+    Integer deleteclass(String id);
+
+    Integer updateclass(Tclass tclass, String fu);
+
+    List<BrandClass> guanlianlist(String id);
+
+    Integer addclass(Tclass tclass, String fu);
 }

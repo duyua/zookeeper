@@ -23,13 +23,13 @@
         <form id="jibenxiugaiid">
                   <input type="hidden" value="${bas.basicid}" name="basicid">
                   <input type="hidden" value="${bas.membersid}" name="memberid">
-            <table cellpadding="0" border="1" >
+            <table cellpadding="0" border="1" cellspacing="0" >
                 <tr>
                     <td>
                         商品分类：
                     </td>
                     <td>
-                        <select class="easyui-combobox" name="typeid"  data-options="valueField:'classid',textField:'classname',url:'<%=request.getContextPath()%>/basicController/typelist.do'" >
+                        <select class="easyui-combobox" name="typeid"  data-options="valueField:'id',textField:'name',url:'<%=request.getContextPath()%>/basicController/typelist.do'" >
                         <option value="${bas.typeid}"></option></select>
                     </td>
                     <td>
@@ -251,9 +251,15 @@
             url: "<%=request.getContextPath()%>/basicController/basicupdate.do",
             type: "post",
             data: $("#jibenxiugaiid").serialize(),
+            dataType:"json",
             success: function (str) {
+                if(str==1){
+                    $("#jibenxiugaiid").reset();
+                    $.messager.alert('温馨提示', '修改成功');
+                }else{
+                    $.messager.alert('警告', '修改失败');
+                }
 
-                $.messager.alert('警告', '修改成功');
 
             },
             error: function () {

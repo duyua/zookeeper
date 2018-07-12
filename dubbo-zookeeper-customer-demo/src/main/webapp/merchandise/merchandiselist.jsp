@@ -35,11 +35,6 @@
 <table id="moduletableid"></table>
 
 
-<div id="moduleinsertdivid"></div>
-<div id="moduleupdatedivid"></div>
-<div id="rolemoduledivid"></div>
-<div id="roleusermoduledivid"></div>
-
 
 <script type="text/javascript">
 
@@ -86,7 +81,7 @@
                     {field:'basiccreatdate',title:'创建时间',width:200,},
                     {field:'ck',title:'操作',width:200,
                         formatter: function(value,row,index){
-                        return "<a href='<%=request.getContextPath()%>/basicController/merchandisupdateye.do?id=\""+row.basicid+"\"' target='iframe'>编辑</a>"
+                        return "<a href='<%=request.getContextPath()%>/basicController/merchandisupdateye.do?id="+row.basicid+"' target='iframe'>编辑</a>"
 
                            /* return "<button onclick='shangpinchaxunid(\""+row.basicid+"\")' type='button' class='btn btn-default'>\n"+
                                 "     <span class='glyphicon glyphicon-pencil' aria-hidden='true'></span>修改\n" +

@@ -9,8 +9,7 @@ public class Tbrand implements Serializable{
     private String brandid;
     //品牌名称
     private String brandname;
-     //品牌地址
-     private String url;
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -42,20 +41,11 @@ public class Tbrand implements Serializable{
         this.brandname = brandname;
     }
 
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
     @Override
     public String toString() {
         return "Tbrand{" +
                 "brandid='" + brandid + '\'' +
                 ", brandname='" + brandname + '\'' +
-                ", url='" + url + '\'' +
                 '}';
     }
 }
