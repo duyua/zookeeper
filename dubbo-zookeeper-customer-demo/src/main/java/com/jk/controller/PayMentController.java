@@ -7,12 +7,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 @Controller
 @RequestMapping("payMent")
 public class PayMentController {
-    @Autowired
+    @Resource
     private PayMentService payMentService;
 
     /**
@@ -24,7 +25,7 @@ public class PayMentController {
     public String queryPayMent(){
 
         List  list=payMentService.queryPayMent();
-        System.out.println("++++++++++++++"+list.toString());
+
 
         return JSON.toJSONString(list);
     }

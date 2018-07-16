@@ -1,10 +1,7 @@
 package com.jk.service.impl;
 
 import com.jk.mapper.ProductMapper;
-import com.jk.model.Tbasic;
-import com.jk.model.Tbrand;
-import com.jk.model.Tclass;
-import com.jk.model.Tmembers;
+import com.jk.model.*;
 import com.jk.service.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -41,9 +38,25 @@ public class ProductServiceImpl implements IProductService {
      * @return
      */
     public List<Tclass> typelist() {
+
+      //  String pid="0";
         List<Tclass> list=productMapper.typelist();
+
         return list;
     }
+    /**
+     * 递归查询分类列表
+     */
+   /* public List<Tclass> typelist(String pid){
+        List<Tclass> list=productMapper.typelist(pid);
+        for(Tclass tclass:list){
+            List<Tclass> typelist = typelist(tclass.getId());
+            if(typelist.size()>0&&typelist!=null){
+                tclass.setChildren(typelist);
+            }
+        }
+        return list;
+    }*/
 
     /**
      * 查询商品品牌列表
@@ -55,7 +68,7 @@ public class ProductServiceImpl implements IProductService {
     }
 
     public void addinsert(Tbasic tbasic,Tmembers tmembers) {
-        if(tbasic.getMembered()==1){
+        if(tbasic.getMembered()!=null){
             String s = UUID.randomUUID().toString().replaceAll("-", "");
             if(tmembers.getGoidmembers()==null){
                  tmembers.setGoidmembers(1.0);
@@ -82,6 +95,10 @@ public class ProductServiceImpl implements IProductService {
 
         String ft = sdf.format(new Date());
         tbasic.setBasiccreatdate(ft);
+        if(tbasic.getMembered()==null){
+            tbasic.setMembered(0);
+            tbasic.setMembersid("null");
+        }
 
         productMapper.addinsert(tbasic);
     }
@@ -97,7 +114,7 @@ public class ProductServiceImpl implements IProductService {
     }
 
     public Integer updatebasic(Tbasic tbasic, Tmembers tmembers) {
-        if(tbasic.getMembered()==1){
+        if(tbasic.getMembered()!=null){
             if(tmembers.getGoidmembers()==null){
                 tmembers.setGoidmembers(1.0);
             }
@@ -119,7 +136,124 @@ public class ProductServiceImpl implements IProductService {
         }else{
            productMapper.deletemembers(tmembers.getMemberid());
         }
+        if(tbasic.getMembered()==null){
+            tbasic.setMembered(0);
+            tbasic.setMembersid("null");
+        }
+        System.out.println(tbasic);
       Integer i=  productMapper.updatebasic(tbasic);
         return i;
+    }
+
+    public Integer deleteclass(String id) {
+        Integer i=productMapper.deleteclass(id);
+        return i;
+    }
+
+    public Integer updateclass(Tclass tclass, String fu) {
+         productMapper.deletebrandclass(tclass.getId());
+        if (fu!=null) {
+            String[] brandid = fu.split(",");
+            for (int i=0;i<brandid.length;i++){
+                String uuid = UUID.randomUUID().toString().replaceAll("-", "");
+                productMapper.addbrandclass(uuid,tclass.getId(),brandid[i]);
+            }
+        }
+        Integer i=productMapper.updateclass(tclass);
+        return i;
+    }
+
+    public List<BrandClass> guanlianlist(String id) {
+        return productMapper.guanlianlist(id);
+    }
+
+    public Integer addclass(Tclass tclass, String fu) {
+        String ids=UUID.randomUUID().toString().replaceAll("-","");
+        if (fu!=null) {
+            String[] brandid = fu.split(",");
+            for (int i=0;i<brandid.length;i++){
+                String uuid = UUID.randomUUID().toString().replaceAll("-", "");
+                productMapper.addbrandclass(uuid,ids,brandid[i]);
+            }
+        }
+        tclass.setId(ids);
+        Integer i=productMapper.addclass(tclass);
+        return i;
+    }
+
+    public List<Tparameter> parameterlist() {
+        String ll="";
+        List<Tparameter> list=productMapper.parameterlist();
+        for (int i=0;i<list.size();i++){
+
+            List<Parameterdetailed> listpara=productMapper.parameterdetailed(list.get(i).getParameterid());
+             for (int j=0;j<listpara.size();j++){
+                 ll+=" "+listpara.get(j).getMinutename();
+
+             }
+
+            list.get(i).setMinutename(ll);
+              ll="";
+        }
+        return list;
+    }
+
+    public Integer deleteparameter(String parameterid) {
+        Integer i=productMapper.deleteparameter(parameterid);
+        return i;
+    }
+
+    public Integer addparameter(Tparameter tparameter,String paixu) {
+        String uu=UUID.randomUUID().toString().replaceAll("-","");
+        String [] ziduan=tparameter.getMinutename().split(",");
+        String []  pai=paixu.split(",");
+        for (int i=0;i<ziduan.length;i++){
+            String st=UUID.randomUUID().toString().replaceAll("-","");
+                   Parameterdetailed  parameterdetailed=new Parameterdetailed();
+                   parameterdetailed.setDetailedid(st);
+                   parameterdetailed.setDetailedparameterid(uu);
+                   parameterdetailed.setMinutename(ziduan[i]);
+                   parameterdetailed.setDetailedsort(Integer.parseInt(pai[i]));
+                   productMapper.addparameterdetailed(parameterdetailed);
+        }
+        tparameter.setParameterid(uu);
+        Integer i= productMapper.addparameter(tparameter);
+        return i;
+    }
+
+    public Tparameter parameterlistbyid(String id) {
+        String sty="";
+        String  xuxu="";
+        Tparameter list=productMapper.parameterlistbyid(id);
+        List<Parameterdetailed> listpara=productMapper.parameterdetailed(list.getParameterid());
+        for (int j=0;j<listpara.size();j++){
+            sty+=","+listpara.get(j).getMinutename();
+            xuxu+=","+listpara.get(j).getDetailedsort();
+        }
+        sty=sty.substring(1);
+        xuxu=xuxu.substring(1);
+        list.setDetailedsort(xuxu);
+        list.setMinutename(sty);
+        return list;
+    }
+
+    public Integer updateparameter(Tparameter tparameter) {
+        productMapper.deleteparameterdetailed(tparameter.getParameterid());
+         String paixu=tparameter.getDetailedsort();
+        String []  pai=paixu.split(",");
+        String [] ziduan=tparameter.getMinutename().split(",");
+        for (int i=0;i<ziduan.length;i++){
+            String st=UUID.randomUUID().toString().replaceAll("-","");
+            Parameterdetailed  parameterdetailed=new Parameterdetailed();
+            parameterdetailed.setDetailedid(st);
+            parameterdetailed.setDetailedparameterid(tparameter.getParameterid());
+            parameterdetailed.setMinutename(ziduan[i]);
+            parameterdetailed.setDetailedsort(Integer.parseInt(pai[i]));
+            productMapper.addparameterdetailed(parameterdetailed);
+        }
+
+
+
+        return productMapper.updateparameter(tparameter);
     }
 }

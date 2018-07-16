@@ -3,20 +3,20 @@
 <mapper namespace="com.jk.mapper.ProductMapper">
 
   <select id="typelist" resultType="com.jk.model.Tclass">
-    select * from T_class
+    select * from Tclass
   </select>
 <select id="queryList" resultType="com.jk.model.Tbasic">
-    SELECT t.*,c.classname FROM t_class c,t_basic t WHERE t.typeid=c.classid
+    SELECT t.*,c.name classname FROM tclass c,tbasic t WHERE t.typeid=c.id
 </select>
     <select id="pinpailist" resultType="com.jk.model.Tbrand">
-        SELECT * FROM t_brand
+        SELECT * FROM tbrand
     </select>
 <insert id="addmembers">
-    INSERT INTO t_members(memberid,vipmember,platinummember,goidmembers,silvermember,regularmembers)values(#{t.memberid},
+    INSERT INTO tmembers(memberid,vipmember,platinummember,goidmembers,silvermember,regularmembers)values(#{t.memberid},
     #{t.vipmember},#{t.platinummember},#{t.goidmembers},#{t.silvermember},#{t.regularmembers})
 </insert>
     <insert id="addinsert">
-        INSERT INTO t_basic(basicid,typeid,basicname,basicnumber,basicprice,membered,membersid,
+        INSERT INTO tbasic(basicid,typeid,basicname,basicnumber,basicprice,membered,membersid,
         basiccost,basicmarket,basicdanjia,basicweight,basicinventory,basiccreatdate,kucunbeizhu,
         zengsongjifen,brandid,thelabel,setupthe,basicnote,basicsearch,pagetitle,basicpage,pagedescription)
         values(#{t.basicid},#{t.typeid},#{t.basicname},#{t.basicnumber},#{t.basicprice},#{t.membered},#{t.membersid},
@@ -25,28 +25,72 @@
         #{t.pagetitle},#{t.basicpage},#{t.pagedescription})
     </insert>
     <delete id="deletebasic">
-        DELETE from t_basic where basicid IN (${basicid})
+        DELETE  tbasic where basicid IN (#{basicid})
     </delete>
     <select id="querybasicbyid" resultType="com.jk.model.Tbasic">
-       SELECT t.*,c.classname FROM t_class c,t_basic t WHERE t.typeid=c.classid AND t.basicid=${id}
+       SELECT t.*,c.name classname FROM tclass c,tbasic t WHERE t.typeid=c.id AND t.basicid=#{id}
 
     </select>
     <delete id="deletemembers">
-     DELETE FROM t_members where memberid=${mem}
+     DELETE  tmembers where memberid=#{mem}
     </delete>
     <update id="updatemembers" parameterType="com.jk.model.Tmembers">
-       UPDATE t_members SET vipmember=#{vipmember},platinummember=#{platinummember},goidmembers=#{goidmembers},
+       UPDATE tmembers SET vipmember=#{vipmember},platinummember=#{platinummember},goidmembers=#{goidmembers},
               silvermember=#{silvermember},regularmembers=#{regularmembers} WHERE memberid=#{memberid}
 
     </update>
     <update id="updatebasic">
-        UPDATE t_basic SET typeid=${t.typeid},basicname=${t.basicname},basicnumber=${t.basicnumber},basicprice=${t.basicprice},
-membered=${t.membered},membersid=${t.membersid},basiccost=${t.basiccost},basicmarket=${t.basicmarket},shid=${t.shid},
-basicdanjia=${t.basicdanjia},basicweight=${t.basicweight},basicinventory=${t.basicinventory},basiccreatdate=${t.basiccreatdate},
-kucunbeizhu=${t.kucunbeizhu},zengsongjifen=${t.zengsongjifen},brandid=${t.brandid},thelabel=${t.thelabel},setupthe=${t.setupthe},
-basicnote=${t.basicnote},basicsearch=${t.basicsearch},pagetitle=${t.pagetitle},basicpage=${t.basicpage},pagedescription=${t.pagedescription},
-WHERE basicid=${t.basicid}
+        UPDATE tbasic SET typeid=#{t.typeid},basicname=#{t.basicname},basicnumber=#{t.basicnumber},basicprice=#{t.basicprice},
+membered=${t.membered},membersid=#{t.membersid},basiccost=#{t.basiccost},basicmarket=#{t.basicmarket},
+basicdanjia=#{t.basicdanjia},basicweight=#{t.basicweight},basicinventory=#{t.basicinventory},
+kucunbeizhu=#{t.kucunbeizhu},zengsongjifen=#{t.zengsongjifen},brandid=#{t.brandid},thelabel=#{t.thelabel},setupthe=#{t.setupthe},
+basicnote=#{t.basicnote},basicsearch=#{t.basicsearch},pagetitle=#{t.pagetitle},basicpage=#{t.basicpage},pagedescription=#{t.pagedescription}
+WHERE basicid=#{t.basicid}
 
     </update>
+    <delete id="deleteclass">
+        DELETE tclass where id=#{id}
+    </delete>
+    <delete id="deletebrandclass">
+        DELETE  brandclass where classid=#{id}
+    </delete>
+    <insert id="addbrandclass">
+        INSERT INTO brandclass(id,classid,brandid)VALUES(#{uuid},#{classid},#{brandid})
+    </insert>
+    <update id="updateclass">
+        update tclass set name=#{tclass.name},pid=#{tclass.pid},classsort=#{tclass.classsort} where id=#{tclass.id}
+    </update>
+    <select id="guanlianlist" resultType="com.jk.model.BrandClass">
+        SELECT id,classid,brandid FROM brandclass where classid=#{id}
+    </select>
+   <insert id="addclass">
+        INSERT INTO tclass(id,name,pid,classsort)values(#{tclass.id},#{tclass.name},#{tclass.pid},#{tclass.classsort})
+   </insert>
+    <select id="parameterlist" resultType="com.jk.model.Tparameter">
+       SELECT t.*,c.name parameterclassname FROM tclass c,tparameter t WHERE c.id=t.typeid
+    </select>
+    <delete id="deleteparameter">
+        DELETE tparameter WHERE parameterid IN(${id})
+    </delete>
+    <insert id="addparameter">
+         INSERT INTO tparameter(parameterid,parametername,typeid,parametersort)VALUES(#{tp.parameterid},#{tp.parametername},#{tp.typeid},
+#{tp.parametersort})
+    </insert>
+    <select id="parameterlistbyid" resultType="com.jk.model.Tparameter">
+select p.* from tparameter p where  p.parameterid=#{id}
+    </select>
+    <update id="updateparameter">
+        UPDATE  tparameter set parametername=#{tp.parametername},typeid=#{tp.typeid},parametersort=#{tp.parametersort}
+        where parameterid=#{tp.parameterid}
+    </update>
+    <insert id="addparameterdetailed">
+       INSERT INTO parameterdetailed(detailedid,detailedparameterid,detailedsort,minutename)VALUES(#{de.detailedid},#{de.detailedparameterid},#{de.detailedsort},#{de.minutename})
+    </insert>
+    <select id="parameterdetailed" resultType="com.jk.model.Parameterdetailed">
+       select * from parameterdetailed where detailedparameterid=#{paid}
+    </select>
+    <delete id="deleteparameterdetailed">
+        delete parameterdetailed where DETAILEDPARAMETERID=#{pid}
+    </delete>
 
 </mapper>

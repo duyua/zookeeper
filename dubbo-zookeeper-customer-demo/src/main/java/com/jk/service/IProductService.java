@@ -27,4 +27,14 @@ public interface IProductService {
     List<BrandClass> guanlianlist(String id);
 
     Integer addclass(Tclass tclass, String fu);
+
+    List<Tparameter> parameterlist();
+
+    Integer deleteparameter(String parameterid);
+
+    Integer addparameter(Tparameter tparameter,String paixu);
+
+    Tparameter parameterlistbyid(String id);
+
+    Integer updateparameter(Tparameter tparameter);
 }

@@ -21,4 +21,17 @@ public interface AttributeService {
     List<Tbrand> selectbrandshow();
 
     void saveatbrand(Tbrand brr);
+
+    void deletebrandall(String ids);
+
+
+    Tattribute selectattributeupdate(String ids);
+
+    List<Checkattr> selectcheckedall(String ids);
+
+    void updateattribute(Tattribute attr, String attrname);
+
+    Tbrand selecttbandupdate(String ids);
+
+    void updateatbrand(Tbrand brn);
 }

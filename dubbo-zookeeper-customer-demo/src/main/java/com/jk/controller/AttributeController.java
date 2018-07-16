@@ -6,8 +6,10 @@ import com.jk.model.Tbrand;
 import com.jk.model.Tclass;
 import com.jk.service.AttributeService;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -22,6 +24,7 @@ public class AttributeController {
         return "/attribute/selectshow";
 
     }
+    //查询属性
     @RequestMapping("selectattributeshow")
     @ResponseBody
     public  List<Tattribute> selectattributeshow(){
@@ -40,13 +43,14 @@ public class AttributeController {
         }
         return list;
     }
-
+     //查询类型
     @RequestMapping("selectclass")
     @ResponseBody
     public  List<Tclass> selectclass(){
         List<Tclass> list= attributeService.selecttclass();
         return list;
     }
+    //新增属性
     @RequestMapping("saveattribute")
     @ResponseBody
     public String saveattribute(Tattribute attr,String attrname){
@@ -73,6 +77,42 @@ public class AttributeController {
     @ResponseBody
     public String saveatbrand(Tbrand brr){
         attributeService.saveatbrand(brr);
+        return "1";
+    }
+    @RequestMapping("deletebrandall")
+    @ResponseBody
+    public String deletebrandall(String ids){
+        attributeService.deletebrandall(ids);
+        return "1";
+    }
+    @RequestMapping("selectattributeupdate")
+    public ModelAndView selectattributeupdate(String ids){
+
+        Tattribute list=attributeService.selectattributeupdate(ids);
+
+            List<Checkattr> listt= attributeService.selectcheckedall(ids);
+        ModelAndView mo= new ModelAndView();
+       mo.addObject("list",list);
+       mo.addObject("listt",listt);
+       mo.setViewName("/attribute/updateattr");
+        return mo;
+    }
+    @RequestMapping("updateattribute")
+    @ResponseBody
+    public String updateattribute(Tattribute attr,String attrname){
+        attributeService.updateattribute(attr,attrname);
+        return "1";
+    }
+    @RequestMapping("selecttbandupdate")
+    public String selecttbandupdate(String ids, Model mp){
+        Tbrand list=attributeService.selecttbandupdate(ids);
+        mp.addAttribute("list",list);
+        return "/brand/updatebrand";
+    }
+    @RequestMapping("updateatbrand")
+    @ResponseBody
+    public String updateatbrand(Tbrand brn){
+        attributeService.updateatbrand(brn);
         return "1";
     }
 }

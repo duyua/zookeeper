@@ -56,7 +56,7 @@
     <tr>
         <th class="logo">
             <a href="main.jhtml">
-                <img src="/shopxx/resources/admin/images/header_logo.gif" alt="SHOP++" />
+                <img src="<%=request.getContextPath()%>/img/1.jpg" width="200px" height="80px" alt="赫基官网" />
             </a>
         </th>
         <th>
@@ -109,10 +109,10 @@
                     <a href="<%=request.getContextPath()%>/basicController/basicye.do" target="iframe">商品管理</a>
                 </dd>
                 <dd>
-                    <a href="../product_category/list.jhtml" target="iframe">商品分类</a>
+                    <a href="<%=request.getContextPath()%>/basicController/classye.do" target="iframe">商品分类</a>
                 </dd>
                 <dd>
-                    <a href="../parameter_group/list.jhtml" target="iframe">商品参数</a>
+                    <a href="<%=request.getContextPath()%>/basicController/parameterye.do" target="iframe">商品参数</a>
                 </dd>
                 <dd>
                     <a href="<%=request.getContextPath()%>/attribute/selectattribute.do" target="iframe">商品属性</a>
@@ -133,16 +133,16 @@
                     <a href="../order/list.jhtml" target="iframe">订单管理</a>
                 </dd>
                 <dd>
-                    <a href="../payment/list.jhtml" target="iframe">收款管理</a>
+                    <a href="<%=request.getContextPath()%>/payMent/jumpPayMent.do" target="iframe">收款管理</a>
                 </dd>
                 <dd>
                     <a href="../refunds/list.jhtml" target="iframe">退款管理</a>
                 </dd>
                 <dd>
-                    <a href="../shipping/list.jhtml" target="iframe">发货管理</a>
+                    <a href="<%=request.getContextPath()%>/payMent/jumpDelivery.do" target="iframe">发货管理</a>
                 </dd>
                 <dd>
-                    <a href="../returns/list.jhtml" target="iframe">退货管理</a>
+                    <a href="<%=request.getContextPath()%>/payMent/jumpReturn.do" target="iframe">退货管理</a>
                 </dd>
                 <dd>
                     <a href="../delivery_center/list.jhtml" target="iframe">发货点管理</a>
@@ -154,19 +154,19 @@
             <dl id="member">
                 <dt>会员管理</dt>
                 <dd>
-                    <a href="../member/list.jhtml" target="iframe">会员管理</a>
+                    <a href="<%=request.getContextPath()%>/userController/tomember.do" target="iframe">会员管理</a>
                 </dd>
                 <dd>
-                    <a href="../member_rank/list.jhtml" target="iframe">会员等级</a>
+                    <a href="../userController/getmemberbasicgrade.do" target="iframe">会员等级</a>
                 </dd>
                 <dd>
                     <a href="../member_attribute/list.jhtml" target="iframe">会员注册项</a>
                 </dd>
                 <dd>
-                    <a href="../review/list.jhtml" target="iframe">评论管理</a>
+                    <a href="../userController/getmemberbasiccomment.do" target="iframe">评论管理</a>
                 </dd>
                 <dd>
-                    <a href="../consultation/list.jhtml" target="iframe">咨询管理</a>
+                    <a href="../userController/getmemberbasicconsult.do" target="iframe">咨询管理</a>
                 </dd>
             </dl>
             <dl id="content">
@@ -285,7 +285,7 @@
             </dl>
         </td>
         <td>
-            <iframe id="iframe" name="iframe" src="index.jhtml" frameborder="0"></iframe>
+            <iframe id="iframe" name="iframe" src="index1.jsp" frameborder="0"></iframe>
         </td>
     </tr>
 </table>

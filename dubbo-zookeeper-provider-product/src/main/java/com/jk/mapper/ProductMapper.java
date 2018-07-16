@@ -1,9 +1,6 @@
 package com.jk.mapper;
 
-import com.jk.model.Tbasic;
-import com.jk.model.Tbrand;
-import com.jk.model.Tclass;
-import com.jk.model.Tmembers;
+import com.jk.model.*;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -28,4 +25,32 @@ public interface ProductMapper {
     int updatemembers(Tmembers tmembers);
 
     Integer updatebasic(@Param("t") Tbasic tbasic);
+
+    Integer deleteclass(@Param("id") String id);
+
+    void deletebrandclass(@Param("id") String id);
+
+    void addbrandclass(@Param("uuid") String uuid,@Param("classid") String id, @Param("brandid") String s);
+
+    Integer updateclass(@Param("tclass") Tclass tclass);
+
+    List<BrandClass> guanlianlist(@Param("id") String id);
+
+    Integer addclass(@Param("tclass") Tclass tclass);
+
+    List<Tparameter> parameterlist();
+
+    Integer deleteparameter(@Param("id") String parameterid);
+
+    Integer addparameter(@Param("tp") Tparameter tparameter);
+
+    Tparameter parameterlistbyid(@Param("id") String id);
+
+    Integer updateparameter(@Param("tp") Tparameter tparameter);
+
+    void addparameterdetailed(@Param("de") Parameterdetailed parameterdetailed);
+
+    List<Parameterdetailed> parameterdetailed(@Param("paid") String parameterid);
+
+    void deleteparameterdetailed(@Param("pid") String parameterid);
 }

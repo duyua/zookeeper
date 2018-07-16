@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.jk.mapper.AttributeMapper">
     <select id="selectattributeshow" resultType="com.jk.model.Tattribute">
-       select tt.*,cc.classname from tattribute tt, tclass cc where tt.genreid=cc.classid
+       select tt.*,cc.name from tattribute tt, tclass cc where tt.genreid=cc.id
 
     </select>
     <select id="selecttclass" resultType="com.jk.model.Tclass">
@@ -30,4 +30,25 @@
     <insert id="saveatbrand">
          insert into tbrand values(#{brr.brandid},#{brr.brandname},#{brr.url})
     </insert>
+    <delete id="deletebrandall">
+         delete tbrand where  brandid in (${ids})
+    </delete>
+    <select id="selectattributeupdate" resultType="com.jk.model.Tattribute">
+           select tt.*,cc.name from tattribute tt, tclass cc where tt.genreid=cc.id and attributeid=#{ids}
+    </select>
+    <select id="selectcheckedall" resultType="com.jk.model.Checkattr">
+         select  aa.attrname from tattribute tt, checkattr aa where  tt.attributeid=aa.attrid and tt.attributeid=#{ids}
+    </select>
+    <update id="updateattribute">
+        update tattribute set attributename=#{attr.attributename},genreid=#{attr.genreid} where attributeid=#{attr.attributeid}
+    </update>
+    <delete id="deletechecked">
+         delete checkattr where  attrid =#{attributeid}
+    </delete>
+    <select id="selecttbandupdate" resultType="com.jk.model.Tbrand">
+        select *  from tbrand where brandid=#{ids}
+    </select>
+    <update id="updateatbrand">
+        update tbrand set brandname=#{brn.brandname},url=#{brn.url} where brandid=#{brn.brandid}
+    </update>
 </mapper>

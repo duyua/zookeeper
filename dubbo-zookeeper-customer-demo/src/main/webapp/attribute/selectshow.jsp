@@ -9,7 +9,7 @@
 <html>
 <head>
     <title>Title</title>
-    <script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-3.2.1/jquery-3.2.1.js"></script>
+       <script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-3.2.1/jquery-3.2.1.js"></script>
     <script type="text/javascript" src="<%=request.getContextPath()%>/js/easyui/jquery.easyui.min.js"></script>
     <script type="text/javascript" src="<%=request.getContextPath()%>/js/easyui/locale/easyui-lang-zh_CN.js"></script>
     <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/js/easyui/themes/default/easyui.css">
@@ -61,31 +61,13 @@
         <i class="glyphicon glyphicon-trash"></i>
         删除
     </button>
-    <button onclick="updateUser()" class="btn btn-warning" type="button">
-        <i class="glyphicon glyphicon-pencil"></i>
-        修改
-    </button>
+
 
 </div>
     <table id="arrid"></table>
     <div id="attrshow"></div>
 <script>
-    function updateUser(){
-        var ids="";
-        var app= $("#arrid").bootstrapTable('getSelections');
-        if(app.length<=0){
-            alert("请选中要修改的数据")
-        }else if(app.length==1){
 
-            for(var i=0;i<app.length;i++){
-                ids+=",'"+app[i]['attributeid']+"'";
-            }
-            ids=ids.substring(1);
-
-        }else{
-            alert("只能选中一行进行修改")
-        }
-    }
     function deleteattrid(){
 
         var ids="";
@@ -98,7 +80,12 @@
                 ids+=",'"+app[i]['attributeid']+"'";
             }
             ids=ids.substring(1);
-         $.ajax({
+            $.messager.confirm('提示', '是否删除选中数据?', function (r) {
+
+                if (!r) {
+                    return;
+                }
+                $.ajax({
              url:'<%=request.getContextPath()%>/attribute/deleteall.do',
                 dataType: "json",
                 traditional:true,//这使json格式的字符不会被转码
@@ -110,6 +97,7 @@
                         tableap()
                     }
                 }
+            });
             });
         }
     }
@@ -146,9 +134,9 @@
 
                for (var i = 0; i < datas.length; i++) {
 
-                   select.append("<option value='"+datas[i].classid+"'>"
+                   select.append("<option value='"+datas[i].id+"'>"
 
-                       + datas[i].classname + "</option>");
+                       + datas[i].name + "</option>");
 
                }
            }
@@ -196,11 +184,17 @@
             columns:[
                 {checkbox:true},
                 {field:'attributename',title:'名称',width:100,align:'center'},
-                {field:'classname',title:'绑定的分类',width:100,align:'center'
+                {field:'name',title:'绑定的分类',width:100,align:'center'
 
                 },
                 {field:'attributegenrename',title:'可选项',width:100,align:'center'},
-                {field:'name',title:'操作',width:100,align:'center'}
+                {field:'pname',title:'操作',width:100,align:'center',
+                    formatter: function(value,row,index){
+                        var set="";
+                        set+="<a  href='<%=request.getContextPath()%>/attribute/selectattributeupdate.do?ids="+row.attributeid+"' target='iframe'>编辑</a>";
+                        return set;
+                    }
+                }
             ]
         });
 

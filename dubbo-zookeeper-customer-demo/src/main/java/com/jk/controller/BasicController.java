@@ -158,4 +158,57 @@ public class BasicController {
         Integer i=productService.addclass(tclass,fu);
         return i;
     }
+    /**
+     * 商品参数跳转页面
+     */
+    @RequestMapping("parameterye")
+    public String parameterye(){
+        return "merchandise/parameterlist";
+    }
+    /**
+     * 查询商品参数信息
+     */
+    @RequestMapping("parameterlist")
+    @ResponseBody
+    public List<Tparameter> parameterlist(){
+        List<Tparameter> list=productService.parameterlist();
+        return list;
+    }
+    /**
+     * 删除商品参数信息
+     */
+    @RequestMapping("parameterdelete")
+    @ResponseBody
+    public Integer parameterdelete(String parameterid){
+        Integer i=productService.deleteparameter(parameterid);
+        return i;
+    }
+    /**
+     * 商品参数新增
+     */
+    @RequestMapping("parameteradd")
+    @ResponseBody
+    public  Integer parameteradd(Tparameter tparameter,String paixu){
+        Integer i=productService.addparameter(tparameter,paixu);
+        return i;
+    }
+    /**
+     * 商品参数修改查询
+     */
+    @RequestMapping("parameterupdateye")
+    public String parameterupdateye(String id,Model ma){
+        Tparameter tparameter=productService.parameterlistbyid(id);
+        ma.addAttribute("tp",tparameter);
+        return "merchandise/parameterupdate";
+
+    }
+    /**
+     * 商品参数新增
+     */
+    @RequestMapping("parameterupdate")
+    @ResponseBody
+    public  Integer parameterupdate(Tparameter tparameter){
+        Integer i=productService.updateparameter(tparameter);
+        return i;
+    }
 }

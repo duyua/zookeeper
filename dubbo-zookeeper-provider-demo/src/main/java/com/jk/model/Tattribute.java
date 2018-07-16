@@ -2,7 +2,6 @@ package com.jk.model;
 
 
 import java.io.Serializable;
-
 //商品属性表
 public class Tattribute implements Serializable{
 
@@ -17,7 +16,7 @@ public class Tattribute implements Serializable{
     //属性类型名称
     private String attributegenrename;
     //业务字段
-    private String classname;
+    private String name;
 
     @Override
     public boolean equals(Object o) {
@@ -66,12 +65,12 @@ public class Tattribute implements Serializable{
         this.attributegenrename = attributegenrename;
     }
 
-    public String getClassname() {
-        return classname;
+    public String getName() {
+        return name;
     }
 
-    public void setClassname(String classname) {
-        this.classname = classname;
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override
@@ -81,7 +80,7 @@ public class Tattribute implements Serializable{
                 ", attributename='" + attributename + '\'' +
                 ", genreid='" + genreid + '\'' +
                 ", attributegenrename='" + attributegenrename + '\'' +
-                ", classname='" + classname + '\'' +
+                ", name='" + name + '\'' +
                 '}';
     }
 }

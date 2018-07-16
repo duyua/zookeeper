@@ -97,11 +97,11 @@
                 <li><a class="icon-youku" href="http://i.youku.com/i/UMzE4MzM0ODAxNg== " target="_blank" rel="nofollow"></a></li>
             </ul>
             <ul class="links">
-                <li><a href="#contact" class="contact_link">联系我们</a></li>
+                <li><a href="" class="contact_link">联系我们</a></li>
                 <li><a href="#mob" class="mob_link">手机版</a></li>
                 <li><a href="#law" class="law_link">法律声明</a></li>
                 <li><a href="#privacy" class="privacy_link">隐私权政策</a></li>
-                <li><a href="missSixty.jsp" class="shop_link_top">线上购物</a></li>
+                <li><a href="/heji/missSixty.jsp" class="shop_link_top">线上购物</a></li>
             </ul>
             <%--<div class="pop_online_shop_top">
                 <a target="_blank" href="http://www.ochirly.com.cn/" rel="nofollow">ochirly官方购物网</a>
@@ -270,7 +270,7 @@
                     <div class="news-item">
                         <div class="picbox" data-src="http://img2.ochirly.com.cn/material/2018/04/17/20180417124240748.jpg"></div>
                         <!-- <a class="des video_news" data-url="http://img2.ochirly.com.cn/rs/trendy/video/2018summer/sd.mp4" data-title="2018 Superdry夏季大片" href="###"> -->
-                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2018summer/sd.mp4" data-title="2018 Superdry夏季大片" data-url="/a/article/news/n/v_sd_2018_summer.shtml" href="###" >
+                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2018summer/sd.mp4" data-title="2018 Superdry夏季大片" data-url="/a/article/news/n/v_sd_2018_summer.shtml" href="" >
                             <dl>
                                 <dt>2018 Superdry</dt>
                                 <dt>夏季大片</dt>
@@ -288,7 +288,7 @@
                     <div class="news-item">
                         <div class="picbox" data-src="http://img2.ochirly.com.cn/material/2018/04/17/20180417123856738.jpg"></div>
                         <!-- <a class="des video_news" data-url="http://img2.ochirly.com.cn/rs/trendy/video/2018summer/m60.mp4" data-title="2018 MISS SIXTY夏季大片" href="###"> -->
-                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2018summer/m60.mp4" data-title="2018 MISS SIXTY夏季大片" data-url="/a/article/news/n/v_m60_2018_summer.shtml" href="###" >
+                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2018summer/m60.mp4" data-title="2018 MISS SIXTY夏季大片" data-url="/a/article/news/n/v_m60_2018_summer.shtml" href="" >
                             <dl>
                                 <dt>2018 MISS SIXTY</dt>
                                 <dt>夏季大片</dt>
@@ -306,7 +306,7 @@
                     <div class="news-item">
                         <div class="picbox" data-src="http://img2.ochirly.com.cn/material/2018/04/17/20180417123613588.jpg"></div>
                         <!-- <a class="des video_news" data-url="http://img2.ochirly.com.cn/rs/trendy/video/2018summer/fp.mp4" data-title="2018 Five Plus夏季大片" href="###"> -->
-                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2018summer/fp.mp4" data-title="2018 Five Plus夏季大片" data-url="/a/article/news/n/v_fiveplus_2018_summer.shtml" href="###" >
+                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2018summer/fp.mp4" data-title="2018 Five Plus夏季大片" data-url="/a/article/news/n/v_fiveplus_2018_summer.shtml" href="" >
                             <dl>
                                 <dt>2018 Five Plus</dt>
                                 <dt>夏季大片</dt>
@@ -324,7 +324,7 @@
                     <div class="news-item">
                         <div class="picbox" data-src="http://img2.ochirly.com.cn/material/2018/04/17/20180417123316673.jpg"></div>
                         <!-- <a class="des video_news" data-url="http://img2.ochirly.com.cn/rs/trendy/video/2018summer/och.mp4" data-title="2018 ochirly夏季大片" href="###"> -->
-                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2018summer/och.mp4" data-title="2018 ochirly夏季大片" data-url="/a/article/news/n/v_ochirly_2018_summer.shtml" href="###" >
+                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2018summer/och.mp4" data-title="2018 ochirly夏季大片" data-url="/a/article/news/n/v_ochirly_2018_summer.shtml" href="" >
                             <dl>
                                 <dt>2018 ochirly</dt>
                                 <dt>夏季大片</dt>
@@ -359,7 +359,7 @@
                     <div class="news-item">
                         <div class="picbox" data-src="http://img2.ochirly.com.cn/material/2018/04/17/20180417120753253.jpg"></div>
                         <!-- <a class="des video_news" data-url="http://img2.ochirly.com.cn/rs/trendy/video/2018spring/m60.mp4" data-title="2018 MISS SIXTY春季大片" href="###"> -->
-                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2018spring/m60.mp4" data-title="2018 MISS SIXTY春季大片" data-url="/a/article/news/n/v_m60_2018_spring.shtml" href="###" >
+                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2018spring/m60.mp4" data-title="2018 MISS SIXTY春季大片" data-url="/a/article/news/n/v_m60_2018_spring.shtml" href="" >
                             <dl>
                                 <dt>2018 MISS SIXTY</dt>
                                 <dt>春季大片</dt>
@@ -377,7 +377,7 @@
                     <div class="news-item">
                         <div class="picbox" data-src="http://img2.ochirly.com.cn/material/2018/04/17/20180417120024524.jpg"></div>
                         <!-- <a class="des video_news" data-url="http://img2.ochirly.com.cn/rs/trendy/video/2018spring/cg.mp4" data-title="2018 COVEN GARDEN春季大片" href="###"> -->
-                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2018spring/cg.mp4" data-title="2018 COVEN GARDEN春季大片" data-url="/a/article/news/n/v_cg_2018_spring.shtml" href="###" >
+                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2018spring/cg.mp4" data-title="2018 COVEN GARDEN春季大片" data-url="/a/article/news/n/v_cg_2018_spring.shtml" href="" >
                             <dl>
                                 <dt>2018 COVEN GARDEN</dt>
                                 <dt>春季大片</dt>
@@ -395,7 +395,7 @@
                     <div class="news-item">
                         <div class="picbox" data-src="http://img2.ochirly.com.cn/material/2018/04/17/20180417115530939.jpg"></div>
                         <!-- <a class="des video_news" data-url="http://img2.ochirly.com.cn/rs/trendy/video/2018spring/tre.mp4" data-title="2018 TRENDIANO春季大片" href="###"> -->
-                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2018spring/tre.mp4" data-title="2018 TRENDIANO春季大片" data-url="/a/article/news/n/v_tre_2018_spring.shtml" href="###" >
+                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2018spring/tre.mp4" data-title="2018 TRENDIANO春季大片" data-url="/a/article/news/n/v_tre_2018_spring.shtml" href="" >
                             <dl>
                                 <dt>2018 TRENDIANO</dt>
                                 <dt>春季大片</dt>
@@ -413,7 +413,7 @@
                     <div class="news-item">
                         <div class="picbox" data-src="http://img2.ochirly.com.cn/material/2018/04/17/20180417115205305.jpg"></div>
                         <!-- <a class="des video_news" data-url="http://img2.ochirly.com.cn/rs/trendy/video/2018spring/fp.mp4" data-title="2018 Five Plus春季大片" href="###"> -->
-                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2018spring/fp.mp4" data-title="2018 Five Plus春季大片" data-url="/a/article/news/n/v_fiveplus_2018_spring.shtml" href="###" >
+                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2018spring/fp.mp4" data-title="2018 Five Plus春季大片" data-url="/a/article/news/n/v_fiveplus_2018_spring.shtml" href="" >
                             <dl>
                                 <dt>2018 Five Plus</dt>
                                 <dt>春季大片</dt>
@@ -431,7 +431,7 @@
                     <div class="news-item">
                         <div class="picbox" data-src="http://img2.ochirly.com.cn/material/2018/04/17/20180417114607126.jpg"></div>
                         <!-- <a class="des video_news" data-url="http://img2.ochirly.com.cn/rs/trendy/video/2018spring/och1.mp4" data-title="2018 ochirly春季大片" href="###"> -->
-                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2018spring/och1.mp4" data-title="2018 ochirly春季大片" data-url="/a/article/news/n/v_ochirly_2018_spring.shtml" href="###" >
+                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2018spring/och1.mp4" data-title="2018 ochirly春季大片" data-url="/a/article/news/n/v_ochirly_2018_spring.shtml" href="" >
                             <dl>
                                 <dt>2018 ochirly</dt>
                                 <dt>春季大片</dt>
@@ -518,7 +518,7 @@
                     <div class="news-item">
                         <div class="picbox" data-src="http://img2.ochirly.com.cn/material/2017/11/29/20171129162650363.jpg"></div>
                         <!-- <a class="des video_news" data-url="http://img2.ochirly.com.cn/rs/trendy/video/2017winter/superdry.mp4" data-title="2017 SUPERDRY冬季大片" href="###"> -->
-                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2017winter/superdry.mp4" data-title="2017 SUPERDRY冬季大片" data-url="/a/article/news/n/v_superdry_2017_winter.shtml" href="###" >
+                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2017winter/superdry.mp4" data-title="2017 SUPERDRY冬季大片" data-url="/a/article/news/n/v_superdry_2017_winter.shtml" href="" >
                             <dl>
                                 <dt>2017 SUPERDRY</dt>
                                 <dt>冬季大片</dt>
@@ -536,7 +536,7 @@
                     <div class="news-item">
                         <div class="picbox" data-src="http://img2.ochirly.com.cn/material/2017/11/29/20171129162038163.jpg"></div>
                         <!-- <a class="des video_news" data-url="http://img2.ochirly.com.cn/rs/trendy/video/2017winter/misssixty_winter.mp4" data-title="2017 Miss Sixty冬季大片" href="###"> -->
-                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2017winter/misssixty_winter.mp4" data-title="2017 Miss Sixty冬季大片" data-url="/a/article/news/n/v_misssixty_2017_winter.shtml" href="###" >
+                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2017winter/misssixty_winter.mp4" data-title="2017 Miss Sixty冬季大片" data-url="/a/article/news/n/v_misssixty_2017_winter.shtml" href="" >
                             <dl>
                                 <dt>2017 Miss Sixty</dt>
                                 <dt>冬季大片</dt>
@@ -554,7 +554,7 @@
                     <div class="news-item">
                         <div class="picbox" data-src="http://img2.ochirly.com.cn/material/2017/11/29/20171129161526891.jpg"></div>
                         <!-- <a class="des video_news" data-url="http://img2.ochirly.com.cn/rs/trendy/video/2017winter/fiveplus_winter_2017.mp4" data-title="2017 Five Plus冬季大片" href="###"> -->
-                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2017winter/fiveplus_winter_2017.mp4" data-title="2017 Five Plus冬季大片" data-url="/a/article/news/n/v_fiveplus_2017_winter.shtml" href="###" >
+                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2017winter/fiveplus_winter_2017.mp4" data-title="2017 Five Plus冬季大片" data-url="/a/article/news/n/v_fiveplus_2017_winter.shtml" href="" >
                             <dl>
                                 <dt>2017 Five Plus</dt>
                                 <dt>冬季大片</dt>
@@ -572,7 +572,7 @@
                     <div class="news-item">
                         <div class="picbox" data-src="http://img2.ochirly.com.cn/material/2017/11/29/20171129155938327.jpg"></div>
                         <!-- <a class="des video_news" data-url="http://img2.ochirly.com.cn/rs/trendy/video/2017winter/ochirly_2017_winter.mp4" data-title="2017 ochirly冬季大片" href="###"> -->
-                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2017winter/ochirly_2017_winter.mp4" data-title="2017 ochirly冬季大片" data-url="/a/article/news/n/v_ochirly_2017_winter.shtml" href="###" >
+                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2017winter/ochirly_2017_winter.mp4" data-title="2017 ochirly冬季大片" data-url="/a/article/news/n/v_ochirly_2017_winter.shtml" href="" >
                             <dl>
                                 <dt>2017 ochirly</dt>
                                 <dt>冬季大片</dt>
@@ -590,7 +590,7 @@
                     <div class="news-item">
                         <div class="picbox" data-src="http://img2.ochirly.com.cn/material/2017/08/10/20170810175423209.jpg"></div>
                         <!-- <a class="des video_news" data-url="http://img2.ochirly.com.cn/rs/trendy/video/2017fall/covengarden_fall.mp4" data-title="2017 COVEN GARDEN秋季大片" href="###"> -->
-                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2017fall/covengarden_fall.mp4" data-title="2017 COVEN GARDEN秋季大片" data-url="/a/article/news/n/v_covengarden_2017_fall.shtml" href="###" >
+                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2017fall/covengarden_fall.mp4" data-title="2017 COVEN GARDEN秋季大片" data-url="/a/article/news/n/v_covengarden_2017_fall.shtml" href="" >
                             <dl>
                                 <dt>2017 COVEN GARDEN</dt>
                                 <dt>秋季大片</dt>
@@ -608,7 +608,7 @@
                     <div class="news-item">
                         <div class="picbox" data-src="http://img2.ochirly.com.cn/material/2017/08/10/20170810174626632.jpg"></div>
                         <!-- <a class="des video_news" data-url="http://img2.ochirly.com.cn/rs/trendy/video/2017fall/misssixty_fall.mp4" data-title="2017 MISS SIXTY秋季大片" href="###"> -->
-                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2017fall/misssixty_fall.mp4" data-title="2017 MISS SIXTY秋季大片" data-url="/a/article/news/n/v_misssixty_2017_fall.shtml" href="###" >
+                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2017fall/misssixty_fall.mp4" data-title="2017 MISS SIXTY秋季大片" data-url="/a/article/news/n/v_misssixty_2017_fall.shtml" href="" >
                             <dl>
                                 <dt>2017 MISS SIXTY</dt>
                                 <dt>秋季大片</dt>
@@ -626,7 +626,7 @@
                     <div class="news-item">
                         <div class="picbox" data-src="http://img2.ochirly.com.cn/material/2017/08/10/20170810174247177.jpg"></div>
                         <!-- <a class="des video_news" data-url="http://img2.ochirly.com.cn/rs/trendy/video/2017fall/trendiano_fall.mp4" data-title="2017 TRENDIANO秋季大片" href="###"> -->
-                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2017fall/trendiano_fall.mp4" data-title="2017 TRENDIANO秋季大片" data-url="/a/article/news/n/v_trendiano_2017_fall.shtml" href="###" >
+                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2017fall/trendiano_fall.mp4" data-title="2017 TRENDIANO秋季大片" data-url="/a/article/news/n/v_trendiano_2017_fall.shtml" href="" >
                             <dl>
                                 <dt>2017 TRENDIANO</dt>
                                 <dt>秋季大片</dt>
@@ -644,7 +644,7 @@
                     <div class="news-item">
                         <div class="picbox" data-src="http://img2.ochirly.com.cn/material/2017/08/10/20170810152032378.jpg"></div>
                         <!-- <a class="des video_news" data-url="http://img2.ochirly.com.cn/rs/trendy/video/2017fall/fiveplus_fall.mp4" data-title="2017 Five Plus秋季大片" href="###"> -->
-                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2017fall/fiveplus_fall.mp4" data-title="2017 Five Plus秋季大片" data-url="/a/article/news/n/v_fiveplus_2017_fall.shtml" href="###" >
+                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2017fall/fiveplus_fall.mp4" data-title="2017 Five Plus秋季大片" data-url="/a/article/news/n/v_fiveplus_2017_fall.shtml" href="" >
                             <dl>
                                 <dt>2017 Five Plus</dt>
                                 <dt>秋季大片</dt>
@@ -662,7 +662,7 @@
                     <div class="news-item">
                         <div class="picbox" data-src="http://img2.ochirly.com.cn/material/2017/08/10/20170810151301147.jpg"></div>
                         <!-- <a class="des video_news" data-url="http://img2.ochirly.com.cn/rs/trendy/video/2017fall/ochirly_fall.mp4" data-title="2017 ochirly秋季大片" href="###"> -->
-                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2017fall/ochirly_fall.mp4" data-title="2017 ochirly秋季大片" data-url="/a/article/news/n/v_ochirly_2017_fall.shtml" href="###" >
+                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2017fall/ochirly_fall.mp4" data-title="2017 ochirly秋季大片" data-url="/a/article/news/n/v_ochirly_2017_fall.shtml" href="" >
                             <dl>
                                 <dt>2017 ochirly</dt>
                                 <dt>秋季大片</dt>
@@ -716,7 +716,7 @@
                     <div class="news-item">
                         <div class="picbox" data-src="http://img2.ochirly.com.cn/material/2017/05/04/20170504175621670.jpg"></div>
                         <!-- <a class="des video_news" data-url="http://img2.ochirly.com.cn/rs/trendy/video/2017summer/trendiano_2017_summer.mp4" data-title="2017 TRENDIANO夏季大片" href="###"> -->
-                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2017summer/trendiano_2017_summer.mp4" data-title="2017 TRENDIANO夏季大片" data-url="/a/article/news/n/v_trendiano_2017_summer.shtml" href="###" >
+                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2017summer/trendiano_2017_summer.mp4" data-title="2017 TRENDIANO夏季大片" data-url="/a/article/news/n/v_trendiano_2017_summer.shtml" href="" >
                             <dl>
                                 <dt>2017 TRENDIANO</dt>
                                 <dt>夏季大片</dt>
@@ -734,7 +734,7 @@
                     <div class="news-item">
                         <div class="picbox" data-src="http://img2.ochirly.com.cn/material/2017/05/04/20170504175139724.jpg"></div>
                         <!-- <a class="des video_news" data-url="http://img2.ochirly.com.cn/rs/trendy/video/2017summer/fiveplus_2017_summer.mp4" data-title="2017 Five Plus夏季大片" href="###"> -->
-                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2017summer/fiveplus_2017_summer.mp4" data-title="2017 Five Plus夏季大片" data-url="/a/article/news/n/v_fiveplus_2017_summer.shtml" href="###" >
+                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2017summer/fiveplus_2017_summer.mp4" data-title="2017 Five Plus夏季大片" data-url="/a/article/news/n/v_fiveplus_2017_summer.shtml" href="" >
                             <dl>
                                 <dt>2017 Five Plus</dt>
                                 <dt>夏季大片</dt>
@@ -752,7 +752,7 @@
                     <div class="news-item">
                         <div class="picbox" data-src="http://img2.ochirly.com.cn/material/2017/05/04/20170504174654003.jpg"></div>
                         <!-- <a class="des video_news" data-url="http://img2.ochirly.com.cn/rs/trendy/video/2017summer/ochirly_2017_summer.mp4" data-title="2017 ochirly夏季大片" href="###"> -->
-                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2017summer/ochirly_2017_summer.mp4" data-title="2017 ochirly夏季大片" data-url="/a/article/news/n/v_ochirly_2017_summer.shtml" href="###" >
+                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2017summer/ochirly_2017_summer.mp4" data-title="2017 ochirly夏季大片" data-url="/a/article/news/n/v_ochirly_2017_summer.shtml" href="" >
                             <dl>
                                 <dt>2017 ochirly</dt>
                                 <dt>夏季大片</dt>
@@ -770,7 +770,7 @@
                     <div class="news-item">
                         <div class="picbox" data-src="http://img2.ochirly.com.cn/material/2017/05/04/20170504173012670.jpg"></div>
                         <!-- <a class="des video_news" data-url="http://img2.ochirly.com.cn/rs/trendy/video/2017sping/cg_2017_spring.mp4" data-title="2017 COVEN GARDEN春夏大片" href="###"> -->
-                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2017sping/cg_2017_spring.mp4" data-title="2017 COVEN GARDEN春夏大片" data-url="/a/article/news/n/v_covengarden_2017_spring_summer.shtml" href="###" >
+                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2017sping/cg_2017_spring.mp4" data-title="2017 COVEN GARDEN春夏大片" data-url="/a/article/news/n/v_covengarden_2017_spring_summer.shtml" href="" >
                             <dl>
                                 <dt>2017 COVEN GARDEN</dt>
                                 <dt>春夏大片</dt>
@@ -788,7 +788,7 @@
                     <div class="news-item">
                         <div class="picbox" data-src="http://img2.ochirly.com.cn/material/2017/05/04/20170504172130765.jpg"></div>
                         <!-- <a class="des video_news" data-url="http://img2.ochirly.com.cn/rs/trendy/video/2017sping/m60_2017_srping.mp4" data-title="2017 MISS SIXTY春夏大片" href="###"> -->
-                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2017sping/m60_2017_srping.mp4" data-title="2017 MISS SIXTY春夏大片" data-url="/a/article/news/n/v_misssixty_2017_sping_summer.shtml" href="###" >
+                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2017sping/m60_2017_srping.mp4" data-title="2017 MISS SIXTY春夏大片" data-url="/a/article/news/n/v_misssixty_2017_sping_summer.shtml" href="" >
                             <dl>
                                 <dt>2017 MISS SIXTY</dt>
                                 <dt>春夏大片</dt>
@@ -806,7 +806,7 @@
                     <div class="news-item">
                         <div class="picbox" data-src="http://img2.ochirly.com.cn/material/2017/05/04/20170504171836441.jpg"></div>
                         <!-- <a class="des video_news" data-url="http://img2.ochirly.com.cn/rs/trendy/video/2017sping/tre_2017_sring.mp4" data-title="2017 TRENDIANO春季大片" href="###"> -->
-                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2017sping/tre_2017_sring.mp4" data-title="2017 TRENDIANO春季大片" data-url="/a/article/news/n/v_trendiano_2017_spring.shtml" href="###" >
+                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2017sping/tre_2017_sring.mp4" data-title="2017 TRENDIANO春季大片" data-url="/a/article/news/n/v_trendiano_2017_spring.shtml" href="" >
                             <dl>
                                 <dt>2017 TRENDIANO</dt>
                                 <dt>春季大片</dt>
@@ -824,7 +824,7 @@
                     <div class="news-item">
                         <div class="picbox" data-src="http://img2.ochirly.com.cn/material/2017/05/04/20170504171553644.jpg"></div>
                         <!-- <a class="des video_news" data-url="http://img2.ochirly.com.cn/rs/trendy/video/2017sping/fp_2017_spring.mp4" data-title="2017 Five Plus春季大片" href="###"> -->
-                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2017sping/fp_2017_spring.mp4" data-title="2017 Five Plus春季大片" data-url="/a/article/news/n/v_fiveplus_2017_spring.shtml" href="###" >
+                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2017sping/fp_2017_spring.mp4" data-title="2017 Five Plus春季大片" data-url="/a/article/news/n/v_fiveplus_2017_spring.shtml" href="" >
                             <dl>
                                 <dt>2017 Five Plus</dt>
                                 <dt>春季大片</dt>
@@ -842,7 +842,7 @@
                     <div class="news-item">
                         <div class="picbox" data-src="http://img2.ochirly.com.cn/material/2017/05/04/20170504170955179.jpg"></div>
                         <!-- <a class="des video_news" data-url="http://img2.ochirly.com.cn/rs/trendy/video/2017sping/och_2017_spring.mp4" data-title="2017 ochirly春季大片" href="###"> -->
-                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2017sping/och_2017_spring.mp4" data-title="2017 ochirly春季大片" data-url="/a/article/news/n/v_ochirly_2017_spring.shtml" href="###" >
+                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/2017sping/och_2017_spring.mp4" data-title="2017 ochirly春季大片" data-url="/a/article/news/n/v_ochirly_2017_spring.shtml" href="" >
                             <dl>
                                 <dt>2017 ochirly</dt>
                                 <dt>春季大片</dt>
@@ -878,7 +878,7 @@
                     <div class="news-item">
                         <div class="picbox" data-src="http://img2.ochirly.com.cn/material/2016/10/11/20161011113242011.jpg"></div>
                         <!-- <a class="des video_news" data-url="http://img2.ochirly.com.cn/rs/trendy/video/b1_1.mp4" data-title="2016 ochirly冬季大片" href="###"> -->
-                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/b1_1.mp4" data-title="2016 ochirly冬季大片" data-url="/a/article/news/n/v_ochirly_2016_winter.shtml" href="###" >
+                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/b1_1.mp4" data-title="2016 ochirly冬季大片" data-url="/a/article/news/n/v_ochirly_2016_winter.shtml" href="" >
                             <dl>
                                 <dt>2016 ochirly</dt>
                                 <dt>冬季大片</dt>
@@ -896,7 +896,7 @@
                     <div class="news-item">
                         <div class="picbox" data-src="http://img2.ochirly.com.cn/material/2016/10/12/20161012180226432.jpg"></div>
                         <!-- <a class="des video_news" data-url="http://img2.ochirly.com.cn/rs/trendy/video/b3_1.mp4" data-title="2016 TRENDIANO冬季大片" href="###"> -->
-                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/b3_1.mp4" data-title="2016 TRENDIANO冬季大片" data-url="/a/article/news/n/v_trendiano_2016_winter.shtml" href="###" >
+                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/b3_1.mp4" data-title="2016 TRENDIANO冬季大片" data-url="/a/article/news/n/v_trendiano_2016_winter.shtml" href="" >
                             <dl>
                                 <dt>2016 TRENDIANO</dt>
                                 <dt>冬季大片</dt>
@@ -914,7 +914,7 @@
                     <div class="news-item">
                         <div class="picbox" data-src="http://img2.ochirly.com.cn/material/2016/10/11/20161011111647226.jpg"></div>
                         <!-- <a class="des video_news" data-url="http://img2.ochirly.com.cn/rs/trendy/video/b2_2.mp4" data-title="2016 FivePlus冬季大片" href="###"> -->
-                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/b2_2.mp4" data-title="2016 FivePlus冬季大片" data-url="/a/article/news/n/v_fiveplus_2016_winter.shtml" href="###" >
+                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/b2_2.mp4" data-title="2016 FivePlus冬季大片" data-url="/a/article/news/n/v_fiveplus_2016_winter.shtml" href="" >
                             <dl>
                                 <dt>2016 FivePlus</dt>
                                 <dt>冬季大片</dt>
@@ -950,7 +950,7 @@
                     <div class="news-item">
                         <div class="picbox" data-src="http://img2.ochirly.com.cn/material/2016/10/09/20161009141404050.jpg"></div>
                         <!-- <a class="des video_news" data-url="http://img2.ochirly.com.cn/rs/trendy/video/v_m_year_25.mp4" data-title="2016 MISS SIXTY 25周年溯源时尚女性牛仔，经典与潮流碰撞" href="###"> -->
-                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/v_m_year_25.mp4" data-title="2016 MISS SIXTY 25周年溯源时尚女性牛仔，经典与潮流碰撞" data-url="/a/article/news/n/misssixty_year_25.shtml" href="###" >
+                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/v_m_year_25.mp4" data-title="2016 MISS SIXTY 25周年溯源时尚女性牛仔，经典与潮流碰撞" data-url="/a/article/news/n/misssixty_year_25.shtml" href="" >
                             <dl>
                                 <dt>2016 MISS SIXTY 25周年</dt>
                                 <dt>溯源时尚女性牛仔，经典与潮流碰撞</dt>
@@ -1004,7 +1004,7 @@
                     <div class="news-item">
                         <div class="picbox" data-src="http://img2.ochirly.com.cn/material/2016/10/09/20161009152402720.jpg"></div>
                         <!-- <a class="des video_news" data-url="http://img2.ochirly.com.cn/rs/trendy/video/v_tre_sound.mp4" data-title="2016 TRENDIANO全球潮人念！千人发声" href="###"> -->
-                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/v_tre_sound.mp4" data-title="2016 TRENDIANO全球潮人念！千人发声" data-url="/a/article/news/n/v_trendiano_sound.shtml" href="###" >
+                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/v_tre_sound.mp4" data-title="2016 TRENDIANO全球潮人念！千人发声" data-url="/a/article/news/n/v_trendiano_sound.shtml" href="" >
                             <dl>
                                 <dt>2016 TRENDIANO</dt>
                                 <dt>全球潮人念！千人发声</dt>
@@ -1022,7 +1022,7 @@
                     <div class="news-item">
                         <div class="picbox" data-src="http://img2.ochirly.com.cn/material/2016/10/11/20161011154826480.jpg"></div>
                         <!-- <a class="des video_news" data-url="http://img2.ochirly.com.cn/rs/trendy/video/v_s_shanghai.mp4" data-title="2016 Superdry上海来福士店酷拽开业" href="###"> -->
-                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/v_s_shanghai.mp4" data-title="2016 Superdry上海来福士店酷拽开业" data-url="/a/article/news/n/v_superdry_shanghai_open_1.shtml" href="###" >
+                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/v_s_shanghai.mp4" data-title="2016 Superdry上海来福士店酷拽开业" data-url="/a/article/news/n/v_superdry_shanghai_open_1.shtml" href="" >
                             <dl>
                                 <dt>2016 Superdry上海来福士店</dt>
                                 <dt>酷拽开业</dt>
@@ -1058,7 +1058,7 @@
                     <div class="news-item">
                         <div class="picbox" data-src="http://img2.ochirly.com.cn/material/2016/08/15/20160815165840103.jpg"></div>
                         <!-- <a class="des video_news" data-url="http://img2.ochirly.com.cn/rs/trendy/video/v4.mp4" data-title="2016 COVEN GARDEN画意“诗”情 • 来自旧时光的优雅" href="###"> -->
-                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/v4.mp4" data-title="2016 COVEN GARDEN画意“诗”情 • 来自旧时光的优雅" data-url="/a/article/news/n/v_covengarden_poetry_1.shtml" href="###" >
+                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/v4.mp4" data-title="2016 COVEN GARDEN画意“诗”情 • 来自旧时光的优雅" data-url="/a/article/news/n/v_covengarden_poetry_1.shtml" href="" >
                             <dl>
                                 <dt>2016 COVEN GARDEN</dt>
                                 <dt>画意“诗”情 • 来自旧时光的优雅</dt>
@@ -1094,7 +1094,7 @@
                     <div class="news-item">
                         <div class="picbox" data-src="http://img2.ochirly.com.cn/material/2016/08/15/20160815165559075.jpg"></div>
                         <!-- <a class="des video_news" data-url="http://img2.ochirly.com.cn/rs/trendy/video/v5.mp4" data-title="2016 ochirly度假系列Chiara Ferragni采访" href="###"> -->
-                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/v5.mp4" data-title="2016 ochirly度假系列Chiara Ferragni采访" data-url="/a/article/news/n/v_ochirly_chiara_ferragni_1.shtml" href="###" >
+                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/v5.mp4" data-title="2016 ochirly度假系列Chiara Ferragni采访" data-url="/a/article/news/n/v_ochirly_chiara_ferragni_1.shtml" href="" >
                             <dl>
                                 <dt>2016 ochirly度假系列</dt>
                                 <dt>Chiara Ferragni采访</dt>
@@ -1112,7 +1112,7 @@
                     <div class="news-item">
                         <div class="picbox" data-src="http://img2.ochirly.com.cn/material/2016/08/15/20160815165417996.jpg"></div>
                         <!-- <a class="des video_news" data-url="http://img2.ochirly.com.cn/rs/trendy/video/v6.mp4" data-title="2016 ochirly携手时尚人士She爱加倍四人合辑" href="###"> -->
-                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/v6.mp4" data-title="2016 ochirly携手时尚人士She爱加倍四人合辑" data-url="/a/article/news/n/v_ochirly_she_1.shtml" href="###" >
+                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/v6.mp4" data-title="2016 ochirly携手时尚人士She爱加倍四人合辑" data-url="/a/article/news/n/v_ochirly_she_1.shtml" href="" >
                             <dl>
                                 <dt>2016 ochirly携手时尚人士She</dt>
                                 <dt>爱加倍四人合辑</dt>
@@ -1148,7 +1148,7 @@
                     <div class="news-item">
                         <div class="picbox" data-src="http://img2.ochirly.com.cn/material/2016/08/15/20160815165207701.jpg"></div>
                         <!-- <a class="des video_news" data-url="http://img2.ochirly.com.cn/rs/trendy/video/v7.mp4" data-title="2015 Mission Sixty 特工“60”微电影" href="###"> -->
-                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/v7.mp4" data-title="2015 Mission Sixty 特工“60”微电影" data-url="/a/article/news/n/v_misssixty_spy_2.shtml" href="###" >
+                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/v7.mp4" data-title="2015 Mission Sixty 特工“60”微电影" data-url="/a/article/news/n/v_misssixty_spy_2.shtml" href="" >
                             <dl>
                                 <dt>2015 Mission Sixty </dt>
                                 <dt>特工“60”微电影</dt>
@@ -1166,7 +1166,7 @@
                     <div class="news-item">
                         <div class="picbox" data-src="http://img2.ochirly.com.cn/material/2016/08/15/20160815165024166.jpg"></div>
                         <!-- <a class="des video_news" data-url="http://img2.ochirly.com.cn/rs/trendy/video/v8.mp4" data-title="2015 TRENDIANO全新微电影《逃离ESCAPE》" href="###"> -->
-                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/v8.mp4" data-title="2015 TRENDIANO全新微电影《逃离ESCAPE》" data-url="/a/article/news/n/v_trendiano_escape_1.shtml" href="###" >
+                        <a class="des video_only" data-video="http://img2.ochirly.com.cn/rs/trendy/video/v8.mp4" data-title="2015 TRENDIANO全新微电影《逃离ESCAPE》" data-url="/a/article/news/n/v_trendiano_escape_1.shtml" href="" >
                             <dl>
                                 <dt>2015 TRENDIANO全新微电影</dt>
                                 <dt>《逃离ESCAPE》</dt>
@@ -1184,7 +1184,7 @@
                     <div class="news-item">
                         <div class="picbox" data-src="http://img2.ochirly.com.cn/material/2016/08/15/20160815172129636.jpg"></div>
                         <!-- <a class="des video_news" data-url="http://img2.ochirly.com.cn/rs/trendy/video/v1.mp4" data-title="时尚男装TRENDIANO揭幕首家 POP-UP STORE 未来时尚快闪店" href="###"> -->
-                        <a class="des video_news" data-video="http://img2.ochirly.com.cn/rs/trendy/video/v1.mp4" data-title="时尚男装TRENDIANO揭幕首家 POP-UP STORE 未来时尚快闪店" data-url="/a/article/news/n/trendiano_pop_up_store_1.shtml" href="###" >
+                        <a class="des video_news" data-video="http://img2.ochirly.com.cn/rs/trendy/video/v1.mp4" data-title="时尚男装TRENDIANO揭幕首家 POP-UP STORE 未来时尚快闪店" data-url="/a/article/news/n/trendiano_pop_up_store_1.shtml" href="" >
                             <dl>
                                 <dt>时尚男装TRENDIANO</dt>
                                 <dt>揭幕首家 POP-UP STORE 未来时尚快闪店</dt>
@@ -1202,7 +1202,7 @@
                     <div class="news-item">
                         <div class="picbox" data-src="http://img2.ochirly.com.cn/material/2016/08/15/20160815171919599.jpg"></div>
                         <!-- <a class="des video_news" data-url="http://img2.ochirly.com.cn/rs/trendy/video/v_o_date.mp4" data-title="ochirly时尚星约秋冬新品发布会" href="###"> -->
-                        <a class="des video_news" data-video="http://img2.ochirly.com.cn/rs/trendy/video/v_o_date.mp4" data-title="ochirly时尚星约秋冬新品发布会" data-url="/a/article/news/n/ochirly_2015_fall_new_1.shtml" href="###" >
+                        <a class="des video_news" data-video="http://img2.ochirly.com.cn/rs/trendy/video/v_o_date.mp4" data-title="ochirly时尚星约秋冬新品发布会" data-url="/a/article/news/n/ochirly_2015_fall_new_1.shtml" href="" >
                             <dl>
                                 <dt>ochirly</dt>
                                 <dt>时尚星约秋冬新品发布会</dt>
@@ -1274,7 +1274,7 @@
                     <div class="news-item">
                         <div class="picbox" data-src="http://img2.ochirly.com.cn/material/2016/08/15/20160815171414566.jpg"></div>
                         <!-- <a class="des video_news" data-url="http://img2.ochirly.com.cn/rs/trendy/video/v_f_zac.mp4" data-title="Five Plus ZACPOSEN“纽约绮遇”主题时尚夜" href="###"> -->
-                        <a class="des video_news" data-video="http://img2.ochirly.com.cn/rs/trendy/video/v_f_zac.mp4" data-title="Five Plus ZACPOSEN“纽约绮遇”主题时尚夜" data-url="/a/article/news/n/fiveplus_vs_zacposen_1.shtml" href="###" >
+                        <a class="des video_news" data-video="http://img2.ochirly.com.cn/rs/trendy/video/v_f_zac.mp4" data-title="Five Plus ZACPOSEN“纽约绮遇”主题时尚夜" data-url="/a/article/news/n/fiveplus_vs_zacposen_1.shtml" href="" >
                             <dl>
                                 <dt>Five Plus ZACPOSEN</dt>
                                 <dt>“纽约绮遇”主题时尚夜</dt>
@@ -1310,7 +1310,7 @@
                     <div class="news-item">
                         <div class="picbox" data-src="http://img2.ochirly.com.cn/material/2016/08/15/20160815171147447.jpg"></div>
                         <!-- <a class="des video_news" data-url="http://img2.ochirly.com.cn/rs/trendy/video/v_c_open.mp4" data-title="COVEN GARDEN品牌首发暨秋冬时尚发布会" href="###"> -->
-                        <a class="des video_news" data-video="http://img2.ochirly.com.cn/rs/trendy/video/v_c_open.mp4" data-title="COVEN GARDEN品牌首发暨秋冬时尚发布会" data-url="/a/article/news/n/covengarden_open_1.shtml" href="###" >
+                        <a class="des video_news" data-video="http://img2.ochirly.com.cn/rs/trendy/video/v_c_open.mp4" data-title="COVEN GARDEN品牌首发暨秋冬时尚发布会" data-url="/a/article/news/n/covengarden_open_1.shtml" href="" >
                             <dl>
                                 <dt>COVEN GARDEN</dt>
                                 <dt>品牌首发暨秋冬时尚发布会</dt>
@@ -1387,7 +1387,7 @@
             </li>
         </ul>
     </div>
-</div>
+</d
 <!-- 模块4 end -->
 
 
@@ -1400,7 +1400,7 @@
                 <span class="picbox" data-src="http://img2.ochirly.com.cn/rs/trendy/pic/pic101.jpg" style="background-position:50% 100%">
                         <!-- <i >集团人力资源、公共事务及行政高级副总裁<br />  SHIRLEY YANG</i> -->
                     </span>
-                <span class="picbox" data-src="http://img2.ochirly.com.cn/rs/trendy/pic/pic24.jpg" style="background-position:top center"></span>
+                iv>        <span class="picbox" data-src="http://img2.ochirly.com.cn/rs/trendy/pic/pic24.jpg" style="background-position:top center"></span>
             </div>
             <div class="fl50 fullwin flexbox flexcol" id="about2_con">
                 <div class="about-con-list flex flexbox flex-ver-center">

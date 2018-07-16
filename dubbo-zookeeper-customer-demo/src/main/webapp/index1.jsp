@@ -10,6 +10,14 @@
 <head>
     <title>Title</title>
 </head>
+<style>
+    body {
+        height: 10%;width: 10%;
+        background: url('<%=request.getContextPath()%>/img/2.jpg');
+        background-size:cover;
+    }
+</style>
+
 <body>
 
 </body>

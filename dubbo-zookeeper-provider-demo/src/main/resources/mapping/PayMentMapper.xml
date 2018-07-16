@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jk.mapper.PayMentMapper">
+
+  <select id="queryPayMent"  resultType="java.util.Map">
+    SELECT * FROM  MANAGEMENTGATHERING,SYSTEMPAYMENT,MEMBERBASIC,MANAGEMENT WHERE GATHERINGPAYMENTID =PAYMENTID
+    AND  GATHERINGMEMBERBASICID=MEMBERBASICID  AND GATHERINGMANAGEMENTNUMBERID =MANAGEMENTID
+  </select>
+
+  <select id="queryDelivery"  resultType="java.util.Map">
+    SELECT * FROM  MANAGEMENTDELIVERY  MD,SYSTEMDELIVERY  SD,SYSTEMLOGISTICS  SL
+   WHERE MD.DELIVERYIDS =SD.DELIVERYID AND  MD.DELIVERYLOGISTICSID=SL.LOGISTICSID
+  </select>
+
+  <select id="queryReturn"  resultType="java.util.Map">
+    SELECT * FROM  MANAGEMENTRETURN  MR,SYSTEMDELIVERY  SD,SYSTEMLOGISTICS  SL
+    WHERE MR.RETURNDELIVERYID  =SD.DELIVERYID  AND  MR.RETURNLOGISTICSID =SL.LOGISTICSID
+  </select>
+
+  <delete id="deletePayMent">
+
+    DELETE FROM  MANAGEMENTGATHERING WHERE  GATHERINGID= #{id}
+
+  </delete>
+
+  <delete id="deleteDelivery">
+   DELETE FROM MANAGEMENTDELIVERY WHERE DELIVERYID IN (${ids})
+  </delete>
+
+
+  <delete id="deleteReturn">
+    DELETE FROM MANAGEMENTRETURN WHERE RETURNID  IN (${ids})
+  </delete>
+
+
+  <!--<select id="frameselectlist" resultType="com.jk.model.FrameWork">
+    select * FROM framework WHERE  pid=#{pid};
+  </select>
+  <delete id="framedelete">
+    delete from framework where id in(${id})
+  </delete>
+  <insert id="frameinsert">
+   INSERT INTO framework(TEXT,pid,coding,abbreviation,classify,
+               advocate,assistant,phone,interior,fax,postcode,urll,site,optionn,describes)VALUES(#{frame.text},#{frame.pid},#{frame.coding},
+               #{frame.abbreviation},#{frame.classify},#{frame.advocate},#{frame.assistant},#{frame.phone},#{frame.interior},
+               #{frame.fax},#{frame.postcode},#{frame.urll},#{frame.site},#{frame.optionn},#{frame.describes})
+
+  </insert>
+    <select id="frameupdateselectye" resultType="com.jk.model.FrameWork">
+        select * FROM  framework WHERE  id=#{id};
+
+    </select>
+    <update id="frameupdate">
+         UPDATE framework SET TEXT=#{frame.text},pid=#{frame.pid},coding=#{frame.coding},abbreviation=#{frame.abbreviation},
+classify=#{frame.classify},advocate=#{frame.advocate},assistant=#{frame.assistant},phone=#{frame.phone},interior=#{frame.interior},
+fax=#{frame.fax},postcode=#{frame.postcode},urll=#{frame.urll},site=#{frame.site},optionn=#{frame.optionn},describes=#{frame.describes}
+WHERE id=#{frame.id}
+
+    </update>-->
+</mapper>

@@ -1,9 +1,6 @@
 package com.jk.service;
 
-import com.jk.model.Tbasic;
-import com.jk.model.Tbrand;
-import com.jk.model.Tclass;
-import com.jk.model.Tmembers;
+import com.jk.model.*;
 
 import java.util.List;
 
@@ -49,4 +46,40 @@ public interface IProductService {
      * 修改商品基本信息
      */
     Integer updatebasic(Tbasic tbasic, Tmembers tmembers);
+    /**
+     * 分类列表删除
+     */
+    Integer deleteclass(String id);
+    /**
+     * 分类列表修改
+     */
+    Integer updateclass(Tclass tclass, String fu);
+    /**
+     * 分类修改查询分类所属品牌
+     */
+    List<BrandClass> guanlianlist(String id);
+    /**
+     * 分类新增
+     */
+    Integer addclass(Tclass tclass, String fu);
+    /**
+     * 查询商品参数信息
+     */
+    List<Tparameter> parameterlist();
+    /**
+     * 删除商品参数
+     */
+    Integer deleteparameter(String parameterid);
+    /**
+     * 增加商品参数
+     */
+    Integer addparameter(Tparameter tparameter,String paixu);
+    /**
+     * 商品参数修改查询
+     */
+    Tparameter parameterlistbyid(String id);
+    /**
+     * 商品参数修改
+     */
+    Integer updateparameter(Tparameter tparameter);
 }
