@@ -13,28 +13,40 @@
 
     <script src="https://img2.fiveplus.com/rs/lib/js/jquery.js"></script>
     <script src="https://img2.fiveplus.com/rs/common/v1/web/js/my.min.js?13"></script>
+
+    <link rel="stylesheet" href="http://img2.misssixty.com.cn/rs/misssixty/v1/www/css/m60_base.css" />
+
+    <script src="http://img2.misssixty.com.cn/rs/lib/js/jquery.js"></script>
+    <script src="http://img2.misssixty.com.cn/rs/misssixty/v1/www/js/m60_www_global.min.js"></script>
 </head>
 <body>
 <script>
     te$.setMyStyle();
 </script>
 
+<p id="tip520" class="top_tip">全场1399包邮<span onclick="this.parentNode.style.display = 'none';">x</span></p>
 <div class="header">
-    <h1 class="logo" id="myLogo"></h1>
-
     <div class="top_link_box">
-        <!-- <a href="#" class="link_langu"><span>中国</span></a> -->
-        <span id="paramLogin"><a href="" id="linkLogin">登录│注册</a></span>
-        <a href="" id="linkAccount">我的账户</a>
-        <a href="javascript:;" class="link_Wishlist"  id="linkWishlist">我的收藏</a>
-        <a href="" class="link_bag" id="linkCart">购物袋(<span id="cartNum">0</span>)</a>
+        <div class="header_content">
+            <div class="header_count">
+                <span id="paramLogin"><em id="emUserName"></em><a id="linkLogin" href="#"></a><em>|</em><a href="#" id="linkReg">注册</a></span>
+                <a id="linkAccount" href="<%=request.getContextPath()%>/basicController/mehost.do" title="我的账户">我的账户</a><em>|</em>
+                <a id="linkWishlist" class="link_Wishlist" href="#" title="我的收藏">我的收藏</a><em>|</em>
+                <a id="linkCart" class="link_bag" href="<%=request.getContextPath()%>/basicController/querygwlist.do" title="购物袋"><span id="cartNum">0</span></a><em>|</em>
+                <a href="javascript:;" class="linkServiceOnlineTop">在线客服</a>
+                <p id="navSearch" class="search2013">
+                    <input type="text" id="navIntSearch" value="搜索您感兴趣的内容">
+                    <button type="button">搜索</button>
+                </p>
+            </div>
+        </div>
     </div>
-    <div class="search2013" id="navSearch" style="display:none;">
-        <input type="text" value="搜索您感兴趣的内容" id="navIntSearch">
-        <button type="button">搜索</button>
+    <div class="header_content">
+        <h1 id="logoOch" class="logo ochirly_logo">
+            <a href="../heji/missSixty.jsp">MISS SIXTY</a>
+        </h1>
     </div>
 </div>
-
 
 <div class="cart_container">
     <div class="edge">
@@ -124,58 +136,14 @@
             </div>
         </div>
 
-
-        <div class="page_num">
-            <div class="page_num_line">
-
-                <span>1</span>
-
-            </div>
-        </div>
-
-
         <div class="order_total">
-            <div class="order_total_action">
-                <p>
-                    <label for="ckSelectAll"><input type="checkbox" id="ckSelectAll" checked autocomplete="off" />全选</label>
-                    <a href="javascript:;" id="btnDeleteSelected">删除已选</a>
-                    <a href="javascript:;" id="btnFavoriteSelected">收藏已选</a>
-                </p>
-            </div>
+
             <div class="order_total_sum">
                 <p>
                     已选：<span id="cartItemCount"></span>件<br />
                     总计金额（不含运费）：￥<span id="cartTotalPrice"></span>
                 </p>
-                <a href=""> <button class="btn_my" type="button" >马上结算</button></a>
-            </div>
-        </div>
-        <script>
-            te$.business.cart.initCart();
-        </script>
-
-        <div onmouseover="javascript:_setRechooseHide();" id="rechooseSize" class="rechoose_size">
-            <div id="rechooseSizeList"></div>
-            <input type="hidden" id="rechooseQty" name="rechooseQty" value="1">
-        </div>
-
-        <div class="rechoose">
-            <h3>选择颜色及尺码</h3>
-            <div class="rechoose_area" id="rechoose">
-                <!--<div class="rechoose_item">
-                    <P><img src="_s_1.jpg" /></P>
-                    <div>
-                        <a>XS</a>
-                        <a>S</a>
-                        <a>M</a>
-                        <a>L</a>
-                        <a>XL</a>
-                    </div>
-                </div>-->
-            </div>
-            <div class="rechoose_btn">
-                <button id="btnRechooseYes">确定</button>
-                <button id="btnRechooseNo">取消</button>
+             <button class="btn_my" type="button" onclick="jiesuan()" >马上结算</button>
             </div>
         </div>
 
@@ -185,12 +153,16 @@
 <div class="copyright">
     <div class="copyright_inner" id="myFooter">
         <p class="copyright_links" id="myCopyrightLinks">
-            <a href="#">隐私申明</a>
-            <a href="#">联系我们</a>
+            <a href="">隐私申明</a>
+            <a href="">联系我们</a>
         </p>
         <p class="copyright_links copyright_txt">Copyright @ 2010-<em id="copyrightYear"></em> 广州赫基信息科技有限公司版权所有  增值电信业务经营许可证 <a href="" id="linkIcp" target="_blank">粤B2-20100553 粤ICP备10229258-<span id="icpNum">1</span>号</a></p>
     </div>
 </div>
+<input type="hidden" id="zongjia"/>
+<input type="hidden" id="zongjian"/>
+<input type="hidden" id="shangpinid" value="${car.get(0).cartbasicid}"/>
+<<input type="hidden" id="dingdanid" value="${car.get(0).cartid}">
 <script>
     te$.system.setMyHeadAndFooter();
     te$.system.hasLoad();
@@ -198,10 +170,11 @@
 <script >
     var r=$("#qty630497").val();
     $("#cartItemCount").text(r);
+    $("#zongjian").val(r);
     var zhi=$("#displayPrice630497").text();
     $("#spPrice630497").html("￥"+zhi)
     $("#cartTotalPrice").html("￥"+zhi)
-
+    $("#zongjia").val(zhi);
 
 
     function suanfa(id) {
@@ -212,9 +185,10 @@
           var zz=parseInt(zhi);
           var zong=zhi*s;
         $("#cartItemCount").text(s);
-
+        $("#zongjian").val(s);
         $("#spPrice630497").html("￥"+zong)
         $("#cartTotalPrice").html("￥"+zong)
+        $("#zongjia").val(zong);
     }
     function suanfaj(id) {
         var zhi=$("#displayPrice630497").text();
@@ -225,22 +199,28 @@
         if(z==1){
             var zong=zhi*s;
             $("#cartItemCount").text(s);
-
+            $("#zongjian").val(1);
             $("#spPrice630497").html("￥"+zong)
             $("#cartTotalPrice").html("￥"+zong)
+            $("#zongjia").val(zong);
         }else{
               var shu=s-1;
             $("#cartItemCount").text(shu);
+            $("#zongjian").val(shu);
             var zong=zhi*shu;
 
             $("#spPrice630497").html("￥"+zong)
             $("#cartTotalPrice").html("￥"+zong)
+            $("#zongjia").val(zong);
         }
 
     }
     function jiesuan() {
-
-
+       var jiage=$("#zongjia").val();
+       var jian=$("#zongjian").val();
+       var shangid=$("#shangpinid").val();
+       var dingid=$("#dingdanid").val();
+       location.href="<%=request.getContextPath()%>/basicController/jiesuan.do?jiage="+jiage+"&jianshu="+jian+"&shangid="+shangid+"&dingid="+dingid;
     }
 </script>
 </body>
