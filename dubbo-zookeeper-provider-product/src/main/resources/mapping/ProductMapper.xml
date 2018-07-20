@@ -92,5 +92,10 @@ select p.* from tparameter p where  p.parameterid=#{id}
     <delete id="deleteparameterdetailed">
         delete parameterdetailed where DETAILEDPARAMETERID=#{pid}
     </delete>
-
+    <select id="querygwlist" resultType="com.jk.model.Cart">
+        select * from cart where cartuserid =#{id}
+    </select>
+     <delete id="deleteList">
+         delete cart where cartid=#{id}
+     </delete>
 </mapper>

@@ -78,7 +78,7 @@
     var m60SetSubMenu = function(str, target) {
         var items;
         var outHtml = '<h5>最抢手单品推荐</h5>';
-        var tmp = '<p><a href="http://www.misssixty.com.cn/p/{sku}.shtml" target="_blank"><img src="{url}" />{title}</a></p>'
+        var tmp = '<p><a href="http://www.misssixty.com.cn/p/{sku}.jsp" target="_blank"><img src="{url}" />{title}</a></p>'
         if (!str) {
             return false;
         }
@@ -290,29 +290,29 @@
 
                 <dt><a href="/Denim/Dresses/list.jsp">连衣裙</a></dt>
                 <dd>
-                    <a href="/Denim/Dresses/Sleeveless_Dresses/list.shtml" >无袖连衣裙</a>
-                    <a href="/Denim/Dresses/Short_Sleeved_Dresses/list.shtml" >短袖连衣裙</a>
-                    <a href="/Denim/Dresses/Mid_Long_Sleeved_Dresses/list.shtml" >中/长袖连衣裙</a>
+                    <a href="/Denim/Dresses/Sleeveless_Dresses/list.jsp" >无袖连衣裙</a>
+                    <a href="/Denim/Dresses/Short_Sleeved_Dresses/list.jsp" >短袖连衣裙</a>
+                    <a href="/Denim/Dresses/Mid_Long_Sleeved_Dresses/list.jsp" >中/长袖连衣裙</a>
                 </dd>
 
                 <dt><a href="/Denim/Shirts/list.jsp">衬衫</a></dt>
                 <dd>
                     <a href="/Denim/Shirts/Sleeveless_Shirts/list.jsp" >无袖衬衫</a>
-                    <a href="/Denim/Shirts/Short_Sleeved_Shirts/list.shtml" >短袖衬衫</a>
-                    <a href="/Denim/Shirts/Mid_Long_Sleeved_Shirts/list.shtml" >中/长袖衬衫</a>
+                    <a href="/Denim/Shirts/Short_Sleeved_Shirts/list.jsp" >短袖衬衫</a>
+                    <a href="/Denim/Shirts/Mid_Long_Sleeved_Shirts/list.jsp" >中/长袖衬衫</a>
                 </dd>
 
                 <dt><a href="/Denim/Jackets/list.jsp">外套</a></dt>
                 <dd>
-                    <a href="/Denim/Jackets/Mid_Long_Jackets/list.shtml" >中/长外套</a>
-                    <a href="/Denim/Jackets/Short_Jackets/list.shtml" >短外套</a>
+                    <a href="/Denim/Jackets/Mid_Long_Jackets/list.jsp" >中/长外套</a>
+                    <a href="/Denim/Jackets/Short_Jackets/list.jsp" >短外套</a>
                 </dd>
 
                 <dt><a href="/Denim/Skirts/list.jsp">半截裙</a></dt>
                 <dd>
-                    <a href="/Denim/Skirts/Sweat_Skirts/list.shtml" >短裙</a>
-                    <a href="/Denim/Skirts/Mid_Skirts/list.shtml" >中裙</a>
-                    <a href="/Denim/Skirts/L_Skirts/list.shtml" >长裙</a>
+                    <a href="/Denim/Skirts/Sweat_Skirts/list.jsp" >短裙</a>
+                    <a href="/Denim/Skirts/Mid_Skirts/list.jsp" >中裙</a>
+                    <a href="/Denim/Skirts/L_Skirts/list.jsp" >长裙</a>
                 </dd>
 
                 <dt class="nobg"><a href="/Denim/Culottes/list.jsp">裙裤</a></dt>
@@ -395,7 +395,7 @@
             <ul id="list" class="main_list">
                 <li>
                     <div class="chip">
-                        <a data-sku="683JJ3800000G11" target="_blank" href="/p/683JJ3800000G11.shtml">
+                        <a data-sku="683JJ3800000G11" target="_blank" href="/p/683JJ3800000G11.jsp">
                             <img alt="FLARE<br />低腰喇叭九分牛仔裤" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="683JJ3800000G11" data-rollover="sku,list-1">
                             <span class="chip_name">
 									FLARE<br />低腰喇叭九分牛仔裤
@@ -412,7 +412,7 @@
                 </li>
                 <li>
                     <div class="chip">
-                        <a data-sku="683JJ6950000F25" target="_blank" href="/p/683JJ6950000F25.shtml">
+                        <a data-sku="683JJ6950000F25" target="_blank" href="/p/683JJ6950000F25.jsp">
                             <img alt="FLARE<br />纯棉破洞喇叭牛仔长裤" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="683JJ6950000F25" data-rollover="sku,list-1">
                             <span class="chip_name">
 									FLARE<br />纯棉破洞喇叭牛仔长裤
@@ -429,7 +429,7 @@
                 </li>
                 <li>
                     <div class="chip">
-                        <a data-sku="683JJ7480000G11" target="_blank" href="/p/683JJ7480000G11.shtml">
+                        <a data-sku="683JJ7480000G11" target="_blank" href="/p/683JJ7480000G11.jsp">
                             <img alt="FLARE<br />天使之翼绣花牛仔裤" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="683JJ7480000G11" data-rollover="sku,list-1">
                             <span class="chip_name">
 									FLARE<br />天使之翼绣花牛仔裤
@@ -445,7 +445,7 @@
                 </li>
                 <li>
                     <div class="chip">
-                        <a data-sku="683JJ0700000G24" target="_blank" href="/p/683JJ0700000G24.shtml">
+                        <a data-sku="683JJ0700000G24" target="_blank" href="/p/683JJ0700000G24.jsp">
                             <img alt="BOY FIT<br />男友风破洞牛仔长裤" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="683JJ0700000G24" data-rollover="sku,list-1">
                             <span class="chip_name">
 									BOY FIT<br />男友风破洞牛仔长裤
@@ -461,7 +461,7 @@
                 </li>
                 <li>
                     <div class="chip">
-                        <a data-sku="683JJ0710000F25" target="_blank" href="/p/683JJ0710000F25.shtml">
+                        <a data-sku="683JJ0710000F25" target="_blank" href="/p/683JJ0710000F25.jsp">
                             <img alt="FLARE<br />纯棉毛边喇叭牛仔长裤" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="683JJ0710000F25" data-rollover="sku,list-1">
                             <span class="chip_name">
 									FLARE<br />纯棉毛边喇叭牛仔长裤
@@ -477,7 +477,7 @@
                 </li>
                 <li>
                     <div class="chip">
-                        <a data-sku="683JJ0760000F25" target="_blank" href="/p/683JJ0760000F25.shtml">
+                        <a data-sku="683JJ0760000F25" target="_blank" href="/p/683JJ0760000F25.jsp">
                             <img alt="REGULAR<br />纯棉钉珠直筒牛仔长裤" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="683JJ0760000F25" data-rollover="sku,list-1">
                             <span class="chip_name">
 									REGULAR<br />纯棉钉珠直筒牛仔长裤
@@ -493,7 +493,7 @@
                 </li>
                 <li>
                     <div class="chip">
-                        <a data-sku="683JJ0800000F25" target="_blank" href="/p/683JJ0800000F25.shtml">
+                        <a data-sku="683JJ0800000F25" target="_blank" href="/p/683JJ0800000F25.jsp">
                             <img alt="BOY FIT<br />纯棉低腰直筒牛仔长裤" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="683JJ0800000F25" data-rollover="sku,list-1">
                             <span class="chip_name">
 									BOY FIT<br />纯棉低腰直筒牛仔长裤
@@ -509,7 +509,7 @@
                 </li>
                 <li>
                     <div class="chip">
-                        <a data-sku="683JJ1050000F25" target="_blank" href="/p/683JJ1050000F25.shtml">
+                        <a data-sku="683JJ1050000F25" target="_blank" href="/p/683JJ1050000F25.jsp">
                             <img alt="FLARE<br />低腰喇叭裤牛仔长裤" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="683JJ1050000F25" data-rollover="sku,list-1">
                             <span class="chip_name">
 									FLARE<br />低腰喇叭裤牛仔长裤
@@ -525,7 +525,7 @@
                 </li>
                 <li>
                     <div class="chip">
-                        <a data-sku="683JJ6790000F25" target="_blank" href="/p/683JJ6790000F25.shtml">
+                        <a data-sku="683JJ6790000F25" target="_blank" href="/p/683JJ6790000F25.jsp">
                             <img alt="SKINNY PUSH UP<br />紧身提臀九分牛仔裤" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="683JJ6790000F25" data-rollover="sku,list-1">
                             <span class="chip_name">
 									SKINNY PUSH UP<br />紧身提臀九分牛仔裤
@@ -541,7 +541,7 @@
                 </li>
                 <li>
                     <div class="chip">
-                        <a data-sku="683JJ6810000G24" target="_blank" href="/p/683JJ6810000G24.shtml">
+                        <a data-sku="683JJ6810000G24" target="_blank" href="/p/683JJ6810000G24.jsp">
                             <img alt="SKINNY PUSH UP<br />紧身提臀九分牛仔裤" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="683JJ6810000G24" data-rollover="sku,list-1">
                             <span class="chip_name">
 									SKINNY PUSH UP<br />紧身提臀九分牛仔裤
@@ -557,7 +557,7 @@
                 </li>
                 <li>
                     <div class="chip">
-                        <a data-sku="683JJ6820000F25" target="_blank" href="/p/683JJ6820000F25.shtml">
+                        <a data-sku="683JJ6820000F25" target="_blank" href="/p/683JJ6820000F25.jsp">
                             <img alt="SKINNY PUSH UP<br />紧身提臀九分牛仔裤" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="683JJ6820000F25" data-rollover="sku,list-1">
                             <span class="chip_name">
 									SKINNY PUSH UP<br />紧身提臀九分牛仔裤
@@ -573,7 +573,7 @@
                 </li>
                 <li>
                     <div class="chip">
-                        <a data-sku="683JJ6840000F25" target="_blank" href="/p/683JJ6840000F25.shtml">
+                        <a data-sku="683JJ6840000F25" target="_blank" href="/p/683JJ6840000F25.jsp">
                             <img alt="HIGH WAIST<br />高腰紧身九分牛仔裤" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="683JJ6840000F25" data-rollover="sku,list-1">
                             <span class="chip_name">
 									HIGH WAIST<br />高腰紧身九分牛仔裤
@@ -589,7 +589,7 @@
                 </li>
                 <li>
                     <div class="chip">
-                        <a data-sku="683JJ6880000G07" target="_blank" href="/p/683JJ6880000G07.shtml">
+                        <a data-sku="683JJ6880000G07" target="_blank" href="/p/683JJ6880000G07.jsp">
                             <img alt="HIGH WAIST<br />高腰紧身九分牛仔裤" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="683JJ6880000G07" data-rollover="sku,list-1">
                             <span class="chip_name">
 									HIGH WAIST<br />高腰紧身九分牛仔裤
@@ -605,7 +605,7 @@
                 </li>
                 <li>
                     <div class="chip">
-                        <a data-sku="683JJ6900000F25" target="_blank" href="/p/683JJ6900000F25.shtml">
+                        <a data-sku="683JJ6900000F25" target="_blank" href="/p/683JJ6900000F25.jsp">
                             <img alt="HIGH WAIST<br />高腰紧身九分牛仔裤" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="683JJ6900000F25" data-rollover="sku,list-1">
                             <span class="chip_name">
 									HIGH WAIST<br />高腰紧身九分牛仔裤
@@ -621,7 +621,7 @@
                 </li>
                 <li>
                     <div class="chip">
-                        <a data-sku="683JJ6920000F25" target="_blank" href="/p/683JJ6920000F25.shtml">
+                        <a data-sku="683JJ6920000F25" target="_blank" href="/p/683JJ6920000F25.jsp">
                             <img alt="HIGH WAIST<br />高腰紧身九分牛仔裤" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="683JJ6920000F25" data-rollover="sku,list-1">
                             <span class="chip_name">
 									HIGH WAIST<br />高腰紧身九分牛仔裤
@@ -637,7 +637,7 @@
                 </li>
                 <li>
                     <div class="chip">
-                        <a data-sku="683JJ6980000F25" target="_blank" href="/p/683JJ6980000F25.shtml">
+                        <a data-sku="683JJ6980000F25" target="_blank" href="/p/683JJ6980000F25.jsp">
                             <img alt="EVERYDAY<br />纯棉破洞直筒牛仔长裤" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="683JJ6980000F25" data-rollover="sku,list-1">
                             <span class="chip_name">
 									EVERYDAY<br />纯棉破洞直筒牛仔长裤
@@ -653,7 +653,7 @@
                 </li>
                 <li>
                     <div class="chip">
-                        <a data-sku="683JJ7010000F25" target="_blank" href="/p/683JJ7010000F25.shtml">
+                        <a data-sku="683JJ7010000F25" target="_blank" href="/p/683JJ7010000F25.jsp">
                             <img alt="SKINNY PUSH UP<br />提臀紧身九分牛仔裤" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="683JJ7010000F25" data-rollover="sku,list-1">
                             <span class="chip_name">
 									SKINNY PUSH UP<br />提臀紧身九分牛仔裤
@@ -669,7 +669,7 @@
                 </li>
                 <li>
                     <div class="chip">
-                        <a data-sku="683JJ7030000F25" target="_blank" href="/p/683JJ7030000F25.shtml">
+                        <a data-sku="683JJ7030000F25" target="_blank" href="/p/683JJ7030000F25.jsp">
                             <img alt="SKINNY PUSH UP<br />紧身提臀九分牛仔裤" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="683JJ7030000F25" data-rollover="sku,list-1">
                             <span class="chip_name">
 									SKINNY PUSH UP<br />紧身提臀九分牛仔裤
@@ -685,7 +685,7 @@
                 </li>
                 <li>
                     <div class="chip">
-                        <a data-sku="683JJ7060000G24" target="_blank" href="/p/683JJ7060000G24.shtml">
+                        <a data-sku="683JJ7060000G24" target="_blank" href="/p/683JJ7060000G24.jsp">
                             <img alt="SKINNY PUSH UP<br />提臀紧身九分牛仔裤" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="683JJ7060000G24" data-rollover="sku,list-1">
                             <span class="chip_name">
 									SKINNY PUSH UP<br />提臀紧身九分牛仔裤
@@ -701,7 +701,7 @@
                 </li>
                 <li>
                     <div class="chip">
-                        <a data-sku="683JJ7080000G11" target="_blank" href="/p/683JJ7080000G11.shtml">
+                        <a data-sku="683JJ7080000G11" target="_blank" href="/p/683JJ7080000G11.jsp">
                             <img alt="SKINNY PUSH UP<br />提臀紧身九分牛仔裤" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="683JJ7080000G11" data-rollover="sku,list-1">
                             <span class="chip_name">
 									SKINNY PUSH UP<br />提臀紧身九分牛仔裤
@@ -717,7 +717,7 @@
                 </li>
                 <li>
                     <div class="chip">
-                        <a data-sku="683JJ1290000F25" target="_blank" href="/p/683JJ1290000F25.shtml">
+                        <a data-sku="683JJ1290000F25" target="_blank" href="/p/683JJ1290000F25.jsp">
                             <img alt="REGULAR<br />纯棉毛边直筒裤牛仔裤" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="683JJ1290000F25" data-rollover="sku,list-1">
                             <span class="chip_name">
 									REGULAR<br />纯棉毛边直筒裤牛仔裤
@@ -733,7 +733,7 @@
                 </li>
                 <li>
                     <div class="chip">
-                        <a data-sku="683JJ1300000F25" target="_blank" href="/p/683JJ1300000F25.shtml">
+                        <a data-sku="683JJ1300000F25" target="_blank" href="/p/683JJ1300000F25.jsp">
                             <img alt="HIGH WAIST<br />纯棉高腰绑带牛仔长裤" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="683JJ1300000F25" data-rollover="sku,list-1">
                             <span class="chip_name">
 									HIGH WAIST<br />纯棉高腰绑带牛仔长裤
@@ -749,7 +749,7 @@
                 </li>
                 <li>
                     <div class="chip">
-                        <a data-sku="683JJ2710000F25" target="_blank" href="/p/683JJ2710000F25.shtml">
+                        <a data-sku="683JJ2710000F25" target="_blank" href="/p/683JJ2710000F25.jsp">
                             <img alt="BOY FIT<br />男友风破洞牛仔长裤" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="683JJ2710000F25" data-rollover="sku,list-1">
                             <span class="chip_name">
 									BOY FIT<br />男友风破洞牛仔长裤
@@ -765,7 +765,7 @@
                 </li>
                 <li>
                     <div class="chip">
-                        <a data-sku="683JJ3530000F25" target="_blank" href="/p/683JJ3530000F25.shtml">
+                        <a data-sku="683JJ3530000F25" target="_blank" href="/p/683JJ3530000F25.jsp">
                             <img alt="SLIM<br />低腰破洞印花牛仔长裤" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="683JJ3530000F25" data-rollover="sku,list-1">
                             <span class="chip_name">
 									SLIM<br />低腰破洞印花牛仔长裤
@@ -806,10 +806,10 @@
         <dl>
             <dt>服务信息</dt>
             <dd>
-                <p><a href="/a/article/w/f/misssixty_shopping_process.shtml">购物流程</a></p>
-                <p><a href="/a/article/w/f/misssixty_delivery.shtml">配送说明</a></p>
-                <!-- <p><a href="/a/article/w/f/misssixty_pay.shtml">支付方式</a></p> -->
-                <p><a href="/a/article/w/f/misssixty_return.shtml">退货流程 </a></p>
+                <p><a href="/a/article/w/f/misssixty_shopping_process.jsp">购物流程</a></p>
+                <p><a href="/a/article/w/f/misssixty_delivery.jsp">配送说明</a></p>
+                <!-- <p><a href="/a/article/w/f/misssixty_pay.jsp">支付方式</a></p> -->
+                <p><a href="/a/article/w/f/misssixty_return.jsp">退货流程 </a></p>
                 <!-- <p><a href="#">订单查询联系我们</a></p> -->
             </dd>
         </dl>
@@ -817,8 +817,8 @@
             <dt>关于我们</dt>
             <dd>
                 <!-- <p><a href="#">关于我们</a></p> -->
-                <p><a href="/a/article/w/f/misssixty_brand_story.shtml">品牌介绍</a></p>
-                <p><a href="/a/article/w/f/misssixty_member.shtml">会员权益</a></p>
+                <p><a href="/a/article/w/f/misssixty_brand_story.jsp">品牌介绍</a></p>
+                <p><a href="/a/article/w/f/misssixty_member.jsp">会员权益</a></p>
                 <!-- <p><a href="#">专属试衣间预约</a></p> -->
             </dd>
         </dl>

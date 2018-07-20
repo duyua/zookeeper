@@ -37,4 +37,8 @@ public interface IProductService {
     Tparameter parameterlistbyid(String id);
 
     Integer updateparameter(Tparameter tparameter);
+
+    List<Cart> querygwlist(String userid);
+
+    void deleteList(String id);
 }

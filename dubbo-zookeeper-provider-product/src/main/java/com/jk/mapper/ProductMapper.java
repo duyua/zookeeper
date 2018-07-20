@@ -53,4 +53,8 @@ public interface ProductMapper {
     List<Parameterdetailed> parameterdetailed(@Param("paid") String parameterid);
 
     void deleteparameterdetailed(@Param("pid") String parameterid);
+
+    List<Cart> querygwlist(@Param("id") String userid);
+
+    void deleteList(@Param("id") String id);
 }

@@ -73,7 +73,7 @@
     var m60SetSubMenu = function(str, target) {
         var items;
         var outHtml = '<h5>最抢手单品推荐</h5>';
-        var tmp = '<p><a href="http://www.misssixty.com.cn/p/{sku}.shtml" target="_blank"><img src="{url}" />{title}</a></p>'
+        var tmp = '<p><a href="http://www.misssixty.com.cn/p/{sku}.jsp" target="_blank"><img src="{url}" />{title}</a></p>'
         if (!str) {
             return false;
         }
@@ -272,29 +272,29 @@
 
                 <dt><a href="/Denim/Jeans/list.jsp">牛仔裤</a></dt>
                 <dd>
-                    <a href="/Denim/Jeans/EVERYDAY/list.shtml" >EVERYDAY</a>
-                    <a href="/Denim/Jeans/HIGH_WAIST/list.shtml" >HIGH WAIST 高腰</a>
-                    <a href="/Denim/Jeans/FLARE/list.shtml" >FLARE 喇叭</a>
-                    <a href="/Denim/Jeans/SLIM/list.shtml" >SLIM 紧身</a>
-                    <a href="/Denim/Jeans/REGULAR/list.shtml" >REGULAR 合体</a>
-                    <a href="/Denim/Jeans/BOY_FIT/list.shtml" >BOY FIT 男友风</a>
-                    <a href="/Denim/Jeans/SKINNY_NON_PUSH_UP/list.shtml" >SKINNY NON PUSH UP 超紧身</a>
-                    <a href="/Denim/Jeans/SKINNY_PUSH_UP/list.shtml" >SKINNY PUSH UP 超紧身提臀</a>
-                    <a href="/Denim/Jeans/STRAIGHT/list.shtml" >STRAIGHT 直筒</a>
+                    <a href="/Denim/Jeans/EVERYDAY/list.jsp" >EVERYDAY</a>
+                    <a href="/Denim/Jeans/HIGH_WAIST/list.jsp" >HIGH WAIST 高腰</a>
+                    <a href="/Denim/Jeans/FLARE/list.jsp" >FLARE 喇叭</a>
+                    <a href="/Denim/Jeans/SLIM/list.jsp" >SLIM 紧身</a>
+                    <a href="/Denim/Jeans/REGULAR/list.jsp" >REGULAR 合体</a>
+                    <a href="/Denim/Jeans/BOY_FIT/list.jsp" >BOY FIT 男友风</a>
+                    <a href="/Denim/Jeans/SKINNY_NON_PUSH_UP/list.jsp" >SKINNY NON PUSH UP 超紧身</a>
+                    <a href="/Denim/Jeans/SKINNY_PUSH_UP/list.jsp" >SKINNY PUSH UP 超紧身提臀</a>
+                    <a href="/Denim/Jeans/STRAIGHT/list.jsp" >STRAIGHT 直筒</a>
                 </dd>
 
                 <dt><a href="/Denim/Dresses/list.jsp">连衣裙</a></dt>
                 <dd>
-                    <a href="/Denim/Dresses/Sleeveless_Dresses/list.shtml" >无袖连衣裙</a>
-                    <a href="/Denim/Dresses/Short_Sleeved_Dresses/list.shtml" >短袖连衣裙</a>
-                    <a href="/Denim/Dresses/Mid_Long_Sleeved_Dresses/list.shtml" >中/长袖连衣裙</a>
+                    <a href="/Denim/Dresses/Sleeveless_Dresses/list.jsp" >无袖连衣裙</a>
+                    <a href="/Denim/Dresses/Short_Sleeved_Dresses/list.jsp" >短袖连衣裙</a>
+                    <a href="/Denim/Dresses/Mid_Long_Sleeved_Dresses/list.jsp" >中/长袖连衣裙</a>
                 </dd>
 
                 <dt><a href="/Denim/Shirts/list.jsp">衬衫</a></dt>
                 <dd>
-                    <a href="/Denim/Shirts/Sleeveless_Shirts/list.shtml" >无袖衬衫</a>
-                    <a href="/Denim/Shirts/Short_Sleeved_Shirts/list.shtml" >短袖衬衫</a>
-                    <a href="/Denim/Shirts/Mid_Long_Sleeved_Shirts/list.shtml" >中/长袖衬衫</a>
+                    <a href="/Denim/Shirts/Sleeveless_Shirts/list.jsp" >无袖衬衫</a>
+                    <a href="/Denim/Shirts/Short_Sleeved_Shirts/list.jsp" >短袖衬衫</a>
+                    <a href="/Denim/Shirts/Mid_Long_Sleeved_Shirts/list.jsp" >中/长袖衬衫</a>
                 </dd>
 
                 <dt class="active"><a href="/Denim/Jackets/list.jsp">外套</a></dt>
@@ -305,9 +305,9 @@
 
                 <dt><a href="/Denim/Skirts/list.jsp">半截裙</a></dt>
                 <dd>
-                    <a href="/Denim/Skirts/Sweat_Skirts/list.shtml" >短裙</a>
-                    <a href="/Denim/Skirts/Mid_Skirts/list.shtml" >中裙</a>
-                    <a href="/Denim/Skirts/L_Skirts/list.shtml" >长裙</a>
+                    <a href="/Denim/Skirts/Sweat_Skirts/list.jsp" >短裙</a>
+                    <a href="/Denim/Skirts/Mid_Skirts/list.jsp" >中裙</a>
+                    <a href="/Denim/Skirts/L_Skirts/list.jsp" >长裙</a>
                 </dd>
 
                 <dt class="nobg"><a href="/Denim/Culottes/list.jsp">裙裤</a></dt>
@@ -390,7 +390,7 @@
             <ul id="list" class="main_list">
                 <li>
                     <div class="chip">
-                        <a data-sku="681CJ2870000F25" target="_blank" href="/p/681CJ2870000F25.shtml">
+                        <a data-sku="681CJ2870000F25" target="_blank" href="/p/681CJ2870000F25.jsp">
                             <img alt="中长牛仔披风大衣外套" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="681CJ2870000F25" data-rollover="sku,list-1">
                             <span class="chip_name">
 									中长牛仔披风大衣外套
@@ -433,10 +433,10 @@
         <dl>
             <dt>服务信息</dt>
             <dd>
-                <p><a href="/a/article/w/f/misssixty_shopping_process.shtml">购物流程</a></p>
-                <p><a href="/a/article/w/f/misssixty_delivery.shtml">配送说明</a></p>
-                <!-- <p><a href="/a/article/w/f/misssixty_pay.shtml">支付方式</a></p> -->
-                <p><a href="/a/article/w/f/misssixty_return.shtml">退货流程 </a></p>
+                <p><a href="/a/article/w/f/misssixty_shopping_process.jsp">购物流程</a></p>
+                <p><a href="/a/article/w/f/misssixty_delivery.jsp">配送说明</a></p>
+                <!-- <p><a href="/a/article/w/f/misssixty_pay.jsp">支付方式</a></p> -->
+                <p><a href="/a/article/w/f/misssixty_return.jsp">退货流程 </a></p>
                 <!-- <p><a href="#">订单查询联系我们</a></p> -->
             </dd>
         </dl>
@@ -444,8 +444,8 @@
             <dt>关于我们</dt>
             <dd>
                 <!-- <p><a href="#">关于我们</a></p> -->
-                <p><a href="/a/article/w/f/misssixty_brand_story.shtml">品牌介绍</a></p>
-                <p><a href="/a/article/w/f/misssixty_member.shtml">会员权益</a></p>
+                <p><a href="/a/article/w/f/misssixty_brand_story.jsp">品牌介绍</a></p>
+                <p><a href="/a/article/w/f/misssixty_member.jsp">会员权益</a></p>
                 <!-- <p><a href="#">专属试衣间预约</a></p> -->
             </dd>
         </dl>

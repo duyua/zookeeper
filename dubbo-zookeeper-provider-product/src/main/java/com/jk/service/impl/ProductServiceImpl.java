@@ -256,4 +256,13 @@ public class ProductServiceImpl implements IProductService {
 
         return productMapper.updateparameter(tparameter);
     }
+
+
+    public List<Cart> querygwlist(String userid) {
+        return productMapper.querygwlist(userid);
+    }
+
+    public void deleteList(String id) {
+        productMapper.deleteList(id);
+    }
 }

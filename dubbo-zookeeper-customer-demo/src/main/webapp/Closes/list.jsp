@@ -78,7 +78,7 @@
     var m60SetSubMenu = function(str, target) {
         var items;
         var outHtml = '<h5>最抢手单品推荐</h5>';
-        var tmp = '<p><a href="http://www.misssixty.com.cn/p/{sku}.shtml" target="_blank"><img src="{url}" />{title}</a></p>'
+        var tmp = '<p><a href="http://www.misssixty.com.cn/p/{sku}.jsp" target="_blank"><img src="{url}" />{title}</a></p>'
         if (!str) {
             return false;
         }
@@ -103,10 +103,10 @@
 <div id="nav2013" class="nav2013">
     <div class="nav2013_ul_box">
         <ul>
-            <li class="first"><a href="/" id="homeLink" >首页</a></li>
+            <li class="first"><a href="/heji/missSixty.jsp" id="homeLink" >首页</a></li>
 
             <li>
-                <a href="/Whats_New/list.shtml">最新上架</a>
+                <a href="/Whats_New/list.jsp">最新上架</a>
             </li>
             <li>
                 <a href="/Denim/list.jsp">牛仔风尚</a>
@@ -181,15 +181,15 @@
                 </div>
             </li>
             <li>
-                <a href="/Angel_Collection/list.shtml">天使系列</a>
+                <a href="/Angel_Collection/list.jsp">天使系列</a>
                 <div class="sub_menu">
                     <div class="sub_menu_mask">-</div>
                     <div class="sub_menu_cont">
                         <h5>按种类选购</h5>
                         <div class="sub_menu_items">
-                            <a href="/Angel_Collection/2018FW/list.shtml">2018FW</a>
+                            <a href="/Angel_Collection/2018FW/list.jsp">2018FW</a>
                             <br />
-                            <a href="/Angel_Collection/2018SS/list.shtml">2018SS</a>
+                            <a href="/Angel_Collection/2018SS/list.jsp">2018SS</a>
                             <br />
                         </div>
                         <div class="sub_menu_imgs" id="subMenuImgsAngel_Collection"></div>
@@ -200,15 +200,15 @@
                 </div>
             </li>
             <li>
-                <a href="/Crossover/list.shtml">跨界合作系列</a>
+                <a href="/Crossover/list.jsp">跨界合作系列</a>
                 <div class="sub_menu">
                     <div class="sub_menu_mask">-</div>
                     <div class="sub_menu_cont">
                         <h5>按种类选购</h5>
                         <div class="sub_menu_items">
-                            <a href="/Crossover/Disney/list.shtml">迪士尼系列</a>
+                            <a href="/Crossover/Disney/list.jsp">迪士尼系列</a>
                             <br />
-                            <a href="/Crossover/Stylist/list.shtml">造型师系列</a>
+                            <a href="/Crossover/Stylist/list.jsp">造型师系列</a>
                             <br />
                         </div>
                         <div class="sub_menu_imgs" id="subMenuImgsCrossover"></div>
@@ -219,17 +219,17 @@
                 </div>
             </li>
             <li>
-                <a href="/Young_Line/list.shtml">年轻线系列</a>
+                <a href="/Young_Line/list.jsp">年轻线系列</a>
                 <div class="sub_menu">
                     <div class="sub_menu_mask">-</div>
                     <div class="sub_menu_cont">
                         <h5>按种类选购</h5>
                         <div class="sub_menu_items">
-                            <a href="/Young_Line/2018AU/list.shtml">2018年秋季</a>
+                            <a href="/Young_Line/2018AU/list.jsp">2018年秋季</a>
                             <br />
-                            <a href="/Young_Line/2018SU/list.shtml">2018年夏季</a>
+                            <a href="/Young_Line/2018SU/list.jsp">2018年夏季</a>
                             <br />
-                            <a href="/Young_Line/2018SP/list.shtml">2018年春季</a>
+                            <a href="/Young_Line/2018SP/list.jsp">2018年春季</a>
                             <br />
                         </div>
                         <div class="sub_menu_imgs" id="subMenuImgsYoung_Line"></div>
@@ -240,15 +240,15 @@
                 </div>
             </li>
             <li>
-                <a href="/summer_sale/list.shtml" style="color:#ff0000;font-weight:bold;">2018春夏大减价</a>
+                <a href="/summer_sale/list.jsp" style="color:#ff0000;font-weight:bold;">2018春夏大减价</a>
             </li>
 
             <li>
-                <a href="/a/w/b/list.shtml">时尚博客</a>
+                <a href="/a/w/b/list.jsp">时尚博客</a>
             </li>
 
             <li>
-                <a href="/a/article/w/f/misssixty_member.shtml">会员权益</a>
+                <a href="/a/article/w/f/misssixty_member.jsp">会员权益</a>
             </li>
 
         </ul>
@@ -279,53 +279,53 @@
 
                 <dt><a href="/Closes/Sweater/list.jsp">卫衣</a></dt>
                 <dd>
-                    <a href="/Closes/Sweater/Short_Sweater/list.shtml" >短袖卫衣</a>
-                    <a href="/Closes/Sweater/Mid_Long_Sweater/list.shtml" >中/长袖卫衣</a>
+                    <a href="/Closes/Sweater/Short_Sweater/list.jsp" >短袖卫衣</a>
+                    <a href="/Closes/Sweater/Mid_Long_Sweater/list.jsp" >中/长袖卫衣</a>
                 </dd>
 
                 <dt class="nobg"><a href="/Closes/Jeans/list.jsp">牛仔裤</a></dt>
 
                 <dt><a href="/Closes/Dresses/list.jsp">连衣裙</a></dt>
                 <dd>
-                    <a href="/Closes/Dresses/Sleeveless_Dresses/list.shtml" >无袖连衣裙</a>
-                    <a href="/Closes/Dresses/Short_Sleeved_Dresses/list.shtml" >短袖连衣裙</a>
-                    <a href="/Closes/Dresses/Mid_Long_Sleeved_Dresses/list.shtml" >中/长袖连衣裙 </a>
+                    <a href="/Closes/Dresses/Sleeveless_Dresses/list.jsp" >无袖连衣裙</a>
+                    <a href="/Closes/Dresses/Short_Sleeved_Dresses/list.jsp" >短袖连衣裙</a>
+                    <a href="/Closes/Dresses/Mid_Long_Sleeved_Dresses/list.jsp" >中/长袖连衣裙 </a>
                 </dd>
 
                 <dt><a href="/Closes/Shirts/list.jsp">衬衫</a></dt>
                 <dd>
-                    <a href="/Closes/Shirts/Sleeveless_Shirts/list.shtml" >无袖衬衫</a>
-                    <a href="/Closes/Shirts/Short_Sleeved_Shirts/list.shtml" >短袖衬衫</a>
-                    <a href="/Closes/Shirts/Mid_Long_Sleeved_Shirts/list.shtml" >中/长袖衬衫</a>
+                    <a href="/Closes/Shirts/Sleeveless_Shirts/list.jsp" >无袖衬衫</a>
+                    <a href="/Closes/Shirts/Short_Sleeved_Shirts/list.jsp" >短袖衬衫</a>
+                    <a href="/Closes/Shirts/Mid_Long_Sleeved_Shirts/list.jsp" >中/长袖衬衫</a>
                 </dd>
 
                 <dt><a href="/Closes/T_shirts/list.jsp">T恤</a></dt>
                 <dd>
-                    <a href="/Closes/T_shirts/Sleeveless_T_Shirts/list.shtml" >无袖T恤</a>
-                    <a href="/Closes/T_shirts/Short_Sleeved_T_Shirts/list.shtml" >短袖T恤</a>
-                    <a href="/Closes/T_shirts/Mid_Long_T_Shirts/list.shtml" >中/长袖T恤</a>
+                    <a href="/Closes/T_shirts/Sleeveless_T_Shirts/list.jsp" >无袖T恤</a>
+                    <a href="/Closes/T_shirts/Short_Sleeved_T_Shirts/list.jsp" >短袖T恤</a>
+                    <a href="/Closes/T_shirts/Mid_Long_T_Shirts/list.jsp" >中/长袖T恤</a>
                 </dd>
 
                 <dt><a href="/Closes/Pullovers/list.jsp">毛织</a></dt>
                 <dd>
-                    <a href="/Closes/Pullovers/Sleeved_Pullovers/list.shtml" >套头毛织</a>
-                    <a href="/Closes/Pullovers/Woollen_Jacket/list.shtml" >毛织外套</a>
+                    <a href="/Closes/Pullovers/Sleeved_Pullovers/list.jsp" >套头毛织</a>
+                    <a href="/Closes/Pullovers/Woollen_Jacket/list.jsp" >毛织外套</a>
                 </dd>
 
                 <dt><a href="/Closes/Jackets/list.jsp">外套</a></dt>
                 <dd>
-                    <a href="/Closes/Jackets/Down_Jacket/list.shtml" >羽绒外套</a>
-                    <a href="/Closes/Jackets/Woolen_Coat/list.shtml" >呢料外套</a>
-                    <a href="/Closes/Jackets/Mid_Long_Jackets/list.shtml" >中/长外套</a>
-                    <a href="/Closes/Jackets/Short_Jackets/list.shtml" >短外套</a>
-                    <a href="/Closes/Jackets/Fur_Clothing/list.shtml" >皮草</a>
+                    <a href="/Closes/Jackets/Down_Jacket/list.jsp" >羽绒外套</a>
+                    <a href="/Closes/Jackets/Woolen_Coat/list.jsp" >呢料外套</a>
+                    <a href="/Closes/Jackets/Mid_Long_Jackets/list.jsp" >中/长外套</a>
+                    <a href="/Closes/Jackets/Short_Jackets/list.jsp" >短外套</a>
+                    <a href="/Closes/Jackets/Fur_Clothing/list.jsp" >皮草</a>
                 </dd>
 
                 <dt><a href="/Closes/Skirts/list.jsp">半截裙</a></dt>
                 <dd>
-                    <a href="/Closes/Skirts/Sweat_Skirts/list.shtml" >短裙</a>
-                    <a href="/Closes/Skirts/Mid_Skirts /list.shtml" >中裙</a>
-                    <a href="/Closes/Skirts/Long_Skirts/list.shtml" >长裙</a>
+                    <a href="/Closes/Skirts/Sweat_Skirts/list.jsp" >短裙</a>
+                    <a href="/Closes/Skirts/Mid_Skirts /list.jsp" >中裙</a>
+                    <a href="/Closes/Skirts/Long_Skirts/list.jsp" >长裙</a>
                 </dd>
 
                 <dt class="nobg"><a href="/Closes/Culottes/list.jsp">裙裤</a></dt>
@@ -410,7 +410,7 @@
             <ul id="list" class="main_list">
                 <li>
                     <div class="chip">
-                        <a data-sku="682JJ4320000G24" target="_blank" href="/p/682JJ4320000G24.shtml">
+                        <a data-sku="682JJ4320000G24" target="_blank" href="/p/682JJ4320000G24.jsp">
                             <img alt="低腰磨破洞牛仔短裤" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="682JJ4320000G24" data-rollover="sku,list-1">
                             <span class="chip_name">
 									低腰磨破洞牛仔短裤
@@ -426,7 +426,7 @@
                 </li>
                 <li>
                     <div class="chip">
-                        <a data-sku="682JJ4340000F25" target="_blank" href="/p/682JJ4340000F25.shtml">
+                        <a data-sku="682JJ4340000F25" target="_blank" href="/p/682JJ4340000F25.jsp">
                             <img alt="低腰磨破洞牛仔短裤" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="682JJ4340000F25" data-rollover="sku,list-1">
                             <span class="chip_name">
 									低腰磨破洞牛仔短裤
@@ -443,7 +443,7 @@
                 </li>
                 <li>
                     <div class="chip">
-                        <a data-sku="682JJ4350000G24" target="_blank" href="/p/682JJ4350000G24.shtml">
+                        <a data-sku="682JJ4350000G24" target="_blank" href="/p/682JJ4350000G24.jsp">
                             <img alt="棉质高腰阔腿牛仔短裤" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="682JJ4350000G24" data-rollover="sku,list-1">
                             <span class="chip_name">
 									棉质高腰阔腿牛仔短裤
@@ -460,7 +460,7 @@
                 </li>
                 <li>
                     <div class="chip">
-                        <a data-sku="682SJ2040000A03" target="_blank" href="/p/682SJ2040000A03.shtml">
+                        <a data-sku="682SJ2040000A03" target="_blank" href="/p/682SJ2040000A03.jsp">
                             <img alt="纯棉图案宽松短袖T恤" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="682SJ2040000A03" data-rollover="sku,list-1">
                             <span class="chip_name">
 									纯棉图案宽松短袖T恤
@@ -477,7 +477,7 @@
                 </li>
                 <li>
                     <div class="chip">
-                        <a data-sku="682DJ0440000A06" target="_blank" href="/p/682DJ0440000A06.shtml">
+                        <a data-sku="682DJ0440000A06" target="_blank" href="/p/682DJ0440000A06.jsp">
                             <img alt="荷叶边绑带短袖连衣裙" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="682DJ0440000A06" data-rollover="sku,list-1">
                             <span class="chip_name">
 									荷叶边绑带短袖连衣裙
@@ -494,7 +494,7 @@
                 </li>
                 <li>
                     <div class="chip">
-                        <a data-sku="682DJ1130000B30" target="_blank" href="/p/682DJ1130000B30.shtml">
+                        <a data-sku="682DJ1130000B30" target="_blank" href="/p/682DJ1130000B30.jsp">
                             <img alt="印花短袖雪纺连衣裙" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="682DJ1130000B30" data-rollover="sku,list-1">
                             <span class="chip_name">
 									印花短袖雪纺连衣裙
@@ -511,7 +511,7 @@
                 </li>
                 <li>
                     <div class="chip">
-                        <a data-sku="682DJ1750000C25" target="_blank" href="/p/682DJ1750000C25.shtml">
+                        <a data-sku="682DJ1750000C25" target="_blank" href="/p/682DJ1750000C25.jsp">
                             <img alt="印花短袖真丝连衣裙" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="682DJ1750000C25" data-rollover="sku,list-1">
                             <span class="chip_name">
 									印花短袖真丝连衣裙
@@ -528,7 +528,7 @@
                 </li>
                 <li>
                     <div class="chip">
-                        <a data-sku="682DJ1750000F42" target="_blank" href="/p/682DJ1750000F42.shtml">
+                        <a data-sku="682DJ1750000F42" target="_blank" href="/p/682DJ1750000F42.jsp">
                             <img alt="印花短袖真丝连衣裙" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="682DJ1750000F42" data-rollover="sku,list-1">
                             <span class="chip_name">
 									印花短袖真丝连衣裙
@@ -545,7 +545,7 @@
                 </li>
                 <li>
                     <div class="chip">
-                        <a data-sku="682PJ2980000Z05" target="_blank" href="/p/682PJ2980000Z05.shtml">
+                        <a data-sku="682PJ2980000Z05" target="_blank" href="/p/682PJ2980000Z05.jsp">
                             <img alt="印花真丝吊带连体短裤" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="682PJ2980000Z05" data-rollover="sku,list-1">
                             <span class="chip_name">
 									印花真丝吊带连体短裤
@@ -562,7 +562,7 @@
                 </li>
                 <li>
                     <div class="chip">
-                        <a data-sku="682SJ1710000A03" target="_blank" href="/p/682SJ1710000A03.shtml">
+                        <a data-sku="682SJ1710000A03" target="_blank" href="/p/682SJ1710000A03.jsp">
                             <img alt="纯棉字母印花短袖T恤" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="682SJ1710000A03" data-rollover="sku,list-1">
                             <span class="chip_name">
 									纯棉字母印花短袖T恤
@@ -579,7 +579,7 @@
                 </li>
                 <li>
                     <div class="chip">
-                        <a data-sku="682SJ1710000G24" target="_blank" href="/p/682SJ1710000G24.shtml">
+                        <a data-sku="682SJ1710000G24" target="_blank" href="/p/682SJ1710000G24.jsp">
                             <img alt="纯棉字母印花短袖T恤" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="682SJ1710000G24" data-rollover="sku,list-1">
                             <span class="chip_name">
 									纯棉字母印花短袖T恤
@@ -596,7 +596,7 @@
                 </li>
                 <li>
                     <div class="chip">
-                        <a data-sku="682SJ1880000A03" target="_blank" href="/p/682SJ1880000A03.shtml">
+                        <a data-sku="682SJ1880000A03" target="_blank" href="/p/682SJ1880000A03.jsp">
                             <img alt="纯棉露肩宽松短袖T恤" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="682SJ1880000A03" data-rollover="sku,list-1">
                             <span class="chip_name">
 									纯棉露肩宽松短袖T恤
@@ -612,7 +612,7 @@
                 </li>
                 <li>
                     <div class="chip">
-                        <a data-sku="682SJ1880000G24" target="_blank" href="/p/682SJ1880000G24.shtml">
+                        <a data-sku="682SJ1880000G24" target="_blank" href="/p/682SJ1880000G24.jsp">
                             <img alt="纯棉露肩宽松短袖T恤" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="682SJ1880000G24" data-rollover="sku,list-1">
                             <span class="chip_name">
 									纯棉露肩宽松短袖T恤
@@ -628,7 +628,7 @@
                 </li>
                 <li>
                     <div class="chip">
-                        <a data-sku="682SJ2550000E07" target="_blank" href="/p/682SJ2550000E07.shtml">
+                        <a data-sku="682SJ2550000E07" target="_blank" href="/p/682SJ2550000E07.jsp">
                             <img alt="棉质字母印花短袖T恤" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="682SJ2550000E07" data-rollover="sku,list-1">
                             <span class="chip_name">
 									棉质字母印花短袖T恤
@@ -644,7 +644,7 @@
                 </li>
                 <li>
                     <div class="chip">
-                        <a data-sku="682SJ2550000G24" target="_blank" href="/p/682SJ2550000G24.shtml">
+                        <a data-sku="682SJ2550000G24" target="_blank" href="/p/682SJ2550000G24.jsp">
                             <img alt="棉质字母印花短袖T恤" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="682SJ2550000G24" data-rollover="sku,list-1">
                             <span class="chip_name">
 									棉质字母印花短袖T恤
@@ -660,7 +660,7 @@
                 </li>
                 <li>
                     <div class="chip">
-                        <a data-sku="682SJ2750000A34" target="_blank" href="/p/682SJ2750000A34.shtml">
+                        <a data-sku="682SJ2750000A34" target="_blank" href="/p/682SJ2750000A34.jsp">
                             <img alt="纯棉字母印花短袖T恤" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="682SJ2750000A34" data-rollover="sku,list-1">
                             <span class="chip_name">
 									纯棉字母印花短袖T恤
@@ -676,7 +676,7 @@
                 </li>
                 <li>
                     <div class="chip">
-                        <a data-sku="682SJ2750000D30" target="_blank" href="/p/682SJ2750000D30.shtml">
+                        <a data-sku="682SJ2750000D30" target="_blank" href="/p/682SJ2750000D30.jsp">
                             <img alt="纯棉字母印花短袖T恤" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="682SJ2750000D30" data-rollover="sku,list-1">
                             <span class="chip_name">
 									纯棉字母印花短袖T恤
@@ -692,7 +692,7 @@
                 </li>
                 <li>
                     <div class="chip">
-                        <a data-sku="682SJ2750000F13" target="_blank" href="/p/682SJ2750000F13.shtml">
+                        <a data-sku="682SJ2750000F13" target="_blank" href="/p/682SJ2750000F13.jsp">
                             <img alt="纯棉字母印花短袖T恤" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="682SJ2750000F13" data-rollover="sku,list-1">
                             <span class="chip_name">
 									纯棉字母印花短袖T恤
@@ -708,7 +708,7 @@
                 </li>
                 <li>
                     <div class="chip">
-                        <a data-sku="682SJ3110000A03" target="_blank" href="/p/682SJ3110000A03.shtml">
+                        <a data-sku="682SJ3110000A03" target="_blank" href="/p/682SJ3110000A03.jsp">
                             <img alt="纯棉字母印花短袖T恤" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="682SJ3110000A03" data-rollover="sku,list-1">
                             <span class="chip_name">
 									纯棉字母印花短袖T恤
@@ -724,7 +724,7 @@
                 </li>
                 <li>
                     <div class="chip">
-                        <a data-sku="682SJ3110000B02" target="_blank" href="/p/682SJ3110000B02.shtml">
+                        <a data-sku="682SJ3110000B02" target="_blank" href="/p/682SJ3110000B02.jsp">
                             <img alt="纯棉字母印花短袖T恤" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="682SJ3110000B02" data-rollover="sku,list-1">
                             <span class="chip_name">
 									纯棉字母印花短袖T恤
@@ -740,7 +740,7 @@
                 </li>
                 <li>
                     <div class="chip">
-                        <a data-sku="682DJ0730000F25" target="_blank" href="/p/682DJ0730000F25.shtml">
+                        <a data-sku="682DJ0730000F25" target="_blank" href="/p/682DJ0730000F25.jsp">
                             <img alt="露背无袖牛仔连衣裙" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="682DJ0730000F25" data-rollover="sku,list-1">
                             <span class="chip_name">
 									露背无袖牛仔连衣裙
@@ -757,7 +757,7 @@
                 </li>
                 <li>
                     <div class="chip">
-                        <a data-sku="682DJ1040000F25" target="_blank" href="/p/682DJ1040000F25.shtml">
+                        <a data-sku="682DJ1040000F25" target="_blank" href="/p/682DJ1040000F25.jsp">
                             <img alt="修身短袖牛仔连衣裙" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="682DJ1040000F25" data-rollover="sku,list-1">
                             <span class="chip_name">
 									修身短袖牛仔连衣裙
@@ -775,7 +775,7 @@
                 </li>
                 <li>
                     <div class="chip">
-                        <a data-sku="682DJ1080000E01" target="_blank" href="/p/682DJ1080000E01.shtml">
+                        <a data-sku="682DJ1080000E01" target="_blank" href="/p/682DJ1080000E01.jsp">
                             <img alt="提花褶皱吊带连衣裙" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="682DJ1080000E01" data-rollover="sku,list-1">
                             <span class="chip_name">
 									提花褶皱吊带连衣裙
@@ -793,7 +793,7 @@
                 </li>
                 <li>
                     <div class="chip">
-                        <a data-sku="682DJ1690000E07" target="_blank" href="/p/682DJ1690000E07.shtml">
+                        <a data-sku="682DJ1690000E07" target="_blank" href="/p/682DJ1690000E07.jsp">
                             <img alt="荷叶边吊带雪纺连衣裙" src="http://img2.misssixty.com.cn/rs/common/v1/web/css/blank.gif"  data-sku="682DJ1690000E07" data-rollover="sku,list-1">
                             <span class="chip_name">
 									荷叶边吊带雪纺连衣裙
@@ -835,10 +835,10 @@
         <dl>
             <dt>服务信息</dt>
             <dd>
-                <p><a href="/a/article/w/f/misssixty_shopping_process.shtml">购物流程</a></p>
-                <p><a href="/a/article/w/f/misssixty_delivery.shtml">配送说明</a></p>
-                <!-- <p><a href="/a/article/w/f/misssixty_pay.shtml">支付方式</a></p> -->
-                <p><a href="/a/article/w/f/misssixty_return.shtml">退货流程 </a></p>
+                <p><a href="/a/article/w/f/misssixty_shopping_process.jsp">购物流程</a></p>
+                <p><a href="/a/article/w/f/misssixty_delivery.jsp">配送说明</a></p>
+                <!-- <p><a href="/a/article/w/f/misssixty_pay.jsp">支付方式</a></p> -->
+                <p><a href="/a/article/w/f/misssixty_return.jsp">退货流程 </a></p>
                 <!-- <p><a href="#">订单查询联系我们</a></p> -->
             </dd>
         </dl>
@@ -846,8 +846,8 @@
             <dt>关于我们</dt>
             <dd>
                 <!-- <p><a href="#">关于我们</a></p> -->
-                <p><a href="/a/article/w/f/misssixty_brand_story.shtml">品牌介绍</a></p>
-                <p><a href="/a/article/w/f/misssixty_member.shtml">会员权益</a></p>
+                <p><a href="/a/article/w/f/misssixty_brand_story.jsp">品牌介绍</a></p>
+                <p><a href="/a/article/w/f/misssixty_member.jsp">会员权益</a></p>
                 <!-- <p><a href="#">专属试衣间预约</a></p> -->
             </dd>
         </dl>

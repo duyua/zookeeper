@@ -6,7 +6,7 @@
     <script>
         (function(){
             if (window.navigator.userAgent.toLowerCase().indexOf('mobile') >= 0) {
-                window.location.href = '/mobile/index.shtml';
+                window.location.href = '/mobile/index.jsp';
             }
         })();
     </script>
@@ -34,7 +34,7 @@
                 <span id="paramLogin"><em id="emUserName"></em><a id="linkLogin" href="#"></a><em>|</em><a href="#" id="linkReg">注册</a></span>
                 <a id="linkAccount" href="#" title="我的账户">我的账户</a><em>|</em>
                 <a id="linkWishlist" class="link_Wishlist" href="#" title="我的收藏">我的收藏</a><em>|</em>
-                <a id="linkCart" class="link_bag" href="#" title="购物袋"><span id="cartNum">0</span></a><em>|</em>
+                <a id="linkCart" class="link_bag" href="<%=request.getContextPath()%>/basicController/querygwlist.do" title="购物袋"><span id="cartNum">0</span></a><em>|</em>
                 <a href="javascript:;" class="linkServiceOnlineTop">在线客服</a>
                 <p id="navSearch" class="search2013">
                     <input type="text" id="navIntSearch" value="搜索您感兴趣的内容">
@@ -45,7 +45,7 @@
     </div>
     <div class="header_content">
         <h1 id="logoOch" class="logo ochirly_logo">
-            <a href="http://www.misssixty.com.cn/">MISS SIXTY</a>
+            <a href="">MISS SIXTY</a>
         </h1>
     </div>
 </div>
@@ -53,7 +53,7 @@
     var m60SetSubMenu = function(str, target) {
         var items;
         var outHtml = '<h5>最抢手单品推荐</h5>';
-        var tmp = '<p><a href="http://www.misssixty.com.cn/p/{sku}.shtml" target="_blank"><img src="{url}" />{title}</a></p>'
+        var tmp = '<p><a href="http://www.misssixty.com.cn/p/{sku}.jsp" target="_blank"><img src="{url}" />{title}</a></p>'
         if (!str) {
             return false;
         }
@@ -236,7 +236,7 @@
 <div class="access" id="indexContent">
     <div class="index_access">
         <div class="m_fix_video" data-fix-h="155" data-fix-r="20|11" id="mFixVideo">
-            <div class="shape_wrap"><a href="http://www.misssixty.com.cn/a/article/w/s/misssixty_18F_angelcollection_pc.shtml" target="_bkank"><img src="http://img2.misssixty.com.cn/rs/common/images/blank.gif" data-src="http://img2.ochirly.com.cn/material/2018/07/04/20180704181810648.jpg" /> </a></div>
+            <div class="shape_wrap"><a href="http://www.misssixty.com.cn/a/article/w/s/misssixty_18F_angelcollection_pc.jsp" target="_bkank"><img src="http://img2.misssixty.com.cn/rs/common/images/blank.gif" data-src="http://img2.ochirly.com.cn/material/2018/07/04/20180704181810648.jpg" /> </a></div>
         </div>
         <script>
             /*(function(){
@@ -252,7 +252,7 @@
         </script>
         <div class="shape">
             <div class="shape_wrap">
-                <a href="http://www.misssixty.com.cn/summer_sale/list.shtml">
+                <a href="http://www.misssixty.com.cn/summer_sale/list.jsp">
                     <img src="http://img2.misssixty.com.cn/rs/common/images/blank.gif" data-src="http://img2.ochirly.com.cn/material/2018/07/04/20180704181810662.jpg" />
                 </a></div>
         </div>
@@ -260,20 +260,20 @@
             <div class="shape_wrap">
                 <img src="http://img2.misssixty.com.cn/rs/common/images/blank.gif" data-src="http://img2.ochirly.com.cn/material/2018/07/04/20180704181810724.jpg" width="1920" height="1733" usemap="#官网7页首页02" border="0" />
                 <map name="官网7页首页02" id="官网7页首页02">
-                    <area shape="rect" coords="308,34,1624,542" href="http://www.misssixty.com.cn/a/article/w/s/misssixty_disney.shtml" target="_blank" />
-                    <area shape="rect" coords="304,588,945,1151" href="http://www.misssixty.com.cn/Whats_New/Newest/list.shtml" target="_blank" />
-                    <area shape="rect" coords="971,590,1629,1150" href="http://www.misssixty.com.cn/Young_Line/list.shtml" target="_blank" />
-                    <area shape="rect" coords="305,1196,1597,2055" href="http://www.misssixty.com.cn/Denim/list.shtml" target="_blank" />
+                    <area shape="rect" coords="308,34,1624,542" href="http://www.misssixty.com.cn/a/article/w/s/misssixty_disney.jsp" target="_blank" />
+                    <area shape="rect" coords="304,588,945,1151" href="http://www.misssixty.com.cn/Whats_New/Newest/list.jsp" target="_blank" />
+                    <area shape="rect" coords="971,590,1629,1150" href="http://www.misssixty.com.cn/Young_Line/list.jsp" target="_blank" />
+                    <area shape="rect" coords="305,1196,1597,2055" href="http://www.misssixty.com.cn/Denim/list.jsp" target="_blank" />
                 </map>
             </div>
         </div>
         <div class="shape">
             <img src="http://img2.misssixty.com.cn/rs/common/images/blank.gif" data-src="http://img2.ochirly.com.cn/material/2018/07/04/20180704181811383.jpg" width="1920" height="676" usemap="#官网7月首页03" border="0" />
             <map name="官网7月首页03" id="官网7月首页03">
-                <area shape="rect" coords="303,236,636,669" href="http://www.misssixty.com.cn/Dresses/Dress/list.shtml" target="_blank" />
-                <area shape="rect" coords="643,236,960,675" href="http://www.misssixty.com.cn/Tops/T_shirts/list.shtml" target="_blank" />
-                <area shape="rect" coords="967,237,1274,681" href="http://www.misssixty.com.cn/Tops/Shirts/list.shtml" target="_blank" />
-                <area shape="rect" coords="1282,238,1612,699" href="http://www.misssixty.com.cn/Dresses/Skirts/list.shtml" target="_blank" />
+                <area shape="rect" coords="303,236,636,669" href="http://www.misssixty.com.cn/Dresses/Dress/list.jsp" target="_blank" />
+                <area shape="rect" coords="643,236,960,675" href="http://www.misssixty.com.cn/Tops/T_shirts/list.jsp" target="_blank" />
+                <area shape="rect" coords="967,237,1274,681" href="http://www.misssixty.com.cn/Tops/Shirts/list.jsp" target="_blank" />
+                <area shape="rect" coords="1282,238,1612,699" href="http://www.misssixty.com.cn/Dresses/Skirts/list.jsp" target="_blank" />
             </map>
         </div>
     </div>
@@ -284,24 +284,24 @@
             <div class="access_blog_list">
                 <!--每博客内容，需要修改博客链接、图片链接、博客标题和博客的内容提示，博客标题中断行的地方用<br />-->
                 <div class="access_blog_item">
-                    <a href="/a/article/w/b/fallangel.shtml"><img data-src="http://img2.misssixty.com.cn/material/2018/07/03/20180703184158569.jpg" src="http://img2.misssixty.com.cn/rs/common/images/blank.gif"></a>
+                    <a href="/a/article/w/b/fallangel.jsp"><img data-src="http://img2.misssixty.com.cn/material/2018/07/03/20180703184158569.jpg" src="http://img2.misssixty.com.cn/rs/common/images/blank.gif"></a>
                     <h4>天使秘境神秘来袭 | 2018 MISS SIXTY秋季天使系列</h4>
                     <p>从热情沙漠到潮流街头，此次秋季天使来到 丛林秘境 ，再次把创始人钟爱的天使之翼提升至全新境界。富于变化且做工精细的天使羽翼随着人体律动而轻轻摇摆，呼唤出原始神秘的自然冒险精神，穿着它如同置身 斑斓迷彩 的自然梦境。</p>
-                    <a class="btn_view_blog" href="/a/article/w/b/fallangel.shtml">浏览详情 &gt;</a>
+                    <a class="btn_view_blog" href="/a/article/w/b/fallangel.jsp">浏览详情 &gt;</a>
                 </div>
                 <!--每博客内容，需要修改博客链接、图片链接、博客标题和博客的内容提示，博客标题中断行的地方用<br />-->
                 <div class="access_blog_item">
-                    <a href="/a/article/w/b/july.shtml"><img data-src="http://img2.misssixty.com.cn/material/2018/07/03/20180703181200340.jpg" src="http://img2.misssixty.com.cn/rs/common/images/blank.gif"></a>
+                    <a href="/a/article/w/b/july.jsp"><img data-src="http://img2.misssixty.com.cn/material/2018/07/03/20180703181200340.jpg" src="http://img2.misssixty.com.cn/rs/common/images/blank.gif"></a>
                     <h4>像纽约客一样，把小周末过成别人羡慕的样子</h4>
                     <p>七月阳光耀眼的盛夏街头，就是展现你风格的最好舞台。当浪漫的紫罗兰色变幻为点点的印花，攀爬上裙摆的荷叶边褶皱，一览无余地展现出柔美的气质。</p>
-                    <a class="btn_view_blog" href="/a/article/w/b/july.shtml">浏览详情 &gt;</a>
+                    <a class="btn_view_blog" href="/a/article/w/b/july.jsp">浏览详情 &gt;</a>
                 </div>
                 <!--每博客内容，需要修改博客链接、图片链接、博客标题和博客的内容提示，博客标题中断行的地方用<br />-->
                 <div class="access_blog_item">
-                    <a href="/a/article/w/b/INSINS.shtml"><img data-src="http://img2.misssixty.com.cn/material/2018/07/03/20180703172319300.jpg" src="http://img2.misssixty.com.cn/rs/common/images/blank.gif"></a>
+                    <a href="/a/article/w/b/INSINS.jsp"><img data-src="http://img2.misssixty.com.cn/material/2018/07/03/20180703172319300.jpg" src="http://img2.misssixty.com.cn/rs/common/images/blank.gif"></a>
                     <h4>超红INS博主都穿这件，一件T恤治愈你的穿搭困难症</h4>
                     <p>在每个人的衣橱里面，都会有一件这样的T恤——在你不知道穿什么的时候，它永远是你的第一选择。穿了100次，还是可以给你100+1的时髦灵感。</p>
-                    <a class="btn_view_blog" href="/a/article/w/b/INSINS.shtml">浏览详情 &gt;</a>
+                    <a class="btn_view_blog" href="/a/article/w/b/INSINS.jsp">浏览详情 &gt;</a>
                 </div>
             </div>
         </div>
@@ -318,10 +318,10 @@
         <dl>
             <dt>服务信息</dt>
             <dd>
-                <p><a href="/a/article/w/f/misssixty_shopping_process.shtml">购物流程</a></p>
-                <p><a href="/a/article/w/f/misssixty_delivery.shtml">配送说明</a></p>
-                <!-- <p><a href="/a/article/w/f/misssixty_pay.shtml">支付方式</a></p> -->
-                <p><a href="/a/article/w/f/misssixty_return.shtml">退货流程 </a></p>
+                <p><a href="/a/article/w/f/misssixty_shopping_process.jsp">购物流程</a></p>
+                <p><a href="/a/article/w/f/misssixty_delivery.jsp">配送说明</a></p>
+                <!-- <p><a href="/a/article/w/f/misssixty_pay.jsp">支付方式</a></p> -->
+                <p><a href="/a/article/w/f/misssixty_return.jsp">退货流程 </a></p>
                 <!-- <p><a href="#">订单查询联系我们</a></p> -->
             </dd>
         </dl>
@@ -329,8 +329,8 @@
             <dt>关于我们</dt>
             <dd>
                 <!-- <p><a href="#">关于我们</a></p> -->
-                <p><a href="/a/article/w/f/misssixty_brand_story.shtml">品牌介绍</a></p>
-                <p><a href="/a/article/w/f/misssixty_member.shtml">会员权益</a></p>
+                <p><a href="/a/article/w/f/misssixty_brand_story.jsp">品牌介绍</a></p>
+                <p><a href="/a/article/w/f/misssixty_member.jsp">会员权益</a></p>
                 <!-- <p><a href="#">专属试衣间预约</a></p> -->
             </dd>
         </dl>

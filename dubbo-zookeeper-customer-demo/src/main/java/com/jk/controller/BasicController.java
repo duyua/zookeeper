@@ -6,8 +6,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @Controller
@@ -210,5 +212,24 @@ public class BasicController {
     public  Integer parameterupdate(Tparameter tparameter){
         Integer i=productService.updateparameter(tparameter);
         return i;
+    }
+    /**
+     * 查询购物车中的商品信息
+     */
+    @RequestMapping("querygwlist")
+    public ModelAndView querygwlist(HttpServletRequest request){
+        ModelAndView mav = new ModelAndView();
+//        String userid = (String) request.getSession().getAttribute("userid");
+        String userid="1";
+        List<Cart> list = productService.querygwlist(userid);
+
+        mav.addObject("car",list);
+        mav.setViewName("cart/newlist");
+        return mav;
+    }
+    @RequestMapping("deleteList")
+    public String deleteList(String id){
+        productService.deleteList(id);
+        return "redirect:querygwlist.do";
     }
 }
