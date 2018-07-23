@@ -32,7 +32,7 @@
                 <span id="paramLogin"><em id="emUserName"></em><a id="linkLogin" href="#"></a><em>|</em><a href="#" id="linkReg">注册</a></span>
                 <a id="linkAccount" href="<%=request.getContextPath()%>/basicController/mehost.do" title="我的账户">我的账户</a><em>|</em>
                 <a id="linkWishlist" class="link_Wishlist" href="#" title="我的收藏">我的收藏</a><em>|</em>
-                <a id="linkCart" class="link_bag" href="<%=request.getContextPath()%>/basicController/querygwlist.do" title="购物袋"><span id="cartNum">0</span></a><em>|</em>
+                <a id="linkCart" class="link_bag" href="<%=request.getContextPath()%>/basicController/querygwlist.do" title="购物袋"></a><em>|</em>
                 <a href="javascript:;" class="linkServiceOnlineTop">在线客服</a>
                 <p id="navSearch" class="search2013">
                     <input type="text" id="navIntSearch" value="搜索您感兴趣的内容">
@@ -96,7 +96,7 @@
                     <c:forEach items="${car}" var="cc">
                         <tr id="item630497" data-param="630497,681SJ3230000A03,890.0,890.0,1,7e52df0a7d7143549571435b8d263d66">
                             <td>
-                                <input type="checkbox" id="selectItem630497" value="${cc.basicprice}" class="ck_select_item" checked  />
+                                <input type="checkbox" id="selectItem630497" value="${cc.basicprice}" class="ck_select_item"  />
                             </td>
                             <td>
                                 <a href="//www.misssixty.com.cn/p/681SJ3230000A03.shtml" target="_blank">
@@ -169,37 +169,45 @@
 </script>
 <script >
     var r=$("#qty630497").val();
+
     $("#cartItemCount").text(r);
     $("#zongjian").val(r);
     var zhi=$("#displayPrice630497").text();
-    $("#spPrice630497").html("￥"+zhi)
-    $("#cartTotalPrice").html("￥"+zhi)
-    $("#zongjia").val(zhi);
+    var zz=parseInt(zhi);
+    var zz=parseInt(r);
+    var w=(zhi*r);
+    $("#spPrice630497").html("￥"+w)
+    $("#cartTotalPrice").html("￥"+w)
+    $("#zongjia").val(w);
 
 
-    function suanfa(id) {
+    function suanfa() {
 
         var zhi=$("#displayPrice630497").text();
+           var ss=parseFloat(zhi)
         var z=$("#qty630497").val();
-          var s=parseInt(z)+1;
-          var zz=parseInt(zhi);
-          var zong=zhi*s;
-        $("#cartItemCount").text(s);
+          var s=parseInt(z);
+        $("#qty630497").val(s+1);
+
+        $("#cartItemCount").text(s+1);
+
+        var zong=ss*s;
         $("#zongjian").val(s);
         $("#spPrice630497").html("￥"+zong)
         $("#cartTotalPrice").html("￥"+zong)
         $("#zongjia").val(zong);
     }
-    function suanfaj(id) {
+    function suanfaj() {
         var zhi=$("#displayPrice630497").text();
         var z=$("#qty630497").val();
 
         var s=parseInt(z);
-        var zz=parseInt(zhi);
-        if(z==1){
-            var zong=zhi*s;
+        var ss=parseFloat(zhi)
+        if(z<=1){
+            var zong=ss*s-1;
             $("#cartItemCount").text(s);
             $("#zongjian").val(1);
+            $("#qty630497").val(1);
             $("#spPrice630497").html("￥"+zong)
             $("#cartTotalPrice").html("￥"+zong)
             $("#zongjia").val(zong);
@@ -207,11 +215,12 @@
               var shu=s-1;
             $("#cartItemCount").text(shu);
             $("#zongjian").val(shu);
-            var zong=zhi*shu;
+            $("#qty630497").val(shu);
+            var zon=ss*shu;
 
-            $("#spPrice630497").html("￥"+zong)
-            $("#cartTotalPrice").html("￥"+zong)
-            $("#zongjia").val(zong);
+            $("#spPrice630497").html("￥"+zon)
+            $("#cartTotalPrice").html("￥"+zon)
+            $("#zongjia").val(zon);
         }
 
     }

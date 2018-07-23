@@ -57,4 +57,14 @@ public interface ProductMapper {
     List<Cart> querygwlist(@Param("id") String userid);
 
     void deleteList(@Param("id") String id);
+
+    void addaddress(@Param("re") Receiveraddress receiver);
+
+    List<Receiveraddress> queryaddresslist(@Param("id") String userid);
+
+    void adddingdan(@Param("man") Management management);
+
+    void updatedingdan(@Param("bianhao") String bianhao);
+
+    void updatemanagement(@Param("userid") String userid,@Param("jine") Double ss, @Param("jifen") Integer zengsongjifen);
 }

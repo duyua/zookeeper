@@ -26,7 +26,7 @@
         <span id="paramLogin"><a href="" id="linkLogin">登录│注册</a></span>
         <a href="#" id="linkAccount">我的账户</a>
         <a href="javascript:;" class="link_Wishlist"  id="linkWishlist">我的收藏</a>
-        <a href="#" class="link_bag" id="linkCart">购物袋(<span id="cartNum">0</span>)</a>
+        <a href="#" class="link_bag" id="linkCart">购物袋</a>
     </div>
     <div class="search2013" id="navSearch" style="display:none;">
         <input type="text" value="搜索您感兴趣的内容" id="navIntSearch">

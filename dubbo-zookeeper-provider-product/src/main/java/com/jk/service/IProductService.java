@@ -87,5 +87,25 @@ public interface IProductService {
      */
     List<Cart> querygwlist(String userid);
 
+    /**
+     * 删除购物车商品
+     * @param id
+     */
     void deleteList(String id);
+    /**
+     * 新增收货地址
+     */
+    //List<Receiveraddress> addreceiver(Receiveraddress receiver, String useid);
+    /**
+     * 查询会员地址信息
+     */
+    List<Receiveraddress> queryreciverlist(String userid);
+    /**
+     * 新增订单信息
+     */
+    void adddingdan(Management management, String gouwuid);
+    /**
+     * 点击支付修改订单状态
+     */
+    void updatedingdan(String bianhao, String userid, String shangpinid,String jine);
 }

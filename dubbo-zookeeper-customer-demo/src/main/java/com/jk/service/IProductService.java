@@ -41,4 +41,12 @@ public interface IProductService {
     List<Cart> querygwlist(String userid);
 
     void deleteList(String id);
+
+    //List<Receiveraddress> addreceiver(Receiveraddress receiver, String useid);
+
+    List<Receiveraddress> queryreciverlist(String userid);
+
+    void adddingdan(Management management, String gouwuid);
+
+    void updatedingdan(String bianhao, String userid, String shangpinid,String jine);
 }

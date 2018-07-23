@@ -265,4 +265,64 @@ public class ProductServiceImpl implements IProductService {
     public void deleteList(String id) {
         productMapper.deleteList(id);
     }
+
+   /* @Override
+    public List<Receiveraddress> addreceiver(Receiveraddress receiver,String useid) {
+          String di="";
+          String si="";
+            if(receiver.getSheng()=="11"){
+                di="北京";
+            }
+        if(receiver.getSheng()=="21"){
+            di="河北";
+        }
+        if(receiver.getSheng()=="31"){
+            di="山东";
+        }
+        receiver.setSheng(di);
+        if(receiver.getShi()=="41"){
+            si="海淀区";
+        }
+        if(receiver.getShi()=="51"){
+            si="朝阳区";
+        }
+        if(receiver.getShi()=="61"){
+            si="曹县";
+        }
+        if(receiver.getShi()=="71"){
+            si="邯郸";
+        }
+        receiver.setShi(si);
+       String uuid= UUID.randomUUID().toString().replaceAll("-","");
+       receiver.setId(uuid);
+        productMapper.addaddress(receiver);
+      List<Receiveraddress> list=productMapper.queryaddresslist(receiver.getUserid());
+        return list;
+    }
+*/
+    @Override
+    public List<Receiveraddress> queryreciverlist(String userid) {
+        List<Receiveraddress> list=productMapper.queryaddresslist(userid);
+        return list;
+    }
+
+    @Override
+    public void adddingdan(Management management, String gouwuid) {
+        productMapper.deleteList(gouwuid);
+       String uuid= UUID.randomUUID().toString().replaceAll("-","");
+       management.setManagementid(uuid);
+       management.setManagementstatus(1);
+        productMapper.adddingdan(management);
+    }
+
+    @Override
+    public void updatedingdan(String bianhao, String userid, String shangpinid,String jine) {
+        productMapper.updatedingdan(bianhao);
+        Tbasic tbasic=productMapper.querybasicbyid(shangpinid);
+       Double ss= Double.parseDouble(jine);
+        Integer zengsongjifen = tbasic.getZengsongjifen();
+        productMapper.updatemanagement(userid,ss,zengsongjifen);
+    }
+
+
 }

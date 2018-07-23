@@ -26,15 +26,15 @@
     </script>
 </head>
 <body>
-<p id="tip520" class="top_tip">全场1399包邮<span onclick="this.parentNode.style.display = 'none';">x</span></p>
+<p id="tip520" class="top_tip">全场139包邮<span onclick="this.parentNode.style.display = 'none';">x</span></p>
 <div class="header">
     <div class="top_link_box">
         <div class="header_content">
             <div class="header_count">
                 <span id="paramLogin"><em id="emUserName"></em><a id="linkLogin" href="#"></a><em>|</em><a href="#" id="linkReg">注册</a></span>
-                <a id="linkAccount" href="#" title="我的账户">我的账户</a><em>|</em>
+                <a id="linkAccount" href="<%=request.getContextPath()%>/basicController/mehost.do" title="我的账户">我的账户</a><em>|</em>
                 <a id="linkWishlist" class="link_Wishlist" href="#" title="我的收藏">我的收藏</a><em>|</em>
-                <a id="linkCart" class="link_bag" href="<%=request.getContextPath()%>/basicController/querygwlist.do" title="购物袋"><span id="cartNum">0</span></a><em>|</em>
+                <a id="linkCart" class="link_bag" href="<%=request.getContextPath()%>/basicController/querygwlist.do" title="购物袋"></a><em>|</em>
                 <a href="javascript:;" class="linkServiceOnlineTop">在线客服</a>
                 <p id="navSearch" class="search2013">
                     <input type="text" id="navIntSearch" value="搜索您感兴趣的内容">

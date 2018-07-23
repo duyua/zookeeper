@@ -4,7 +4,8 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>选择支付方式</title>
+    <title>我的购物袋</title>
+
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="stylesheet" href="https://img2.fiveplus.com/rs/common/v1/web/css/my.min.css?1" />
@@ -44,55 +45,23 @@
     </div>
 </div>
 
-<script>
-    var _mvq = _mvq || [];
-    var _gaSkuItem = _gaSkuItem || [];
-    _mvq.push(['$setGeneral', 'ordercreate', '', '', '']);
-    _mvq.push(['$addOrder','50736681', '864.00']);
-</script>
 <div class="cart_container">
     <div class="edge">
-        <div class="checkout_step">
-            <div class="pay_tip col_6">
-                <h2>订单已生成，请继续完成支付！</h2>
-                <p><span>订单编号：${bianhao}</span> <span>支付金额：<b>￥${jine}</b></span></p>
+
+        <div class="cart">
+            <div class="checkout_step">
+                <h3>购物袋</h3>
             </div>
-        </div>
-
-        <div class="checkout row">
-            <!--支付信息|支付Id: 240447 ;appId:3-->
-            <!-- <div>显示渠道|渠道公司数目：1  </div> -->
-            <p class="pay_tip_fallow">你需要支付：<b>￥${jine}元</b>，请选择：</p>
-
-
-
-            <div class="pay_total col_13">
-                <div>
-
-                    支付 <b>￥${jine}</b>
+            <div class="cart_tip">优惠：单笔消费，满699元免邮</div>
+            <div class="cart_content col_13">
+                <div class="blank_tip">
+                    <p><b class="blank_tip_no">no</b>购物袋还是空的哦，<a href="../heji/missSixty.jsp">快去挑选心仪的衣服吧~</a></p>
                 </div>
-                <p>
-                    <button class="col_3" type="button" onclick="zhifu()">支付</button>
-                </p>
             </div>
-
         </div>
+
     </div>
 </div>
-<input type="hidden" id="bianhaoid" value="${bianhao}">
-<input type="hidden" id="userid" value="${userid}">
-<input type="hidden" id="shangpinid" value="${shangpinid}">
-<input type="hidden" id="jine" value="${jine}">
-<script>
-    var _gaOrderInfo = {
-        'shop' : te$.getCurrBrand(),
-        'total': 864.00,
-        'ship': 0.00000,
-        'id' : 5585244
-    }
-    var _gaViewPoint1 = 'beforePay';
-    te$.business.pay.initPayChannel();
-</script>
 
 <div class="copyright">
     <div class="copyright_inner" id="myFooter">
@@ -106,15 +75,6 @@
 <script>
     te$.system.setMyHeadAndFooter();
     te$.system.hasLoad();
-</script>
-<script >
-    function zhifu() {
-        var zhi=$("#bianhaoid").val();
-        var zhi1=$("#userid").val();
-        var zhi2=$("#shangpinid").val();
-        var zhi3=$("#jine").val();
-        location.href="<%=request.getContextPath()%>/basicController/chenggongupdate.do?bianhao="+zhi+"&userid="+zhi1+"&shangpinid="+zhi2+"&jine="+zhi3;
-    }
 </script>
 </body>
 </html>
