@@ -20,32 +20,7 @@
     <script src="http://img2.misssixty.com.cn/rs/misssixty/v1/www/js/m60_www_global.min.js"></script>
 </head>
 <body>
-<script>
-    te$.setMyStyle();
-</script>
-
-
-<p id="tip520" class="top_tip">全场1399包邮<span onclick="this.parentNode.style.display = 'none';">x</span></p>
-<div class="header">
-    <div class="top_link_box">
-        <div class="header_content">
-            <div class="header_count">
-                <span id="paramLogin"><em id="emUserName"></em><a id="linkLogin" href="#"></a><em>|</em><a href="#" id="linkReg">注册</a></span>
-                <a id="linkAccount" href="<%=request.getContextPath()%>/basicController/mehost.do" title="我的账户">我的账户</a><em>|</em>
-                <a id="linkWishlist" class="link_Wishlist" href="#" title="我的收藏">我的收藏</a><em>|</em>
-                <a id="linkCart" class="link_bag" href="<%=request.getContextPath()%>/basicController/querygwlist.do" title="购物袋"></a><em>|</em>
-
-
-            </div>
-        </div>
-    </div>
-    <div class="header_content">
-        <h1 id="logoOch" class="logo ochirly_logo">
-            <a href="../heji/missSixty.jsp">MISS SIXTY</a>
-        </h1>
-    </div>
-</div>
-
+<jsp:include page="../incolud.jsp"></jsp:include>
 <script>
     var _gaSkuItem = [];
     var _mvq = _mvq || [];

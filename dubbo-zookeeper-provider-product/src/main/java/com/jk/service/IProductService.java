@@ -83,6 +83,10 @@ public interface IProductService {
      */
     Integer updateparameter(Tparameter tparameter);
     /**
+     * 新增购物车商品
+     */
+    Integer addshpping(Cart cart);
+    /**
      * 购物车商品查询
      */
     List<Cart> querygwlist(String userid);

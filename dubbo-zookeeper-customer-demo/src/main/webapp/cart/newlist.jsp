@@ -20,33 +20,7 @@
     <script src="http://img2.misssixty.com.cn/rs/misssixty/v1/www/js/m60_www_global.min.js"></script>
 </head>
 <body>
-<script>
-    te$.setMyStyle();
-</script>
-
-<p id="tip520" class="top_tip">全场1399包邮<span onclick="this.parentNode.style.display = 'none';">x</span></p>
-<div class="header">
-    <div class="top_link_box">
-        <div class="header_content">
-            <div class="header_count">
-                <span id="paramLogin"><em id="emUserName"></em><a id="linkLogin" href="#"></a><em>|</em><a href="#" id="linkReg">注册</a></span>
-                <a id="linkAccount" href="<%=request.getContextPath()%>/basicController/mehost.do" title="我的账户">我的账户</a><em>|</em>
-                <a id="linkWishlist" class="link_Wishlist" href="#" title="我的收藏">我的收藏</a><em>|</em>
-                <a id="linkCart" class="link_bag" href="<%=request.getContextPath()%>/basicController/querygwlist.do" title="购物袋"></a><em>|</em>
-                <a href="javascript:;" class="linkServiceOnlineTop">在线客服</a>
-                <p id="navSearch" class="search2013">
-                    <input type="text" id="navIntSearch" value="搜索您感兴趣的内容">
-                    <button type="button">搜索</button>
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="header_content">
-        <h1 id="logoOch" class="logo ochirly_logo">
-            <a href="../heji/missSixty.jsp">MISS SIXTY</a>
-        </h1>
-    </div>
-</div>
+<jsp:include page="../incolud.jsp"></jsp:include>
 
 <div class="cart_container">
     <div class="edge">
@@ -57,7 +31,7 @@
         </div>
 
         <div class="cart">
-            <div class="cart_tip">优惠：单笔消费，满699元免邮</div>
+            <div class="cart_tip">优惠：全场消费，满1399元免邮</div>
             <div class="cart_content col_13">
                 <script>
                     var _mvq = _mvq || [];
@@ -169,15 +143,23 @@
 </script>
 <script >
     var r=$("#qty630497").val();
-
-    $("#cartItemCount").text(r);
+    if($("#selectItem630497").is(":checked")){
+        $("#cartItemCount").text(r);
+    }else {
+        $("#cartItemCount").text(0);
+    }
     $("#zongjian").val(r);
     var zhi=$("#displayPrice630497").text();
     var zz=parseInt(zhi);
     var zz=parseInt(r);
     var w=(zhi*r);
     $("#spPrice630497").html("￥"+w)
-    $("#cartTotalPrice").html("￥"+w)
+    if($("#selectItem630497").is(":checked")){
+        $("#cartTotalPrice").html("￥"+w)
+    }else {
+        $("#cartTotalPrice").html("￥"+0)
+    }
+
     $("#zongjia").val(w);
 
 
@@ -188,14 +170,21 @@
         var z=$("#qty630497").val();
           var s=parseInt(z);
         $("#qty630497").val(s+1);
-
-        $("#cartItemCount").text(s+1);
-
+        if($("#selectItem630497").is(":checked")){
+            $("#cartItemCount").text(s+1);
+        }else {
+            $("#cartItemCount").text(0);
+        }
         var zong=ss*s;
         $("#zongjian").val(s);
         $("#spPrice630497").html("￥"+zong)
-        $("#cartTotalPrice").html("￥"+zong)
+
         $("#zongjia").val(zong);
+        if($("#selectItem630497").is(":checked")){
+            $("#cartTotalPrice").html("￥"+zong)
+        }else {
+            $("#cartTotalPrice").html("￥"+0)
+        }
     }
     function suanfaj() {
         var zhi=$("#displayPrice630497").text();
@@ -205,21 +194,42 @@
         var ss=parseFloat(zhi)
         if(z<=1){
             var zong=ss*s-1;
-            $("#cartItemCount").text(s);
+            if($("#selectItem630497").is(":checked")){
+                $("#cartItemCount").text(s);
+                $("#cartTotalPrice").html("￥"+zong)
+            }else {
+                $("#cartItemCount").text(0);
+                $("#cartTotalPrice").html("￥"+0)
+            }
+
+
             $("#zongjian").val(1);
             $("#qty630497").val(1);
             $("#spPrice630497").html("￥"+zong)
-            $("#cartTotalPrice").html("￥"+zong)
+
             $("#zongjia").val(zong);
         }else{
               var shu=s-1;
-            $("#cartItemCount").text(shu);
+            if($("#selectItem630497").is(":checked")){
+                $("#cartItemCount").text(shu);
+
+            }else {
+                $("#cartItemCount").text(0);
+
+            }
+
             $("#zongjian").val(shu);
             $("#qty630497").val(shu);
             var zon=ss*shu;
+            if($("#selectItem630497").is(":checked")){
 
+                $("#cartTotalPrice").html("￥"+zon)
+            }else {
+
+                $("#cartTotalPrice").html("￥"+0)
+            }
             $("#spPrice630497").html("￥"+zon)
-            $("#cartTotalPrice").html("￥"+zon)
+
             $("#zongjia").val(zon);
         }
 

@@ -257,6 +257,21 @@ public class ProductServiceImpl implements IProductService {
         return productMapper.updateparameter(tparameter);
     }
 
+    @Override
+    public Integer addshpping(Cart cart) {
+        Integer i=0;
+        List<Cart> querygwlist = productMapper.querygwlisttwo(cart.getCartuserid(),cart.getCartbasicid(),cart.getBasicsize(),cart.getBasiccolor());
+       if(querygwlist!=null&&querygwlist.size()>0){
+         i= productMapper.updatecart(querygwlist.get(0).getCartid(),cart.getCartuserid(),cart.getBasicsumprice(),cart.getBasiccount());
+       }else {
+           String uuid = UUID.randomUUID().toString().replaceAll("-", "");
+           cart.setCartid(uuid);
+          i=productMapper.addcart(cart);
+       }
+
+        return i;
+    }
+
 
     public List<Cart> querygwlist(String userid) {
         return productMapper.querygwlist(userid);

@@ -49,4 +49,6 @@ public interface IProductService {
     void adddingdan(Management management, String gouwuid);
 
     void updatedingdan(String bianhao, String userid, String shangpinid,String jine);
+
+    Integer addshpping(Cart cart);
 }

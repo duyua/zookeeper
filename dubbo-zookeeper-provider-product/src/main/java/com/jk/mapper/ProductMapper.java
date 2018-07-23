@@ -67,4 +67,10 @@ public interface ProductMapper {
     void updatedingdan(@Param("bianhao") String bianhao);
 
     void updatemanagement(@Param("userid") String userid,@Param("jine") Double ss, @Param("jifen") Integer zengsongjifen);
+
+    List<Cart> querygwlisttwo(@Param("usid") String cartCartuserid, @Param("shangid") String cartCartbasicid,@Param("chicun") String basicsize,@Param("yanse") String basiccolor);
+
+    Integer updatecart(@Param("id") String cartid, @Param("userid") String cartuserid, @Param("jiage") Double basicsumprice, @Param("shuliang") Integer basiccount);
+
+    Integer addcart(@Param("cart") Cart cart);
 }

@@ -10,6 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -19,7 +20,16 @@ import java.util.List;
 public class BasicController {
     @Resource
     private IProductService productService;
-
+    /**
+     * 点击退出清空session
+     */
+    @RequestMapping("tuichu")
+    public String tuichu(HttpServletRequest request){
+        HttpSession session = request.getSession();
+        session.removeAttribute("userid");
+        session.removeAttribute("user");
+        return "heji/missSixty";
+    }
     /**
      * 查询商品信息跳转页面
      * @return
@@ -216,19 +226,45 @@ public class BasicController {
         return i;
     }
     /**
+     * 新增购物车商品信息
+     */
+    @RequestMapping("addshpping")
+    @ResponseBody
+    public Integer addshpping(Cart cart,HttpServletRequest request){
+        String userid= (String) request.getSession().getAttribute("userid");
+        cart.setCartuserid(userid);
+        cart.setCartbasicid("d54fc22f0e6a459792d0b4dd55e3034e");
+        cart.setBasicname("交罚款");
+        cart.setBasicprice(230.23);
+        cart.setBasicsize("M");
+        cart.setBasicsumprice(230.23);
+        cart.setBasicnumber("3243");
+        cart.setBasiccount(1);
+        cart.setBasiccolor("蓝色");
+      Integer i= productService.addshpping(cart);
+        return i;
+    }
+
+    /**
      * 查询购物车中的商品信息
      */
     @RequestMapping("querygwlist")
     public ModelAndView querygwlist(HttpServletRequest request){
         ModelAndView mav = new ModelAndView();
-        String userid="1";
-        List<Cart> list = productService.querygwlist(userid);
-        if(list.size()>0&&list!=null){
-            mav.addObject("car",list);
-            mav.setViewName("cart/newlist");
-        }else {
-            mav.setViewName("cart/cart4");
+        String userid= (String) request.getSession().getAttribute("userid");
+        if(userid==null){
+            mav.setViewName("login");
+        }else{
+            List<Cart> list = productService.querygwlist(userid);
+            if(list.size()>0&&list!=null){
+                mav.addObject("car",list);
+                mav.setViewName("cart/newlist");
+            }else {
+                mav.setViewName("cart/cart4");
+            }
+
         }
+
 
 
         return mav;
@@ -254,8 +290,8 @@ public class BasicController {
      * @return
      */
     @RequestMapping("jiesuan")
-    public String jiesuan(Double jiage,Integer jianshu,String shangid,String dingid,Model ma){
-        String userid="1";
+    public String jiesuan(Double jiage,Integer jianshu,String shangid,String dingid,Model ma,HttpServletRequest request){
+        String userid = (String) request.getSession().getAttribute("userid");
         List<Cart> list = productService.querygwlist(userid);
         List<Receiveraddress> dizhi = productService.queryreciverlist(userid);
         ma.addAttribute("jiage",jiage);
@@ -289,8 +325,8 @@ public class BasicController {
      */
     @RequestMapping("adddingdan")
     public String adddingdan(String shangpinid,String gouwuid,Double jine,Integer jianshu,String shouname,HttpServletRequest request,Model ma){
-       // String useid=(String) request.getSession().getAttribute("userid");
-        String useid="1";
+        String useid=(String) request.getSession().getAttribute("userid");
+
          Management  management=new Management();
          management.setManagementpaymentid(shangpinid);
          management.setManagementconsignee(shouname);

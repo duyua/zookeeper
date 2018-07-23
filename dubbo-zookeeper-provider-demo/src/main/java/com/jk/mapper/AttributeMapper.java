@@ -1,8 +1,5 @@
 package com.jk.mapper;
-import com.jk.model.Tclass;
-import com.jk.model.Checkattr;
-import com.jk.model.Tattribute;
-import com.jk.model.Tbrand;
+import com.jk.model.*;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -39,4 +36,10 @@ public interface AttributeMapper {
     Tbrand selecttbandupdate(@Param("ids") String ids);
 
     void updateatbrand(@Param("brn") Tbrand brn);
+
+    List<Memberbasic> selectname(@Param("memberbasicphone") String memberbasicphone);
+
+    Memberbasic selectusersphone(@Param("userphone") String userphone);
+
+    void saveMemberbasic(@Param("basic") Memberbasic basic);
 }

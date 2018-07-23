@@ -118,5 +118,16 @@ managementcreatdate) values(#{man.managementid},#{man.managementnumber},#{man.ma
     <update id="updatemanagement">
         UPDATE  memberbasic SET memberbasicintegral=(memberbasicintegral+#{jifen}),memberbasicmonetary=(memberbasicmonetary+#{jine}) WHERE   MEMBERBASICID=#{userid}
     </update>
-
+    <select id="querygwlisttwo" resultType="com.jk.model.Cart">
+        select * from cart where cartuserid =#{usid} AND BASICSIZE=#{chicun} AND  CARTBASICID=#{shangid} AND  BASICCOLOR=#{yanse}
+    </select>
+    <update id="updatecart">
+        UPDATE cart SET BASICSUMPRICE=BASICSUMPRICE+#{jiage},BASICCOUNT=BASICCOUNT+#{shuliang} WHERE CARTID=#{id} AND CARTUSERID=#{userid}
+    </update>
+    <insert id="addcart">
+        INSERT  INTO cart(CARTID,CARTUSERID,CARTBASICID,BASICNAME,BASICPRICE,BASICSIZE,BASICNUMBER,BASICSUMPRICE,BASICCOUNT,BASICCOLOR)VALUES (
+        #{cart.cartid},#{cart.cartuserid},#{cart.cartbasicid},#{cart.basicname},${cart.basicprice},#{cart.basicsize},#{cart.basicnumber},${cart.basicsumprice},
+        ${cart.basiccount},#{cart.basiccolor}
+        )
+    </insert>
 </mapper>

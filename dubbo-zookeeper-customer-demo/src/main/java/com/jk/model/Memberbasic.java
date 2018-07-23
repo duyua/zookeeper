@@ -10,6 +10,7 @@ public class Memberbasic implements Serializable{
     private String memberbasiclogname;             // 会员登陆名称
     private String memberbasicpassword ;           // 会员密码
     private String memberbasicmima;                 //确认密码
+    private String memberbasicphone;                 //会员电话
     private String memberbasicemail ;               // 会员邮箱
     private Integer memberbasicintegral;           //会员积分
     private Double memberbasicbalance;             // 会员账号余额
@@ -168,6 +169,14 @@ public class Memberbasic implements Serializable{
         return memberbasicid.hashCode();
     }
 
+    public String getMemberbasicphone() {
+        return memberbasicphone;
+    }
+
+    public void setMemberbasicphone(String memberbasicphone) {
+        this.memberbasicphone = memberbasicphone;
+    }
+
     @Override
     public String toString() {
         return "Memberbasic{" +
@@ -175,6 +184,7 @@ public class Memberbasic implements Serializable{
                 ", memberbasiclogname='" + memberbasiclogname + '\'' +
                 ", memberbasicpassword='" + memberbasicpassword + '\'' +
                 ", memberbasicmima='" + memberbasicmima + '\'' +
+                ", memberbasicphone='" + memberbasicphone + '\'' +
                 ", memberbasicemail='" + memberbasicemail + '\'' +
                 ", memberbasicintegral=" + memberbasicintegral +
                 ", memberbasicbalance=" + memberbasicbalance +
