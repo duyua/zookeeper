@@ -27,29 +27,6 @@
 </head>
 <body>
 <jsp:include page="../incolud.jsp"></jsp:include>
-<p id="tip520" class="top_tip">全场1399包邮<span onclick="this.parentNode.style.display = 'none';">x</span></p>
-<div class="header">
-    <div class="top_link_box">
-        <div class="header_content">
-            <div class="header_count">
-                <span id="paramLogin"><em id="emUserName"></em><a id="linkLogin" href="#"></a><em>|</em><a href="#" id="linkReg">注册</a></span>
-                <a id="linkAccount" href="#" title="我的账户">我的账户</a><em>|</em>
-                <a id="linkWishlist" class="link_Wishlist" href="#" title="我的收藏">我的收藏</a><em>|</em>
-                <a id="linkCart" class="link_bag" href="<%=request.getContextPath()%>/basicController/querygwlist.do" title="购物袋"><span id="cartNum">0</span></a><em>|</em>
-                <a href="javascript:;" class="linkServiceOnlineTop">在线客服</a>
-
-                    <input type="text"  value="搜索您感兴趣的内容" id="name">
-                    <button type="button" onclick="search()">搜索</button>
-
-            </div>
-        </div>
-    </div>
-    <div class="header_content">
-        <h1 id="logoOch" class="logo ochirly_logo">
-            <a href="">MISS SIXTY</a>
-        </h1>
-    </div>
-</div>
 <script>
     var m60SetSubMenu = function(str, target) {
         var items;
@@ -369,6 +346,11 @@
 </div>
 <script>
     te$.system.hasLoad();
+
+    function search() {
+        alert($("#name").val())
+        window.location.href="<%=request.getContextPath()%>/solr/list.do?name="+encodeURI(encodeURI($("#name").val()))
+    }
 </script>
 </body>
 </html>
