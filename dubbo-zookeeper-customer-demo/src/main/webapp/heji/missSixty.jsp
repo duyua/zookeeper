@@ -36,10 +36,10 @@
                 <a id="linkWishlist" class="link_Wishlist" href="#" title="我的收藏">我的收藏</a><em>|</em>
                 <a id="linkCart" class="link_bag" href="<%=request.getContextPath()%>/basicController/querygwlist.do" title="购物袋"><span id="cartNum">0</span></a><em>|</em>
                 <a href="javascript:;" class="linkServiceOnlineTop">在线客服</a>
-                <p id="navSearch" class="search2013">
-                    <input type="text" id="navIntSearch" value="搜索您感兴趣的内容">
-                    <button type="button">搜索</button>
-                </p>
+
+                    <input type="text"  value="搜索您感兴趣的内容" id="name">
+                    <button type="button" onclick="search()">搜索</button>
+
             </div>
         </div>
     </div>
@@ -79,7 +79,6 @@
     <div class="nav2013_ul_box">
         <ul>
             <li class="first"><a href="missSixty.jsp" id="homeLink" >首页</a></li>
-
             <li>
                 <a href="/Whats_New/list.jsp">最新上架</a>
             </li>
@@ -368,6 +367,11 @@
 </div>
 <script>
     te$.system.hasLoad();
+
+    function search() {
+        alert($("#name").val())
+        window.location.href="<%=request.getContextPath()%>/solr/list.do?name="+encodeURI(encodeURI($("#name").val()))
+    }
 </script>
 </body>
 </html>

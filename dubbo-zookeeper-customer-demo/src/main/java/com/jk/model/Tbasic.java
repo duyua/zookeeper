@@ -56,6 +56,9 @@ public class Tbasic implements Serializable{
     //查询商品信息分类业务字段
     private String classname;
 
+
+    private String imgname;
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -271,6 +274,12 @@ public class Tbasic implements Serializable{
         this.basiccreatdate = basiccreatdate;
     }
 
+    public String getImgname() {
+        return imgname;
+    }
+    public void setImgname(String imgname) {
+        this.imgname = imgname;
+    }
     @Override
     public String toString() {
         return "Tbasic{" +
@@ -279,26 +288,27 @@ public class Tbasic implements Serializable{
                 ", basicname='" + basicname + '\'' +
                 ", basicnumber='" + basicnumber + '\'' +
                 ", basicprice=" + basicprice +
-                ", membered='" + membered + '\'' +
+                ", membered=" + membered +
                 ", membersid='" + membersid + '\'' +
                 ", basiccost=" + basiccost +
                 ", basicmarket=" + basicmarket +
                 ", shid='" + shid + '\'' +
-                ", basicdanjia=" + basicdanjia +
+                ", basicdanjia='" + basicdanjia + '\'' +
                 ", basicweight=" + basicweight +
                 ", basicinventory=" + basicinventory +
                 ", basiccreatdate='" + basiccreatdate + '\'' +
                 ", kucunbeizhu='" + kucunbeizhu + '\'' +
                 ", zengsongjifen=" + zengsongjifen +
                 ", brandid='" + brandid + '\'' +
-                ", thelabel=" + thelabel +
-                ", setupthe=" + setupthe +
+                ", thelabel='" + thelabel + '\'' +
+                ", setupthe='" + setupthe + '\'' +
                 ", basicnote='" + basicnote + '\'' +
                 ", basicsearch='" + basicsearch + '\'' +
                 ", pagetitle='" + pagetitle + '\'' +
                 ", basicpage='" + basicpage + '\'' +
                 ", pagedescription='" + pagedescription + '\'' +
                 ", classname='" + classname + '\'' +
+                ", imgname='" + imgname + '\'' +
                 '}';
     }
 }
