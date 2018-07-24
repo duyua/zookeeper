@@ -22,10 +22,8 @@
                 <a id="linkWishlist" class="link_Wishlist" href="#" title="我的收藏">我的收藏</a><em>|</em>
                 <a id="linkCart" class="link_bag" href="<%=request.getContextPath()%>/basicController/querygwlist.do" title="购物袋"></a><em>|</em>
                 <a href="javascript:;" class="linkServiceOnlineTop">在线客服</a>
-                <p id="navSearch" class="search2013">
-                    <input type="text" id="navIntSearch" value="搜索您感兴趣的内容">
-                    <button type="button">搜索</button>
-                </p>
+                    <input type="text"  value="搜索您感兴趣的内容" id="name">
+                    <button type="button" onclick="search()">搜索</button>
             </div>
         </div>
     </div>
