@@ -20,7 +20,7 @@ public class SolrServiceImpl implements SolrService {
     // home
     private static final String uri = "my_code";
     //定义常量，代表每页显示的商品条数：
-    private final static Integer PAGE_SIZE = 60;
+    private final static Integer PAGE_SIZE = 18;
     @Override
     public ResultModel search(String queryString, String basicname, String price, Integer page, String sort) throws IOException, SolrServerException {
         //1、封装查询条件对象，因为需要调用dao层的方法，dao层的检索方法就需要一个solr服务的查询条件对象：
@@ -37,9 +37,13 @@ public class SolrServiceImpl implements SolrService {
         }
         //4、按照商品价格排序展示商品数据：
         if("1".equals(sort)){
-            solrQuery.setSort("basicmarket", SolrQuery.ORDER.asc);
-        }else{
-            solrQuery.setSort("basicmarket", SolrQuery.ORDER.desc);
+            solrQuery.setSort("basicprice", SolrQuery.ORDER.asc);
+        }else if("2".equals(sort)){
+            solrQuery.setSort("basicprice", SolrQuery.ORDER.desc);
+        }
+        //5.按照商品上架日期排序   新品
+        if("3".equals(sort)){
+            solrQuery.setSort("basiccreatdate", SolrQuery.ORDER.desc);
         }
         //7、分页查询商品数据：
         //首先校验数据合法性，如果当前页的值为空或小于1，则默认开始查询第一页数据：

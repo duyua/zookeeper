@@ -26,15 +26,15 @@
         var pageParams = {
                 catelogId : '1239',
                 pId : 0,
-                pageIndex : 1,
+                pageIndex : ${result.curPage},
                 pageCount : ${result.pageCount},//没有
-                pageShowCount : 6,
+                pageShowCount : 24,
                 pageSize : 24,
                 beginPrice : '0',
                 size : '',
                 name : '${basicname}',
-                orderBy : 'listedDate desc',
-                color : '' ,
+                orderBy : '',
+                color : 'red' ,
                 firstDate : '',
                 inventory : '',
                 keyword :  '',
@@ -273,18 +273,15 @@
             <h3>
                 搜索：${basicname}
             </h3>
-            <p><span>51 items</span></p>
+            <p><span>3 items</span></p>
 
         </div>
 
         <!--left-->
         <div class="aside_left">
             <!-- CatalogInfoKit.getCatalogInfoListByParentCatalogId(CatalogId) test:269 1239-->
-
-
             <div id="filterKeyword">
             </div>
-
             <!-- <div id="filterKeyword">
                 <div class="filter_style">
                     <div class="filter_title">风格</div>
@@ -326,13 +323,12 @@
                 <div id="brandOrder" class="order">
                     <div class="btn_order_match"><span id="btnChangeListImgType">单品</span></div>
                     <div class="order_item_content" id="btnChangeSortType">
-                            <div>
                            排序方式
-                           最佳推荐
-                           最新上架
-                           价格由高到低
-                           价格由低到高
-                        </div>
+                    </div>
+                    <div  id="nav" style="z-index: 9999;margin-left: 110px;margin-top: 30px;display: none"  >
+                        <a href="javascript:solrdate(3)"><font color="black">最新上架</font></a><br><br>
+                        <a href="javascript:solrasc(2)"><font color="black">价格由高到低</font></a><br><br>
+                        <a href="javascript:solrdesc(1)"><font color="black">价格由低到高</font></a><br>
                     </div>
                     <!-- <b>排序:</b>
                     <a id="sortPriority" href="##" class=" active">默认</a>
@@ -371,9 +367,15 @@
                     </li>
                 </c:forEach>
             </ul>
-            <div class="page_number_box">
-                <div id="pageNumber" class="page_number"></div>
+            <%--<div class="page_number_box">
+                <div id="pageNumber" class="page_number">
+                </div>
+            </div>--%>
+            <div align="center">
+                    <div id="Count" >
+                    </div>
             </div>
+
             <script>
                 te$.ui.lazy.init('list');
                 t$('btnChangeListImgType').addEventListener('click', function(){
@@ -434,6 +436,7 @@
         <li><a href="http://weibo.com/lovemssixty" class="sns_weibo" target="_blank">weibo</a></li>
         <!-- <a href="#" class="sns_qq" target="_blank">qq</a> -->
     </ul>
+    <input type="hidden" value="${result.pageCount}" id="pgount"/>
     <script>
         (function(){
             $('#snsWechat').mouseenter(function(){
@@ -446,13 +449,53 @@
     <div class="footer_copyright">&copy; 广州赫斯汀服饰有限公司<a href="http://www.miibeian.gov.cn/" target="_blank">粤ICP备16013978号-1</a><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44010502000396" target="_blank"><img src="http://img2.misssixty.com.cn/material/2016/10/31/20161031164826771.png" />粤公网安备 44010502000396号</a></div>
 </div>
 <script>
+
+    $(function () {
+       var tr="";
+            for(var i=1;i<=$("#pgount").val();i++){
+                 tr+='<a href="javascript:solrPage('+i+')">'+i+'</a>&nbsp;&nbsp;&nbsp;&nbsp;';
+            }
+        $("#Count").html(tr)
+    });
+
     te$.system.hasLoad();
 
     function search() {
-        alert($("#name").val())
         window.location.href="<%=request.getContextPath()%>/solr/list.do?name="+encodeURI(encodeURI($("#name").val()))
 
     }
+
+    //div 商品导航显示
+    $("#btnChangeSortType").on({
+        mouseover:function () {
+            $("#nav").show();
+        }
+    })
+    $("#nav").on({
+        mouseover:function () {
+            $("#nav").show();
+        },
+        mouseout:function () {
+            $("#nav").hide()
+        }
+    })
+
+    function solrasc(sort){
+        window.location.href="<%=request.getContextPath()%>/solr/list.do?name="+encodeURI(encodeURI($("#name").val()))+"&sort="+sort
+    }
+    function solrdesc(sort){
+        window.location.href="<%=request.getContextPath()%>/solr/list.do?name="+encodeURI(encodeURI($("#name").val()))+"&sort="+sort
+    }
+    function solrdate(sort){
+        window.location.href="<%=request.getContextPath()%>/solr/list.do?name="+encodeURI(encodeURI($("#name").val()))+"&sort="+sort
+    }
+    function solrPage(page) {
+        window.location.href="<%=request.getContextPath()%>/solr/list.do?name="+encodeURI(encodeURI($("#name").val()))+"&page="+page
+    }
+    
+    
+    
+
 </script>
 
 </body>

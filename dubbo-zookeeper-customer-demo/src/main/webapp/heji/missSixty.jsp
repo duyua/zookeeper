@@ -348,7 +348,6 @@
     te$.system.hasLoad();
 
     function search() {
-        alert($("#name").val())
         window.location.href="<%=request.getContextPath()%>/solr/list.do?name="+encodeURI(encodeURI($("#name").val()))
     }
 </script>
