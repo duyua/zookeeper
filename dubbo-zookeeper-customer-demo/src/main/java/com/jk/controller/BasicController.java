@@ -10,6 +10,9 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -17,7 +20,16 @@ import java.util.List;
 public class BasicController {
     @Resource
     private IProductService productService;
-
+    /**
+     * 点击退出清空session
+     */
+    @RequestMapping("tuichu")
+    public String tuichu(HttpServletRequest request){
+        HttpSession session = request.getSession();
+        session.removeAttribute("userid");
+        session.removeAttribute("user");
+        return "heji/missSixty";
+    }
     /**
      * 查询商品信息跳转页面
      * @return
@@ -214,22 +226,142 @@ public class BasicController {
         return i;
     }
     /**
+     * 新增购物车商品信息
+     */
+    @RequestMapping("addshpping")
+    @ResponseBody
+    public Integer addshpping(Cart cart,HttpServletRequest request){
+        String userid= (String) request.getSession().getAttribute("userid");
+        cart.setCartuserid(userid);
+        cart.setCartbasicid("d54fc22f0e6a459792d0b4dd55e3034e");
+        cart.setBasicname("交罚款");
+        cart.setBasicprice(230.23);
+        cart.setBasicsize("M");
+        cart.setBasicsumprice(230.23);
+        cart.setBasicnumber("3243");
+        cart.setBasiccount(1);
+        cart.setBasiccolor("蓝色");
+      Integer i= productService.addshpping(cart);
+        return i;
+    }
+
+    /**
      * 查询购物车中的商品信息
      */
     @RequestMapping("querygwlist")
     public ModelAndView querygwlist(HttpServletRequest request){
         ModelAndView mav = new ModelAndView();
-//        String userid = (String) request.getSession().getAttribute("userid");
-        String userid="1";
-        List<Cart> list = productService.querygwlist(userid);
+        String userid= (String) request.getSession().getAttribute("userid");
+        if(userid==null){
+            mav.setViewName("login");
+        }else{
+            List<Cart> list = productService.querygwlist(userid);
+            if(list.size()>0&&list!=null){
+                mav.addObject("car",list);
+                mav.setViewName("cart/newlist");
+            }else {
+                mav.setViewName("cart/cart4");
+            }
 
-        mav.addObject("car",list);
-        mav.setViewName("cart/newlist");
+        }
+
+
+
         return mav;
     }
+
+    /**
+     * 删除购物车的商品
+     * @param id
+     * @return
+     */
     @RequestMapping("deleteList")
     public String deleteList(String id){
         productService.deleteList(id);
         return "redirect:querygwlist.do";
+    }
+
+    /**
+     * 进入结算页面，查询购物车以及地址列表
+     * @param jiage
+     * @param jianshu
+     * @param shangid
+     * @param dingid
+     * @return
+     */
+    @RequestMapping("jiesuan")
+    public String jiesuan(Double jiage,Integer jianshu,String shangid,String dingid,Model ma,HttpServletRequest request){
+        String userid = (String) request.getSession().getAttribute("userid");
+        List<Cart> list = productService.querygwlist(userid);
+        List<Receiveraddress> dizhi = productService.queryreciverlist(userid);
+        ma.addAttribute("jiage",jiage);
+        ma.addAttribute("jianshu",jianshu);
+        ma.addAttribute("shangid",shangid);
+        ma.addAttribute("gouwuid",dingid);
+        ma.addAttribute("list",list);
+        ma.addAttribute("dizhi",dizhi);
+        return "cart/cart2";
+    }
+    /**
+     * 跳转我的账户页面
+     */
+    @RequestMapping("mehost")
+    public  String mehost(){
+        return "cart/mehost";
+    }
+    /**
+     * 添加用户收货地址
+     */
+    /*@RequestMapping("addaddress")
+    @ResponseBody
+    public List<Receiveraddress> addaddress(Receiveraddress  receiver,HttpServletRequest request){
+        String useid="1";
+        receiver.setUserid(useid);
+        List<Receiveraddress> list = productService.addreceiver(receiver,useid);
+        return list;
+    }*/
+    /**
+     * 新增订单信息
+     */
+    @RequestMapping("adddingdan")
+    public String adddingdan(String shangpinid,String gouwuid,Double jine,Integer jianshu,String shouname,HttpServletRequest request,Model ma){
+        String useid=(String) request.getSession().getAttribute("userid");
+
+         Management  management=new Management();
+         management.setManagementpaymentid(shangpinid);
+         management.setManagementconsignee(shouname);
+         management.setManagementamount(jine);
+         management.setManagementdeliverystatus(jianshu);
+         management.setManagementmemberid(useid);
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//设置日期格式
+        String date = df.format(new Date());
+        management.setManagementcreatdate(date);
+        SimpleDateFormat dd = new SimpleDateFormat("yyyyMMddHHmmss");//设置日期格式
+        String dat = dd.format(new Date());
+        management.setManagementnumber("hj"+dat);
+        productService.adddingdan(management,gouwuid);
+       ma.addAttribute("bianhao","hj"+dat);
+       ma.addAttribute("jine",jine);
+       ma.addAttribute("userid",useid);
+       ma.addAttribute("shangpinid",shangpinid);
+        return "cart/cart3";
+    }
+    /**
+     * 点击支付修改订单状态
+     */
+    @RequestMapping("chenggongupdate")
+    public String chenggongupdate(String bianhao,String userid,String shangpinid,String jine){
+         productService.updatedingdan(bianhao,userid,shangpinid,jine);
+        return "redirect:querygwlist.do";
+    }
+    /**
+     * 点击收藏商品更改商品收藏字段
+     */
+    @RequestMapping("shoucang")
+    @ResponseBody
+    public Integer shoucang(String id,HttpServletRequest request){
+        String userid = (String) request.getSession().getAttribute("userid");
+        Integer i=productService.updateshoucang(id,userid);
+        return i;
     }
 }

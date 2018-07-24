@@ -98,4 +98,39 @@ select p.* from tparameter p where  p.parameterid=#{id}
      <delete id="deleteList">
          delete cart where cartid=#{id}
      </delete>
+    <insert id="addaddress">
+        insert into receiveraddress(id,userid,receiver,mobile,sheng,shi,address)values(
+  #{re.id},#{re.userid},#{re.receiver},#{re.mobile},#{re.sheng},#{re.shi},#{re.address})
+    </insert>
+    <select id="queryaddresslist" resultType="com.jk.model.Receiveraddress">
+        select * FROM receiveraddress where userid=#{id} AND addressstatus=1
+    </select>
+     <insert id="adddingdan">
+         insert into management(managementid,managementnumber,managementamount,managementmemberid,
+managementconsignee,managementpaymentid,managementstatus,managementdeliverystatus,
+managementcreatdate,managementpaymentstatus) values(#{man.managementid},#{man.managementnumber},#{man.managementamount},
+#{man.managementmemberid},#{man.managementconsignee},#{man.managementpaymentid},#{man.managementstatus},
+#{man.managementdeliverystatus},#{man.managementcreatdate},#{man.managementpaymentstatus})
+     </insert>
+    <update id="updatedingdan">
+        UPDATE management SET managementstatus=2 where managementnumber=#{bianhao}
+    </update>
+    <update id="updatemanagement">
+        UPDATE  memberbasic SET memberbasicintegral=(memberbasicintegral+#{jifen}),memberbasicmonetary=(memberbasicmonetary+#{jine}) WHERE   MEMBERBASICID=#{userid}
+    </update>
+    <select id="querygwlisttwo" resultType="com.jk.model.Cart">
+        select * from cart where cartuserid =#{usid} AND BASICSIZE=#{chicun} AND  CARTBASICID=#{shangid} AND  BASICCOLOR=#{yanse}
+    </select>
+    <update id="updatecart">
+        UPDATE cart SET BASICSUMPRICE=BASICSUMPRICE+#{jiage},BASICCOUNT=BASICCOUNT+#{shuliang} WHERE CARTID=#{id} AND CARTUSERID=#{userid}
+    </update>
+    <insert id="addcart">
+        INSERT  INTO cart(CARTID,CARTUSERID,CARTBASICID,BASICNAME,BASICPRICE,BASICSIZE,BASICNUMBER,BASICSUMPRICE,BASICCOUNT,BASICCOLOR)VALUES (
+        #{cart.cartid},#{cart.cartuserid},#{cart.cartbasicid},#{cart.basicname},${cart.basicprice},#{cart.basicsize},#{cart.basicnumber},${cart.basicsumprice},
+        ${cart.basiccount},#{cart.basiccolor}
+        )
+    </insert>
+    <insert id="updateshoucang">
+        INSERT INTO memberbasiccollect(collectid,collectmemberbasicid,collectbasrcid)VALUES (#{mem.collectid},#{mem.collectmemberbasicid},#{mem.collectbasrcid})
+    </insert>
 </mapper>

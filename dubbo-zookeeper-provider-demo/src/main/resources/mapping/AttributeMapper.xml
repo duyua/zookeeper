@@ -51,4 +51,13 @@
     <update id="updateatbrand">
         update tbrand set brandname=#{brn.brandname},url=#{brn.url} where brandid=#{brn.brandid}
     </update>
+    <select id="selectname" resultType="com.jk.model.Memberbasic">
+        select * from memberbasic  where memberbasicphone=#{memberbasicphone} or memberbasicemail=#{memberbasicphone}
+    </select>
+    <select id="selectusersphone" resultType="com.jk.model.Memberbasic">
+        select * from memberbasic  where memberbasicphone=#{userphone}
+    </select>
+    <insert id="saveMemberbasic">
+        insert into memberbasic(memberbasicid,memberbasicpassword,memberbasicmima,memberbasicphone) values(#{basic.memberbasicid},#{basic.memberbasicpassword},#{basic.memberbasicmima},#{basic.memberbasicphone})
+    </insert>
 </mapper>

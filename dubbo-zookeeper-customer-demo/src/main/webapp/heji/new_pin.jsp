@@ -59,7 +59,7 @@
                 <span id="paramLogin"><em id="emUserName"></em><a id="linkLogin" href="#"></a><em>|</em><a href="#" id="linkReg">注册</a></span>
                 <a id="linkAccount" href="#" title="我的账户">我的账户</a><em>|</em>
                 <a id="linkWishlist" class="link_Wishlist" href="#" title="我的收藏">我的收藏</a><em>|</em>
-                <a id="linkCart" class="link_bag" href="#" title="购物袋"><span id="cartNum">0</span></a><em>|</em>
+                <a id="linkCart" class="link_bag" href="<%=request.getContextPath()%>/basicController/querygwlist.do" title="购物袋"></a><em>|</em>
                 <a href="javascript:;" class="linkServiceOnlineTop">在线客服</a>
                 <p id="navSearch" class="search2013">
                     <input type="text" id="navIntSearch" value="搜索您感兴趣的内容">

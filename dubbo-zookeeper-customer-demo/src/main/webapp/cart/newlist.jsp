@@ -13,28 +13,14 @@
 
     <script src="https://img2.fiveplus.com/rs/lib/js/jquery.js"></script>
     <script src="https://img2.fiveplus.com/rs/common/v1/web/js/my.min.js?13"></script>
+
+    <link rel="stylesheet" href="http://img2.misssixty.com.cn/rs/misssixty/v1/www/css/m60_base.css" />
+
+    <script src="http://img2.misssixty.com.cn/rs/lib/js/jquery.js"></script>
+    <script src="http://img2.misssixty.com.cn/rs/misssixty/v1/www/js/m60_www_global.min.js"></script>
 </head>
 <body>
-<script>
-    te$.setMyStyle();
-</script>
-
-<div class="header">
-    <h1 class="logo" id="myLogo"></h1>
-
-    <div class="top_link_box">
-        <!-- <a href="#" class="link_langu"><span>中国</span></a> -->
-        <span id="paramLogin"><a href="" id="linkLogin">登录│注册</a></span>
-        <a href="" id="linkAccount">我的账户</a>
-        <a href="javascript:;" class="link_Wishlist"  id="linkWishlist">我的收藏</a>
-        <a href="" class="link_bag" id="linkCart">购物袋(<span id="cartNum">0</span>)</a>
-    </div>
-    <div class="search2013" id="navSearch" style="display:none;">
-        <input type="text" value="搜索您感兴趣的内容" id="navIntSearch">
-        <button type="button">搜索</button>
-    </div>
-</div>
-
+<jsp:include page="../incolud.jsp"></jsp:include>
 
 <div class="cart_container">
     <div class="edge">
@@ -45,7 +31,7 @@
         </div>
 
         <div class="cart">
-            <div class="cart_tip">优惠：单笔消费，满699元免邮</div>
+            <div class="cart_tip">优惠：全场消费，满1399元免邮</div>
             <div class="cart_content col_13">
                 <script>
                     var _mvq = _mvq || [];
@@ -84,7 +70,7 @@
                     <c:forEach items="${car}" var="cc">
                         <tr id="item630497" data-param="630497,681SJ3230000A03,890.0,890.0,1,7e52df0a7d7143549571435b8d263d66">
                             <td>
-                                <input type="checkbox" id="selectItem630497" value="${cc.basicprice}" class="ck_select_item" checked  />
+                                <input type="checkbox" id="selectItem630497" value="${cc.basicprice}" class="ck_select_item" checked />
                             </td>
                             <td>
                                 <a href="//www.misssixty.com.cn/p/681SJ3230000A03.shtml" target="_blank">
@@ -110,7 +96,8 @@
                                     <input type="text" readonly value="${cc.basiccount}" defaultvalue="1"  id="qty630497" class="tx_edit" autocomplete="off"/>
                                     <em class="btn_num_plus" data-item-id="630497" data-product-id="137759" data-cart-id="7e52df0a7d7143549571435b8d263d66" onclick="suanfa()">+</em>
                                 </div>
-                                <a href="javascript:;" class="link_add_fav" data-action-param="137759">收藏</a>&nbsp;/&nbsp;<a href="<%=request.getContextPath()%>/basicController/deleteList.do?id=${cc.cartid}" class="link_del_cart_item" data-action-param="630497">删除</a>
+                                <span id="shou">
+                                <a href="javascript:shoucang('${cc.cartbasicid}')" class="link_add_fav" data-action-param="137759">收藏</a>&nbsp;/&nbsp;</span><a href="<%=request.getContextPath()%>/basicController/deleteList.do?id=${cc.cartid}" class="link_del_cart_item" data-action-param="630497">删除</a>
                             </td>
                             <td>
                                 <span class="price" id="spPrice630497"></span>
@@ -124,58 +111,14 @@
             </div>
         </div>
 
-
-        <div class="page_num">
-            <div class="page_num_line">
-
-                <span>1</span>
-
-            </div>
-        </div>
-
-
         <div class="order_total">
-            <div class="order_total_action">
-                <p>
-                    <label for="ckSelectAll"><input type="checkbox" id="ckSelectAll" checked autocomplete="off" />全选</label>
-                    <a href="javascript:;" id="btnDeleteSelected">删除已选</a>
-                    <a href="javascript:;" id="btnFavoriteSelected">收藏已选</a>
-                </p>
-            </div>
+
             <div class="order_total_sum">
                 <p>
                     已选：<span id="cartItemCount"></span>件<br />
                     总计金额（不含运费）：￥<span id="cartTotalPrice"></span>
                 </p>
-                <a href=""> <button class="btn_my" type="button" >马上结算</button></a>
-            </div>
-        </div>
-        <script>
-            te$.business.cart.initCart();
-        </script>
-
-        <div onmouseover="javascript:_setRechooseHide();" id="rechooseSize" class="rechoose_size">
-            <div id="rechooseSizeList"></div>
-            <input type="hidden" id="rechooseQty" name="rechooseQty" value="1">
-        </div>
-
-        <div class="rechoose">
-            <h3>选择颜色及尺码</h3>
-            <div class="rechoose_area" id="rechoose">
-                <!--<div class="rechoose_item">
-                    <P><img src="_s_1.jpg" /></P>
-                    <div>
-                        <a>XS</a>
-                        <a>S</a>
-                        <a>M</a>
-                        <a>L</a>
-                        <a>XL</a>
-                    </div>
-                </div>-->
-            </div>
-            <div class="rechoose_btn">
-                <button id="btnRechooseYes">确定</button>
-                <button id="btnRechooseNo">取消</button>
+             <button class="btn_my" type="button" onclick="jiesuan()" >马上结算</button>
             </div>
         </div>
 
@@ -185,62 +128,126 @@
 <div class="copyright">
     <div class="copyright_inner" id="myFooter">
         <p class="copyright_links" id="myCopyrightLinks">
-            <a href="#">隐私申明</a>
-            <a href="#">联系我们</a>
+            <a href="">隐私申明</a>
+            <a href="">联系我们</a>
         </p>
         <p class="copyright_links copyright_txt">Copyright @ 2010-<em id="copyrightYear"></em> 广州赫基信息科技有限公司版权所有  增值电信业务经营许可证 <a href="" id="linkIcp" target="_blank">粤B2-20100553 粤ICP备10229258-<span id="icpNum">1</span>号</a></p>
     </div>
 </div>
+<input type="hidden" id="zongjia"/>
+<input type="hidden" id="zongjian"/>
+<input type="hidden" id="shangpinid" value="${car.get(0).cartbasicid}"/>
+<<input type="hidden" id="dingdanid" value="${car.get(0).cartid}">
 <script>
     te$.system.setMyHeadAndFooter();
     te$.system.hasLoad();
 </script>
 <script >
     var r=$("#qty630497").val();
-    $("#cartItemCount").text(r);
+
+        $("#cartItemCount").text(r);
+
+    $("#zongjian").val(r);
     var zhi=$("#displayPrice630497").text();
-    $("#spPrice630497").html("￥"+zhi)
-    $("#cartTotalPrice").html("￥"+zhi)
+    var zz=parseInt(zhi);
+    var zz=parseInt(r);
+    var w=(zhi*r);
+    $("#spPrice630497").html("￥"+w)
+
+        $("#cartTotalPrice").html("￥"+w)
 
 
+    $("#zongjia").val(w);
 
-    function suanfa(id) {
+
+    function suanfa() {
 
         var zhi=$("#displayPrice630497").text();
+           var ss=parseFloat(zhi)
         var z=$("#qty630497").val();
-          var s=parseInt(z)+1;
-          var zz=parseInt(zhi);
-          var zong=zhi*s;
-        $("#cartItemCount").text(s);
+          var s=parseInt(z);
+          var sss=s+1;
+        $("#qty630497").val(sss);
 
+        $("#cartItemCount").text(sss);
+
+        var zong=ss*sss;
+        $("#zongjian").val(s);
         $("#spPrice630497").html("￥"+zong)
-        $("#cartTotalPrice").html("￥"+zong)
+
+        $("#zongjia").val(zong);
+
+            $("#cartTotalPrice").html("￥"+zong)
+
+
+
     }
-    function suanfaj(id) {
+    function suanfaj() {
         var zhi=$("#displayPrice630497").text();
         var z=$("#qty630497").val();
 
         var s=parseInt(z);
-        var zz=parseInt(zhi);
-        if(z==1){
-            var zong=zhi*s;
-            $("#cartItemCount").text(s);
+        var ss=parseFloat(zhi)
+        if(z<=1){
+            var zong=ss*s-1;
 
+                $("#cartItemCount").text(s);
+                $("#cartTotalPrice").html("￥"+zong)
+
+
+
+
+
+            $("#zongjian").val(1);
+            $("#qty630497").val(1);
             $("#spPrice630497").html("￥"+zong)
-            $("#cartTotalPrice").html("￥"+zong)
+
+            $("#zongjia").val(zong);
         }else{
               var shu=s-1;
-            $("#cartItemCount").text(shu);
-            var zong=zhi*shu;
 
-            $("#spPrice630497").html("￥"+zong)
-            $("#cartTotalPrice").html("￥"+zong)
+                $("#cartItemCount").text(shu);
+
+
+
+
+
+
+            $("#zongjian").val(shu);
+            $("#qty630497").val(shu);
+            var zon=ss*shu;
+
+
+                $("#cartTotalPrice").html("￥"+zon)
+
+
+            $("#spPrice630497").html("￥"+zon)
+
+            $("#zongjia").val(zon);
         }
 
     }
     function jiesuan() {
-
-
+       var jiage=$("#zongjia").val();
+       var jian=$("#zongjian").val();
+       var shangid=$("#shangpinid").val();
+       var dingid=$("#dingdanid").val();
+       location.href="<%=request.getContextPath()%>/basicController/jiesuan.do?jiage="+jiage+"&jianshu="+jian+"&shangid="+shangid+"&dingid="+dingid;
+    }
+    function shoucang(id) {
+        $.ajax({
+            url:"<%=request.getContextPath()%>/basicController/shoucang.do",
+            type:"post",
+            data:{id:id},
+            success:function(str){
+              if(str==1){
+                  $("#shou").hide();
+              }
+            },
+            error:function(){
+                $.messager.alert('警告','系统错误！');
+            }
+        });
     }
 </script>
 </body>

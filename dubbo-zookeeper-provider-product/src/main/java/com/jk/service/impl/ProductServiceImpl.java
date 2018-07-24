@@ -257,6 +257,21 @@ public class ProductServiceImpl implements IProductService {
         return productMapper.updateparameter(tparameter);
     }
 
+    @Override
+    public Integer addshpping(Cart cart) {
+        Integer i=0;
+        List<Cart> querygwlist = productMapper.querygwlisttwo(cart.getCartuserid(),cart.getCartbasicid(),cart.getBasicsize(),cart.getBasiccolor());
+       if(querygwlist!=null&&querygwlist.size()>0){
+         i= productMapper.updatecart(querygwlist.get(0).getCartid(),cart.getCartuserid(),cart.getBasicsumprice(),cart.getBasiccount());
+       }else {
+           String uuid = UUID.randomUUID().toString().replaceAll("-", "");
+           cart.setCartid(uuid);
+          i=productMapper.addcart(cart);
+       }
+
+        return i;
+    }
+
 
     public List<Cart> querygwlist(String userid) {
         return productMapper.querygwlist(userid);
@@ -265,4 +280,77 @@ public class ProductServiceImpl implements IProductService {
     public void deleteList(String id) {
         productMapper.deleteList(id);
     }
+
+   /* @Override
+    public List<Receiveraddress> addreceiver(Receiveraddress receiver,String useid) {
+          String di="";
+          String si="";
+            if(receiver.getSheng()=="11"){
+                di="北京";
+            }
+        if(receiver.getSheng()=="21"){
+            di="河北";
+        }
+        if(receiver.getSheng()=="31"){
+            di="山东";
+        }
+        receiver.setSheng(di);
+        if(receiver.getShi()=="41"){
+            si="海淀区";
+        }
+        if(receiver.getShi()=="51"){
+            si="朝阳区";
+        }
+        if(receiver.getShi()=="61"){
+            si="曹县";
+        }
+        if(receiver.getShi()=="71"){
+            si="邯郸";
+        }
+        receiver.setShi(si);
+       String uuid= UUID.randomUUID().toString().replaceAll("-","");
+       receiver.setId(uuid);
+        productMapper.addaddress(receiver);
+      List<Receiveraddress> list=productMapper.queryaddresslist(receiver.getUserid());
+        return list;
+    }
+*/
+    @Override
+    public List<Receiveraddress> queryreciverlist(String userid) {
+        List<Receiveraddress> list=productMapper.queryaddresslist(userid);
+        return list;
+    }
+
+    @Override
+    public void adddingdan(Management management, String gouwuid) {
+        productMapper.deleteList(gouwuid);
+       String uuid= UUID.randomUUID().toString().replaceAll("-","");
+       management.setManagementid(uuid);
+       management.setManagementstatus(1);
+       management.setManagementpaymentstatus(2);
+        productMapper.adddingdan(management);
+    }
+
+    @Override
+    public void updatedingdan(String bianhao, String userid, String shangpinid,String jine) {
+        productMapper.updatedingdan(bianhao);
+        Tbasic tbasic=productMapper.querybasicbyid(shangpinid);
+       Double ss= Double.parseDouble(jine);
+        Integer zengsongjifen = tbasic.getZengsongjifen();
+        productMapper.updatemanagement(userid,ss,zengsongjifen);
+    }
+
+    @Override
+    public Integer updateshoucang(String id, String userid) {
+        String uuid = UUID.randomUUID().toString().replaceAll("-", "");
+     Memberbasiccollect mem=new Memberbasiccollect();
+     mem.setCollectbasrcid(id);
+     mem.setCollectid(uuid);
+     mem.setCollectmemberbasicid(userid);
+
+
+        return productMapper.updateshoucang(mem);
+    }
+
+
 }

@@ -26,6 +26,7 @@
     </script>
 </head>
 <body>
+<jsp:include page="../incolud.jsp"></jsp:include>
 <p id="tip520" class="top_tip">全场1399包邮<span onclick="this.parentNode.style.display = 'none';">x</span></p>
 <div class="header">
     <div class="top_link_box">
@@ -79,6 +80,7 @@
     <div class="nav2013_ul_box">
         <ul>
             <li class="first"><a href="missSixty.jsp" id="homeLink" >首页</a></li>
+
             <li>
                 <a href="/Whats_New/list.jsp">最新上架</a>
             </li>
@@ -367,11 +369,6 @@
 </div>
 <script>
     te$.system.hasLoad();
-
-    function search() {
-        alert($("#name").val())
-        window.location.href="<%=request.getContextPath()%>/solr/list.do?name="+encodeURI(encodeURI($("#name").val()))
-    }
 </script>
 </body>
 </html>
