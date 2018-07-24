@@ -34,4 +34,5 @@
 	<dubbo:reference id="indentService" interface="com.jk.service.IIndentService" />
 	<dubbo:reference id="attributeService" interface="com.jk.service.AttributeService" />
 	<dubbo:reference id="payMentService" interface="com.jk.service.PayMentService"  />
+	<dubbo:reference id="solrService" interface="com.jk.service.SolrService"  />
 </beans>  
