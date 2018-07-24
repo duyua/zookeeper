@@ -108,9 +108,9 @@ select p.* from tparameter p where  p.parameterid=#{id}
      <insert id="adddingdan">
          insert into management(managementid,managementnumber,managementamount,managementmemberid,
 managementconsignee,managementpaymentid,managementstatus,managementdeliverystatus,
-managementcreatdate) values(#{man.managementid},#{man.managementnumber},#{man.managementamount},
+managementcreatdate,managementpaymentstatus) values(#{man.managementid},#{man.managementnumber},#{man.managementamount},
 #{man.managementmemberid},#{man.managementconsignee},#{man.managementpaymentid},#{man.managementstatus},
-#{man.managementdeliverystatus},#{man.managementcreatdate})
+#{man.managementdeliverystatus},#{man.managementcreatdate},#{man.managementpaymentstatus})
      </insert>
     <update id="updatedingdan">
         UPDATE management SET managementstatus=2 where managementnumber=#{bianhao}
@@ -129,5 +129,8 @@ managementcreatdate) values(#{man.managementid},#{man.managementnumber},#{man.ma
         #{cart.cartid},#{cart.cartuserid},#{cart.cartbasicid},#{cart.basicname},${cart.basicprice},#{cart.basicsize},#{cart.basicnumber},${cart.basicsumprice},
         ${cart.basiccount},#{cart.basiccolor}
         )
+    </insert>
+    <insert id="updateshoucang">
+        INSERT INTO memberbasiccollect(collectid,collectmemberbasicid,collectbasrcid)VALUES (#{mem.collectid},#{mem.collectmemberbasicid},#{mem.collectbasrcid})
     </insert>
 </mapper>

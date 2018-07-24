@@ -112,4 +112,8 @@ public interface IProductService {
      * 点击支付修改订单状态
      */
     void updatedingdan(String bianhao, String userid, String shangpinid,String jine);
+    /**
+     * 新增收藏商品
+     */
+    Integer updateshoucang(String id, String userid);
 }

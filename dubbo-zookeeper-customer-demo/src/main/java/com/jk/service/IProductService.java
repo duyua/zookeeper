@@ -51,4 +51,6 @@ public interface IProductService {
     void updatedingdan(String bianhao, String userid, String shangpinid,String jine);
 
     Integer addshpping(Cart cart);
+
+    Integer updateshoucang(String id, String userid);
 }

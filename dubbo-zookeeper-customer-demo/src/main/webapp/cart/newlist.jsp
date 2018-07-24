@@ -70,7 +70,7 @@
                     <c:forEach items="${car}" var="cc">
                         <tr id="item630497" data-param="630497,681SJ3230000A03,890.0,890.0,1,7e52df0a7d7143549571435b8d263d66">
                             <td>
-                                <input type="checkbox" id="selectItem630497" value="${cc.basicprice}" class="ck_select_item"  />
+                                <input type="checkbox" id="selectItem630497" value="${cc.basicprice}" class="ck_select_item" checked />
                             </td>
                             <td>
                                 <a href="//www.misssixty.com.cn/p/681SJ3230000A03.shtml" target="_blank">
@@ -96,7 +96,8 @@
                                     <input type="text" readonly value="${cc.basiccount}" defaultvalue="1"  id="qty630497" class="tx_edit" autocomplete="off"/>
                                     <em class="btn_num_plus" data-item-id="630497" data-product-id="137759" data-cart-id="7e52df0a7d7143549571435b8d263d66" onclick="suanfa()">+</em>
                                 </div>
-                                <a href="javascript:;" class="link_add_fav" data-action-param="137759">收藏</a>&nbsp;/&nbsp;<a href="<%=request.getContextPath()%>/basicController/deleteList.do?id=${cc.cartid}" class="link_del_cart_item" data-action-param="630497">删除</a>
+                                <span id="shou">
+                                <a href="javascript:shoucang('${cc.cartbasicid}')" class="link_add_fav" data-action-param="137759">收藏</a>&nbsp;/&nbsp;</span><a href="<%=request.getContextPath()%>/basicController/deleteList.do?id=${cc.cartid}" class="link_del_cart_item" data-action-param="630497">删除</a>
                             </td>
                             <td>
                                 <span class="price" id="spPrice630497"></span>
@@ -143,22 +144,18 @@
 </script>
 <script >
     var r=$("#qty630497").val();
-    if($("#selectItem630497").is(":checked")){
+
         $("#cartItemCount").text(r);
-    }else {
-        $("#cartItemCount").text(0);
-    }
+
     $("#zongjian").val(r);
     var zhi=$("#displayPrice630497").text();
     var zz=parseInt(zhi);
     var zz=parseInt(r);
     var w=(zhi*r);
     $("#spPrice630497").html("￥"+w)
-    if($("#selectItem630497").is(":checked")){
+
         $("#cartTotalPrice").html("￥"+w)
-    }else {
-        $("#cartTotalPrice").html("￥"+0)
-    }
+
 
     $("#zongjia").val(w);
 
@@ -169,22 +166,21 @@
            var ss=parseFloat(zhi)
         var z=$("#qty630497").val();
           var s=parseInt(z);
-        $("#qty630497").val(s+1);
-        if($("#selectItem630497").is(":checked")){
-            $("#cartItemCount").text(s+1);
-        }else {
-            $("#cartItemCount").text(0);
-        }
-        var zong=ss*s;
+          var sss=s+1;
+        $("#qty630497").val(sss);
+
+        $("#cartItemCount").text(sss);
+
+        var zong=ss*sss;
         $("#zongjian").val(s);
         $("#spPrice630497").html("￥"+zong)
 
         $("#zongjia").val(zong);
-        if($("#selectItem630497").is(":checked")){
+
             $("#cartTotalPrice").html("￥"+zong)
-        }else {
-            $("#cartTotalPrice").html("￥"+0)
-        }
+
+
+
     }
     function suanfaj() {
         var zhi=$("#displayPrice630497").text();
@@ -194,13 +190,12 @@
         var ss=parseFloat(zhi)
         if(z<=1){
             var zong=ss*s-1;
-            if($("#selectItem630497").is(":checked")){
+
                 $("#cartItemCount").text(s);
                 $("#cartTotalPrice").html("￥"+zong)
-            }else {
-                $("#cartItemCount").text(0);
-                $("#cartTotalPrice").html("￥"+0)
-            }
+
+
+
 
 
             $("#zongjian").val(1);
@@ -210,24 +205,22 @@
             $("#zongjia").val(zong);
         }else{
               var shu=s-1;
-            if($("#selectItem630497").is(":checked")){
+
                 $("#cartItemCount").text(shu);
 
-            }else {
-                $("#cartItemCount").text(0);
 
-            }
+
+
+
 
             $("#zongjian").val(shu);
             $("#qty630497").val(shu);
             var zon=ss*shu;
-            if($("#selectItem630497").is(":checked")){
+
 
                 $("#cartTotalPrice").html("￥"+zon)
-            }else {
 
-                $("#cartTotalPrice").html("￥"+0)
-            }
+
             $("#spPrice630497").html("￥"+zon)
 
             $("#zongjia").val(zon);
@@ -240,6 +233,21 @@
        var shangid=$("#shangpinid").val();
        var dingid=$("#dingdanid").val();
        location.href="<%=request.getContextPath()%>/basicController/jiesuan.do?jiage="+jiage+"&jianshu="+jian+"&shangid="+shangid+"&dingid="+dingid;
+    }
+    function shoucang(id) {
+        $.ajax({
+            url:"<%=request.getContextPath()%>/basicController/shoucang.do",
+            type:"post",
+            data:{id:id},
+            success:function(str){
+              if(str==1){
+                  $("#shou").hide();
+              }
+            },
+            error:function(){
+                $.messager.alert('警告','系统错误！');
+            }
+        });
     }
 </script>
 </body>

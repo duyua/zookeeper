@@ -73,4 +73,6 @@ public interface ProductMapper {
     Integer updatecart(@Param("id") String cartid, @Param("userid") String cartuserid, @Param("jiage") Double basicsumprice, @Param("shuliang") Integer basiccount);
 
     Integer addcart(@Param("cart") Cart cart);
+
+    Integer updateshoucang(@Param("mem") Memberbasiccollect mem);
 }

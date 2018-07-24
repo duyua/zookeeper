@@ -327,6 +327,7 @@ public class ProductServiceImpl implements IProductService {
        String uuid= UUID.randomUUID().toString().replaceAll("-","");
        management.setManagementid(uuid);
        management.setManagementstatus(1);
+       management.setManagementpaymentstatus(2);
         productMapper.adddingdan(management);
     }
 
@@ -337,6 +338,18 @@ public class ProductServiceImpl implements IProductService {
        Double ss= Double.parseDouble(jine);
         Integer zengsongjifen = tbasic.getZengsongjifen();
         productMapper.updatemanagement(userid,ss,zengsongjifen);
+    }
+
+    @Override
+    public Integer updateshoucang(String id, String userid) {
+        String uuid = UUID.randomUUID().toString().replaceAll("-", "");
+     Memberbasiccollect mem=new Memberbasiccollect();
+     mem.setCollectbasrcid(id);
+     mem.setCollectid(uuid);
+     mem.setCollectmemberbasicid(userid);
+
+
+        return productMapper.updateshoucang(mem);
     }
 
 

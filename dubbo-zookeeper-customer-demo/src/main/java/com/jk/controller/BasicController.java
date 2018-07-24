@@ -354,4 +354,14 @@ public class BasicController {
          productService.updatedingdan(bianhao,userid,shangpinid,jine);
         return "redirect:querygwlist.do";
     }
+    /**
+     * 点击收藏商品更改商品收藏字段
+     */
+    @RequestMapping("shoucang")
+    @ResponseBody
+    public Integer shoucang(String id,HttpServletRequest request){
+        String userid = (String) request.getSession().getAttribute("userid");
+        Integer i=productService.updateshoucang(id,userid);
+        return i;
+    }
 }
